@@ -28,7 +28,7 @@ $theme_path = get_template_directory_uri();
 
 					<div class="site-info">
 						
-						<img src="<?php echo $theme_path; ?>/assets/images/red-logo-white.png" class="footer-logo">
+						<img src="<?php echo $theme_path; ?>/assets/images/RED-logo-white.png" class="footer-logo">
 						
 						<div class="footer-social-media">
 							<?php include(get_template_directory() . '/global-templates/template-parts/social-media.php'); ?>
