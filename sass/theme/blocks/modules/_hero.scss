@@ -1,0 +1,12 @@
+.hero {
+	height: 250px;
+	width: 100vw;
+	margin: auto;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	
+	@include respond-to('md'){
+		height: 50vw;
+	}		
+}

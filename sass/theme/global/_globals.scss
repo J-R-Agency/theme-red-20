@@ -1,0 +1,12 @@
+@mixin global-padding {
+	padding: 3rem 1rem;
+	@include respond-to('md'){
+		padding: 3rem 10rem;
+	}	
+}
+
+.generic {
+	@include global-padding;
+}
+
+

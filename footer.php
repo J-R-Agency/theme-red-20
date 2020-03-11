@@ -11,6 +11,7 @@
 defined( 'ABSPATH' ) || exit;
 
 $container = get_theme_mod( 'understrap_container_type' );
+$theme_path = get_template_directory_uri();
 ?>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
@@ -26,8 +27,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 				<footer class="site-footer" id="colophon">
 
 					<div class="site-info">
-
-						<?php understrap_site_info(); ?>
+						
+						<img src="<?php echo $theme_path; ?>/assets/images/red-logo-white.png" class="footer-logo">
+						
+						<div class="footer-social-media">
+							<?php include(get_template_directory() . '/global-templates/template-parts/social-media.php'); ?>
+						</div>
+						
+						<?php
+						wp_nav_menu( array( 
+						    'theme_location' => 'footer-menu' ) ); 
+						?>
 
 					</div><!-- .site-info -->
 
