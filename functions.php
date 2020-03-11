@@ -42,7 +42,7 @@ if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page();
 	acf_add_options_sub_page("Header");
 	acf_add_options_sub_page("Social Media");
-	acf_add_options_sub_page("Brands");
+	acf_add_options_sub_page("Business Information");
 }
 
 /*-- REGISTER MENUS --*/
