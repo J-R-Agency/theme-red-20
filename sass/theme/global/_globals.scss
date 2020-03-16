@@ -5,8 +5,25 @@
 	}	
 }
 
+@mixin horizontal-center {
+	display: flex;
+	justify-content: center;
+}
+
 .generic {
 	@include global-padding;
+}
+
+.horizontal-center {
+	@include horizontal-center;
+}
+
+.bg-light-grey {
+	background-color: $light-grey;
+}
+
+.bg-red {
+	background-color: $red;
 }
 
 a:hover {
