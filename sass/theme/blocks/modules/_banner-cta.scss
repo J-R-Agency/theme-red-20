@@ -1,0 +1,45 @@
+.banner-cta {
+	background-color: $red;
+	padding: 2rem;
+	color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	@include respond-to('md'){
+		flex-direction: row;
+	}	
+	&.link {
+		justify-content: center;
+		h2 {
+			text-align: center;
+			@include respond-to('md'){
+				text-align: left;
+			}			
+		}
+	}
+	&.social-media {
+		justify-content: center;
+	}
+}
+
+.banner-cta-left {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	@include respond-to('md'){
+		text-align: left;
+	}		
+}
+
+.banner-social-media {
+	filter: invert(1);
+	@include respond-to('md'){
+		margin-left: 20%;
+	}	
+	img {
+		margin: 0.5rem;
+		width: 30px;
+		height: 30px;
+		object-fit: contain;
+	}
+}

@@ -1,0 +1,14 @@
+.btn {
+	
+	&_white-border {
+		margin: 0 2rem;
+		border: 1px solid white;
+		padding: 1rem;
+		text-transform: uppercase;
+		&:hover {
+			text-decoration: none;
+			color: black;
+			border: 1px solid black;
+		}
+	}
+}

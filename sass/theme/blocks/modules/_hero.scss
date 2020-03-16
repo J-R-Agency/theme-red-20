@@ -8,7 +8,7 @@
 }
 .hero-copy {
 	padding: 2rem;
-	background-color: red;
+	background-color: $red;
 	color: white;
 	@include respond-to('md'){
 		position: absolute;
