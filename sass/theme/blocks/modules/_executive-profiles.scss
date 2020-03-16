@@ -51,6 +51,7 @@
 	height: 400px;
 	display: flex;
 	background-size: cover;
+	background-position: center top;
 	@include respond-to('md'){
 		width: 33%;
 	}	
