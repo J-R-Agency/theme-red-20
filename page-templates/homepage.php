@@ -14,8 +14,6 @@ defined( 'ABSPATH' ) || exit;
 get_header(); ?>
 
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner.tpl'); ?>
-<section class="generic" style="background-color: red;">
-	<h1><?php include(get_template_directory() . '/global-templates/template-parts/social-media.php'); ?></h1>
-</section>
+
 
 <?php get_footer(); ?>

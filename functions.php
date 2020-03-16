@@ -80,9 +80,10 @@ function add_social_media_icons ( $items, $args ) {
     return $items;
 }
 
-// Enqueue script
-function myprefix_enqueue_scripts() {
-    wp_enqueue_script( 'my-script', get_template_directory_uri() . '/js/add-social-media-header.js', array(), true );
-}
-add_action( 'wp_enqueue_scripts', 'myprefix_enqueue_scripts' );
-	 
+
+/**
+ * Add custom styles to the mce formats dropdown
+ *
+ * @url https://codex.wordpress.org/TinyMCE_Custom_Styles
+ *
+ */

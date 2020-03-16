@@ -1,12 +1,44 @@
 .hero {
-	height: 250px;
-	width: 100vw;
-	margin: auto;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-	
+
+	@include respond-to('md'){
+		display: flex;
+		position: relative;
+		height:50vw;
+	}	
+}
+.hero-copy {
+	padding: 2rem;
+	background-color: red;
+	color: white;
+	@include respond-to('md'){
+		position: absolute;
+		z-index: 1;
+		padding: 5rem 60% 5rem 5rem;
+		height: 100%;
+		h1 {
+			font-size: 4rem;
+			line-height: 4rem;
+			span {
+				@include _roboto-condensed-bold;
+			}
+		}		
+	}	
+}
+
+.hero-image {
 	@include respond-to('md'){
 		height: 50vw;
-	}		
+		width: 100vw;
+		background-color: red;
+		mask: url(../assets/masks/clippingmask-1.svg);
+		mask-size: cover;
+		mask-position: left;
+		z-index: 2;		
+	}
+	img {
+		object-fit: contain;
+		object-position: right;
+		width: 100%;
+		height: 100%;
+	}
 }
