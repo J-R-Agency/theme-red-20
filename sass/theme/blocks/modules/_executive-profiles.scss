@@ -1,0 +1,74 @@
+.executive-profiles-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	background-color: $light-grey;
+}
+
+.president-profile {
+	flex-grow: 1;
+	width: 100%;
+	color: white;
+	height: 400px;
+	background-position: center;
+	background-color: $light-grey;
+	@include respond-to('md'){
+		width: 50%;
+		clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
+	}		
+}
+
+.president-description {
+	flex-grow: 1;
+	width: 100%;
+	background-color: $light-grey;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2rem;
+	@include respond-to('md'){
+		width: 50%;
+		padding: 5rem;
+	}	
+	.ep-position {
+		color: $red;
+	}
+}
+
+.dog-overlay {
+	background-image: url(../assets/images/dog-watermark-eb.png);
+	background-position: center;
+	@include respond-to('md'){
+		background-position: left;
+	}	
+}
+
+.executive-profile {
+	width: 100%;
+	flex-grow: 1;
+	color: white;
+	padding: 2rem;
+	height: 400px;
+	display: flex;
+	background-size: cover;
+	@include respond-to('md'){
+		width: 33%;
+	}	
+	.ep-description {
+		text-align: center;
+		align-self: flex-end;
+		text-shadow: 2px 2px 2px #000000;
+		margin: 0 auto;
+		p {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.executive-profile:hover {
+	z-index: 0;
+}
+
+.ep-hover {
+	display: flex;
+}
