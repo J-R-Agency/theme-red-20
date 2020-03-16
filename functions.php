@@ -81,9 +81,4 @@ function add_social_media_icons ( $items, $args ) {
 }
 
 
-/**
- * Add custom styles to the mce formats dropdown
- *
- * @url https://codex.wordpress.org/TinyMCE_Custom_Styles
- *
- */
+add_editor_style();
