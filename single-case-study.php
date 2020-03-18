@@ -11,7 +11,7 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
-TEST
+
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner-post.tpl'); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/our-involvement.tpl'); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/photo-gallery.tpl'); ?>
