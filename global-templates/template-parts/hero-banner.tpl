@@ -10,8 +10,14 @@
 					<?php echo $hero['hero_title']; ?>
 				</div>
 				<div class="hero-intro <?php echo $hero['hero_style']?>">
-					<p><?php echo $hero['hero_intro']; ?></p>
+					<?php echo $hero['hero_intro']; ?>
+
 				</div>
+									<?php
+						if (!empty($hero['hero_cta_link'])) {
+							echo "<a class='btn_white-border margin-vertical' href='".$hero['hero_cta_link']['url']."'>".$hero['hero_cta_link']['title']."</a>";
+						}
+					?>
 			</div>
 			<div class="hero-image <?php echo $hero['hero_style']?>">	
 				<img src="<?php echo $thumb; ?>">

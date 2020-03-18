@@ -9,7 +9,7 @@ if( $banner_cta ): ?>
 	?>
 	<div class="banner-cta link">
 		<h2><?php echo $banner_cta['cta_text']; ?></h2>		
-		<a href="<?php echo $banner_cta['cta_link']['url']?>" target="<?php echo $banner_cta['cta_link']['target']?>" class="btn_white-border"><?php echo $banner_cta['cta_link']['title']?></a>
+		<a href="<?php echo $banner_cta['cta_link']['url']?>" target="<?php echo $banner_cta['cta_link']['target']?>" class="btn_white-border margin-horizontal"><?php echo $banner_cta['cta_link']['title']?></a>
 	</div>
 	
 	<!-- Social media -->	

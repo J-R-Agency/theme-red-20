@@ -1,9 +1,13 @@
 .hero {
-	& .primary {
+	&.primary {
 		background-color: $red;
 		color: white;		
 	}
-	& .post {
+	&.secondary {
+		background-color: $dark-grey;
+		color: white;
+	}
+	&.post {
 		background-color: white;
 	}
 	@include respond-to('md'){
@@ -12,6 +16,9 @@
 		height:50vw;
 		&.post {
 			height: 40vw;	
+		}
+		&.secondary {
+			height: 40vw;
 		}
 	}	
 }
@@ -49,19 +56,29 @@
 			}
 		}
 	}	
+}
+
+.hero-intro {
+	margin: 2rem 0 4rem 0;
 }	
 
 .hero-image {
 	@include respond-to('md'){
 		height: 50vw; 
 		width: 100vw;
-		z-index: 2;	
 		&.primary {
 			background-color: $red;
 			mask: url(../assets/masks/clippingmask-1.svg);
 			mask-size: cover;
 			mask-position: left;	
-		}		
+		}
+		&.secondary {
+			height: 40vw;
+			background-color: $dark-grey;
+			mask: url(../assets/masks/clippingmask-1.svg);
+			mask-size: cover;
+			mask-position: left;			
+		}	
 		&.post {
 			height: 40vw;
 			background-color: white;
