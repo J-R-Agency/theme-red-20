@@ -26,6 +26,7 @@
 }
 
 .hero-title {	
+	@include _roboto-condensed-bold;
 	p, h1, span {
 		@include _roboto-condensed-bold;
 		font-size: 4rem;
@@ -36,6 +37,9 @@
 		border-bottom: 2px solid black;
 	}
 	&.post {
+		color: $red;
+		font-size: 3rem;
+		line-height: 3rem;		
 		p, h1, span {
 			color: $red;
 			font-size: 3rem;
