@@ -82,3 +82,17 @@ function add_social_media_icons ( $items, $args ) {
 
 
 add_editor_style();
+
+/*-- Custom template for Case Study --*/
+add_filter( 'single_template', 'case_study_template' );
+function case_study_template($single_template)
+{
+	$category_name = get_term_by( 'slug', 'case-study', 'category' );
+    if (in_category($category_name)) {
+        $file = get_template_directory().'/single-case-study.php';
+        if ( file_exists($file) ) {
+            return $file;
+        }
+    }
+    return $single_template;
+}

@@ -10,6 +10,15 @@
 	justify-content: center;
 }
 
+@mixin no-margins {
+	padding: 0;
+	margin: 0;
+}
+
+.no-margins {
+	@include no-margins;
+}
+
 .generic {
 	@include global-padding;
 }

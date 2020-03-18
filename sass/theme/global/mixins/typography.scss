@@ -33,6 +33,7 @@ a {
 h1 {
 	@include _roboto-condensed-bold;
 	text-transform: uppercase;
+	font-size: 4rem;
 }
 
 h2 {

@@ -1,44 +1,87 @@
 .hero {
-
+	& .primary {
+		background-color: $red;
+		color: white;		
+	}
+	& .post {
+		background-color: white;
+	}
 	@include respond-to('md'){
 		display: flex;
 		position: relative;
 		height:50vw;
+		&.post {
+			height: 40vw;	
+		}
 	}	
 }
 .hero-copy {
 	padding: 2rem;
-	background-color: $red;
-	color: white;
 	@include respond-to('md'){
 		position: absolute;
 		z-index: 1;
 		padding: 5rem 60% 5rem 5rem;
 		height: 100%;
-		h1 {
-			font-size: 4rem;
-			line-height: 4rem;
-			span {
-				@include _roboto-condensed-bold;
-			}
-		}		
-	}	
+	}
 }
+
+.hero-title {	
+	p, h1, span {
+		@include _roboto-condensed-bold;
+		font-size: 4rem;
+		line-height: 4rem;
+		text-transform: uppercase;
+	}
+	&:after {
+		border-bottom: 2px solid black;
+	}
+	&.post {
+		p, h1, span {
+			color: $red;
+			font-size: 3rem;
+			line-height: 3rem;
+			&:after {
+				border: 3px solid black;
+			}
+		}
+	}	
+}	
 
 .hero-image {
 	@include respond-to('md'){
-		height: 50vw;
+		height: 50vw; 
 		width: 100vw;
-		background-color: red;
-		mask: url(../assets/masks/clippingmask-1.svg);
-		mask-size: cover;
-		mask-position: left;
-		z-index: 2;		
+		z-index: 2;	
+		&.primary {
+			background-color: $red;
+			mask: url(../assets/masks/clippingmask-1.svg);
+			mask-size: cover;
+			mask-position: left;	
+		}		
+		&.post {
+			height: 40vw;
+			background-color: white;
+			mask: url(../assets/masks/clippingmask-2.svg);
+			mask-size: cover;
+			mask-position: left;				
+			img {
+				object-fit: cover;
+			}
+		}
 	}
 	img {
 		object-fit: contain;
 		object-position: right;
 		width: 100%;
 		height: 100%;
+	}
+}
+
+.hero-line {
+	display: none;
+	&.post {
+		display: block;
+		border: 3px solid black;
+		margin: 2rem 0;
 	}
 }
