@@ -9,10 +9,13 @@
 	
 		<div class="row blog-posts">
 			<?php
+				$caseStudy = get_category_by_slug('case-study');
+				
 				$wp_query = new WP_Query(array(
 					'post_type'=>'post',
 					'post_status'=>'publish',
 					'posts_per_page'=>3,
+					'category__not_in' => $caseStudy,
 				));															
 			?>
 			<!-- WHILE LOOP -->

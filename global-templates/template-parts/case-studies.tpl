@@ -8,9 +8,7 @@
 		</div>
 	
 		<div class="row blog-posts">
-			<?php
-				$caseStudy = get_cat_ID('case-study');
-				
+			<?php				
 				$wp_query = new WP_Query(array(
 					'post_type'=>'post',
 					'post_status'=>'publish',
