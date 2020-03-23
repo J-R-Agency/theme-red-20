@@ -1,0 +1,55 @@
+.dog-overlay-cs {
+	background-image: url(../assets/images/dog-watermark-cs.png);
+	background-position: center;
+	@include respond-to('md'){
+		background-position: bottom left;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}	
+}
+
+.case-study-card {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	padding: 1.5rem;
+	height: 350px;
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+	margin: 1rem 0;
+	
+	@include respond-to('md'){
+		margin: 0;
+	}	
+		
+	&__img {
+		margin-bottom: 0.5rem;
+		height: 200px;
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+	&__title {
+		margin-bottom: 0rem;
+		word-wrap: break-word;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		max-height: 5em;
+		
+		a {
+			color: black;
+			text-transform: uppercase;
+			@include _roboto-condensed-bold;
+			font-size: 1.5rem;
+			line-height: 1.5rem;			
+		}
+	}
+	
+	&__category a {
+		color: $red;
+		margin: 0;
+	}
+}

@@ -1,11 +1,15 @@
 .hero {
 	&.primary {
 		background-color: $red;
-		color: white;		
+		color: white;
+		display: flex;
+		flex-direction: column-reverse;
 	}
 	&.secondary {
 		background-color: $dark-grey;
 		color: white;
+		display: flex;
+		flex-direction: column-reverse;		
 	}
 	&.post {
 		background-color: white;
@@ -23,7 +27,7 @@
 	}	
 }
 .hero-copy {
-	padding: 2rem;
+	padding: 2rem 2rem 0 2rem;
 	@include respond-to('md'){
 		position: absolute;
 		z-index: 1;
@@ -61,6 +65,10 @@
 .hero-intro {
 	margin: 2rem 0 4rem 0;
 }	
+
+.hero-cta-link {
+	margin-bottom: 2rem;
+}
 
 .hero-image {
 	@include respond-to('md'){

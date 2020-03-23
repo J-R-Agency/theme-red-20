@@ -15,5 +15,7 @@ get_header(); ?>
 
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner.tpl'); ?>
 
+<?php include(get_template_directory() . '/global-templates/template-parts/case-studies.tpl'); ?>
+
 <?php include(get_template_directory() . '/global-templates/template-parts/banner-cta.tpl'); ?>
 <?php get_footer(); ?>
