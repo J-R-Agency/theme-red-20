@@ -16,6 +16,7 @@
 					'category_name'=>'case-study',
 				));															
 			?>
+			
 			<!-- WHILE LOOP -->
 		    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 		    

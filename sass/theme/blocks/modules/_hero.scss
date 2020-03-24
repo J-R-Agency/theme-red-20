@@ -11,6 +11,13 @@
 		display: flex;
 		flex-direction: column-reverse;		
 	}
+	&.tertiary {
+		height: 40vw;
+		background-color: white;
+		color: black;
+		display: flex;
+		flex-direction: column-reverse;		
+	}	
 	&.post {
 		background-color: white;
 	}
@@ -33,6 +40,9 @@
 		z-index: 1;
 		padding: 5rem 60% 5rem 5rem;
 		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 }
 
@@ -86,7 +96,14 @@
 			mask: url(../assets/masks/clippingmask-1.svg);
 			mask-size: cover;
 			mask-position: left;			
-		}	
+		}
+		&.tertiary {
+			height: 40vw;
+			background-color: white;
+			mask: url(../assets/masks/clippingmask-3.svg);
+			mask-size: cover;
+			mask-position: left;			
+		}
 		&.post {
 			height: 40vw;
 			background-color: white;

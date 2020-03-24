@@ -96,3 +96,30 @@ function case_study_template($single_template)
     }
     return $single_template;
 }
+
+// Trim excerpt
+function trim_excerpt($text) {
+	$string = "[...]";
+     $text = str_replace( $string, '...', $text);
+     return $text;
+    }
+add_filter('get_the_excerpt', 'trim_excerpt', 99);
+
+// Remove excerpt "read more" button
+function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+
+	return $post_excerpt;
+}
+
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+
+/**
+ * Replaces the excerpt "more" text by a link
+ */
+if ( ! function_exists( 'dyad_excerpt_continue_reading' ) ) {
+	function dyad_excerpt_continue_reading() {
+		return '<div class="news-card__button"><a href="' . esc_url( get_permalink() ) . '" class="link"><div class="btn_red-border">' . sprintf( esc_html__( 'Read On', 'dyad' ), '<span class="screen-reader-text"> "' . get_the_title() . '"</span>' ) . '</div></a></div>';
+	}
+} // /dyad_excerpt_continue_reading
+
+add_filter( 'excerpt_more', 'dyad_excerpt_continue_reading' );

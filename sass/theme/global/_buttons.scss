@@ -9,12 +9,42 @@
 			border: 1px solid black;
 		}
 	}
+	
+	&_red-border {
+		border: 2px solid $red;
+		padding: 1rem;
+		text-transform: uppercase;
+		color: $red;
+		
+		&:hover {
+			text-decoration: none;
+			color: black;
+			border: 1px solid black;
+		}		
+	}
+	&_black-border {
+		border: 2px solid black;
+		padding: 1rem;
+		text-transform: uppercase;
+		color: black;
+		
+		&:hover {
+			text-decoration: none;
+			color: black;
+			border: 1px solid black;
+		}		
+	}
 }
 
 .link {
 	display: inline-block;
+	width: max-content;
 }
 
 .margin-horizontal {
 	margin: 0 2rem;
+}
+
+.margin-vertical {
+	margin: 2rem 0;
 }

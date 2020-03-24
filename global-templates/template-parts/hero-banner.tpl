@@ -15,7 +15,16 @@
 				<div class="hero-cta-link">
 					<?php
 						if (!empty($hero['hero_cta_link'])) {
-							echo "<a href='".$hero['hero_cta_link']['url']."' target='".$hero['hero_cta_link']['target']."' class='link'><div class='btn_white-border'>".$hero['hero_cta_link']['title']."</div></a>";
+							echo "<a href='".$hero['hero_cta_link']['url']."' target='".$hero['hero_cta_link']['target']."' class='link'>";
+							
+							if ($hero['hero_style']=='tertiary') {
+								echo "<div class='btn_red-border'>";
+							} else {
+								echo "<div class='btn_white-border'>";
+							}
+							echo	$hero['hero_cta_link']['title'];
+							echo	"</div>
+								</a>";
 						}
 					?>					
 				</div>
