@@ -7,6 +7,7 @@
 	flex-direction: column;
 	@include respond-to('md'){
 		flex-direction: row;
+		width: 100%;
 	}	
 	&.link {
 		justify-content: center;
