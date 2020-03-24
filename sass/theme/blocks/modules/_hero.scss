@@ -35,6 +35,11 @@
 }
 .hero-copy {
 	padding: 2rem 2rem 0 2rem;
+	&.primary {
+		@include respond-to('md'){
+			padding: 10rem 60% 5rem 5rem;
+		}
+	}	
 	@include respond-to('md'){
 		position: absolute;
 		z-index: 1;
