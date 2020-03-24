@@ -19,8 +19,12 @@
 	    max-width: 100%;
 	    max-height: 100%;
 	    object-position: center center;
-	    object-fit: cover;
+	    
+	    &.logo {
+		    object-fit: contain;
+	    }
 	    &.other {
+		    object-fit: cover;
 		    max-height: initial;
 	    }
 	    
