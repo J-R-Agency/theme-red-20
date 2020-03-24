@@ -14,6 +14,7 @@ defined( 'ABSPATH' ) || exit;
 get_header(); ?>
 
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner.tpl'); ?>
+<?php get_template_part( 'loop-templates/content', 'flexible' ); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/executive-profiles.tpl'); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/our-news.tpl'); ?>
 
