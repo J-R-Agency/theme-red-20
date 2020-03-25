@@ -17,7 +17,6 @@ if( have_rows('flexible_content_block') ):
     // Loop through rows.
     while ( have_rows('flexible_content_block') ) : the_row();
 
-
           // -------------------------- //
          // -- CASE: TWO COLUMN BLOCK -//
         // -------------------------- //
@@ -44,11 +43,61 @@ if( have_rows('flexible_content_block') ):
 			endif;	
 
           // -------------------------- //
-         // -- CASE: ONE COLUMN BLOCK -//
+         // ---- CASE: BRAND BLOCK ----//
         // -------------------------- //
-       // elseif( get_row_layout() == 'fc_two_column_block' ): 
-
-
+       elseif( get_row_layout() == 'fc_brands_block' ):
+       
+       		$bb_style = get_sub_field('bb_style'); // Style (select)
+       		$bb_text = get_sub_field('bb_text');
+       		$bb_background_image = get_sub_field('bb_background_image');
+       		
+       		if ($bb_style == 'primary'):
+	   			echo "<section class='fc_brands_block primary' style='background-image:url(".$bb_background_image['url'].");'>
+	   					<img src='".get_template_directory_uri()."/assets/images/red-logo-line.png' id='red-logo-line'>
+	   			";
+	   				if( have_rows('businesses', 'option') ):
+						echo "
+							<div class='business-logos'>
+								<ul class='business-logos-list-full'>
+							";
+						
+							while( have_rows('businesses', 'option') ): the_row();
+								$business_logo = get_sub_field('business_logo', 'option'); // Image
+								$business_website = get_sub_field('business_website', 'option'); // Website link
+								
+								echo "
+								    <li>
+								    	<a href='".$business_website['url']."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+								    </li>";
+							
+							endwhile;
+						echo "</ul></div>";
+					endif;	   				
+	   			echo "</section>";	
+	   		elseif($bb_style == 'secondary'):
+	   			echo "<section class='fc_brands_block secondary');'>
+	   				<p>".$bb_text."</p>
+	   			";
+	   				if( have_rows('businesses', 'option') ):
+						echo "
+							<div class='business-logos'>
+								<ul class='business-logos-list-full'>
+							";
+						
+							while( have_rows('businesses', 'option') ): the_row();
+								$business_logo = get_sub_field('business_logo', 'option'); // Image
+								$business_website = get_sub_field('business_website', 'option'); // Website link
+								
+								echo "
+								    <li>
+								    	<a href='".$business_website['url']."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+								    </li>";
+							
+							endwhile;
+						echo "</ul></div>";
+					endif;	   				
+	   			echo "</section>";		
+	   		endif;
 		    
         endif;        
 

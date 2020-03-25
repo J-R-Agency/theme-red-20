@@ -96,3 +96,49 @@
 		}
 	}
 }
+
+.business-logos-list-full {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	padding: 0;
+	margin: 0 auto;
+	
+	li {
+		display: flex;
+		margin: 0 1rem;
+		list-style: none;		
+		img {
+			width: 150px;
+			height: 150px;
+			object-fit: contain;
+		}
+	}
+}
+
+.fc_brands_block {
+	padding: 2rem 0;
+	&.primary {
+		background-color: #383838;
+		background-blend-mode: overlay;
+		background-position: bottom;
+	}
+	&.secondary {
+		background-color: $dark-grey;
+		color: white;
+		text-align: center;
+	}
+}
+
+#red-logo-line {
+	width: 83%;
+	display: flex;
+	margin-left: 10%;
+}
+
+#red-logo-white {
+	width: 200px;
+	margin-left: 44%;
+	display: flex;
+	padding: 1rem;
+}
