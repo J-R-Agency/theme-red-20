@@ -45,7 +45,7 @@ if( have_rows('flexible_content_block') ):
           // -------------------------- //
          // ---- CASE: BRAND BLOCK ----//
         // -------------------------- //
-       elseif( get_row_layout() == 'fc_brands_block' ):
+		elseif( get_row_layout() == 'fc_brands_block' ):
        
        		$bb_style = get_sub_field('bb_style'); // Style (select)
        		$bb_text = get_sub_field('bb_text');
@@ -98,8 +98,31 @@ if( have_rows('flexible_content_block') ):
 					endif;	   				
 	   			echo "</section>";		
 	   		endif;
+
+          // -------------------------- //
+         // --- CASE: FULL-WIDTH CTA --//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_cta' ):
+       		$cta_text = get_sub_field('cta_text');
+       		$cta_background_image = get_sub_field('cta_background_image');
+       		$cta_link = get_sub_field('cta_link');
+       		
+       		echo "
+			<div class='flex-column-2'>
+				<div class='tcb_cta secondary' style='background-image:url(".$cta_background_image['url'].");'>
+					<h2 class='cta_text_full'>".$cta_text."</h2>
+					<div class='tcb_cta_link'>
+						<a href='".$cta_link['url']."' target='".$cta_link['target']."' class='link margin-vertical'><div class='btn_white-border'>".$cta_link['title']."</div></a>
+					</div>
+				</div>
+			</div>       		
+       		
+       		";
+       		
+       		
+       		
 		    
-        endif;        
+        endif; // Last endif            
 
     // End loop.
     endwhile;
