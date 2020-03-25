@@ -57,6 +57,7 @@ elseif( get_row_layout() == 'tcb_brands' ):
 			<p><strong>Our Brands:</strong></p>";
 			if( have_rows('businesses', 'option') ):
 				
+				
 				echo "
 					<div class='business-logos'>
 						<ul class='business-logos-list'>
@@ -68,7 +69,7 @@ elseif( get_row_layout() == 'tcb_brands' ):
 						
 						echo "
 						    <li>
-						    	<a href='".$business_website['url']."' target='".$business_website['target']."'><img src='".$business_logo['url']."'></a>
+						    	<a href='".$business_website['url']."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_color']['url']."' alt='".$business_logo['business_logo_color']['alt']."'></a>
 						    </li>";
 					
 					endwhile;
