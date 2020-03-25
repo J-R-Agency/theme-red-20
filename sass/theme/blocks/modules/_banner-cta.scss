@@ -1,13 +1,14 @@
 .banner-cta {
 	background-color: $red;
-	padding: 2rem;
+	padding: 1rem;
 	color: white;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	width: 100%;
 	@include respond-to('md'){
 		flex-direction: row;
-		width: 100%;
+		padding: 2rem;
 	}	
 	&.link {
 		justify-content: center;
