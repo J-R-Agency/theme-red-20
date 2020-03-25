@@ -18,5 +18,6 @@ get_header(); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/executive-profiles.tpl'); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/our-news.tpl'); ?>
 
+
 <?php include(get_template_directory() . '/global-templates/template-parts/banner-cta.tpl'); ?>
 <?php get_footer(); ?>

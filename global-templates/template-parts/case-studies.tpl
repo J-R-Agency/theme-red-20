@@ -24,7 +24,7 @@
 		
 			<?php endwhile; ?>
 										    
-			<?php wp_reset_postdata(); ?>
+			<?php wp_reset_query(); ?>
 		</div>
 	</div>
 </section>

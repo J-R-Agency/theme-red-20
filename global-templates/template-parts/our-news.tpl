@@ -15,17 +15,20 @@
 					'post_type'=>'post',
 					'post_status'=>'publish',
 					'posts_per_page'=>3,
-					'category__not_in' => $caseStudy,
+					'category__not_in' => $caseStudy
 				));															
-			?>
-			<!-- WHILE LOOP -->
-		    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
+			
+			// The Loop
+			if ( $wp_query->have_posts() ):
+				while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 		    
 				<?php include (get_template_directory() . '/global-templates/cards/news-card.tpl'); ?>
 		
-			<?php endwhile; ?>
+			<?php
+				endwhile;
+			endif; ?>
 										    
-			<?php wp_reset_postdata(); ?>
+			<?php wp_reset_query(); ?>
 		</div>
 	</div>
 </section>
