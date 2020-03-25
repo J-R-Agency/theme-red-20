@@ -30,7 +30,7 @@ a {
 	@include _montserrat-semibold;
 }
 
-h1 {
+h1, h1 > p, h1 > p > span {
 	@include _roboto-condensed-bold;
 	text-transform: uppercase;
 	font-size: 4rem;

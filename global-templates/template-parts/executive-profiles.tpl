@@ -1,10 +1,16 @@
-
 <?php
 
 // check if the repeater field has rows of data
 if( have_rows('executive_profile') ):
 	$count = 0;?>
 <section class="executive-profiles-wrapper">
+	
+<section class="generic bg-white">
+	<div class="executive-profiles-intro">
+		<h1><?php the_field('ep_headline');?></h1>
+		<p><?php the_field('ep_intro');?></p>
+	</div>
+</section>
 
 <?php
  	// loop through the rows of data
