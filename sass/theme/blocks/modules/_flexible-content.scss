@@ -108,15 +108,19 @@
 	flex-wrap: wrap;
 	padding: 0;
 	margin: 0 auto;
-	
+	justify-content: center;
 	li {
 		display: flex;
 		margin: 0 1rem;
 		list-style: none;		
 		img {
-			width: 150px;
-			height: 150px;
+			width: 100px;
+			height: 100px;
 			object-fit: contain;
+			@include respond-to('md'){
+				width: 150px;
+				height: 150px;
+			}					
 		}
 	}
 }
@@ -136,9 +140,12 @@
 }
 
 #red-logo-line {
-	width: 83%;
-	display: flex;
-	margin-left: 10%;
+	display: none;
+	@include respond-to('md'){
+		width: 83%;
+		display: flex;
+		margin-left: 10%;
+	}	
 }
 
 #red-logo-white {
