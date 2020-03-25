@@ -43,6 +43,7 @@
 	&__img {
 		margin-bottom: 0.5rem;
 		height: 200px;
+		width: 290px;
 		img {
 			height: 100%;
 			width: 86%;
@@ -68,11 +69,10 @@
 		}
 	}
 	&__title {
-		margin-bottom: 2rem;
-		word-wrap: break-word;
-		text-overflow: ellipsis;
+		display: flex;
 		overflow: hidden;
-		max-height: 5em;
+		max-height: 4.5em;
+		margin-bottom: 2rem;
 		
 		a {
 			color: black;
