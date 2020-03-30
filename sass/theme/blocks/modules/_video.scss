@@ -1,5 +1,9 @@
 .embed-container {
 	iframe {
-		width: 100%;
+		width: 99%;
+		height: 300px;
+		@include respond-to('md'){
+			height: 449px;
+		}		
 	}
 }
