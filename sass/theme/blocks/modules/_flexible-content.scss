@@ -6,7 +6,7 @@
 	}	
 }
 
-.flex-row:nth-child(even) {
+.flex-row .contact:nth-child(even) {
 	flex-direction:row-reverse !important;
 }
 

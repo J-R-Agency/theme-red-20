@@ -7,7 +7,7 @@
 		    	$business_locations = get_sub_field('business_locations', 'option');
 		    	$business_website = get_sub_field('business_website', 'option');
 		    ?>
-		    <div class="flex-row">
+		    <div class="flex-row contact">
 				<div class='flex-column-2'>
 					<div class='tcb_cta primary' style='background-image:url(<?php echo $business_logo['business_logo_background_image']['url']; ?>);'>
 		        		<img src='<?php echo $business_logo['business_logo_color']['url']; ?>' class='logo'>
