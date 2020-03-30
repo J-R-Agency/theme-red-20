@@ -2,19 +2,22 @@
 	display:flex;
 	flex-wrap: wrap;
 	@include respond-to('md'){
-		height: 500px;
+		min-height: 500px;
 	}	
+}
+
+.flex-row:nth-child(even) {
+	flex-direction:row-reverse !important;
 }
 
 .flex-column-2 {
 	display: flex;
 	flex: 100%;
 	flex-grow: 1;
-	height: auto;
-	justify-content: center;
+	min-height: auto;
 	@include respond-to('md'){
 		flex: 50%;
-		height: 500px;
+		min-height: 500px;
 	}	
 	img {
 	    max-width: 100%;
@@ -123,6 +126,27 @@
 			}					
 		}
 	}
+}
+
+.business-info {
+	padding: 5rem 2rem;
+	justify-content: left;
+	flex: 1;
+	.business-name {
+		padding-bottom: 1rem;
+		border-bottom: 8px solid black;
+		display: inline-block;
+	}
+	a {
+		color: $red;
+		text-transform: uppercase;
+		span {
+			font-size: 2rem;
+			font-family:monospace;		
+			padding-left: 0.5rem;	
+		}
+	}
+
 }
 
 .fc_brands_block {

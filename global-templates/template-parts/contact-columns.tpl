@@ -1,22 +1,54 @@
 <section>
-	<div class='flex-row'>
 		<?php if( have_rows('businesses', 'option') ): ?>
-		
-		    <div class='flex-column-2'>
 		
 		    <?php while( have_rows('businesses', 'option') ): the_row();
 		    	$business_logo = get_sub_field('business_logo', 'option'); // Image
+		    	$business_name = get_sub_field('business_name', 'option'); // Text
+		    	$business_locations = get_sub_field('business_locations', 'option');
+		    	$business_website = get_sub_field('business_website', 'option');
 		    ?>
-		
-		        <img src='<?php echo $business_logo['business_logo_color']['url']; ?>' class='logo'>
-		
-		    <?php endwhile; ?>
-		
-		    </div>
-		
+		    <div class="flex-row">
+				<div class='flex-column-2'>
+					<div class='tcb_cta primary' style='background-image:url(<?php echo $business_logo['business_logo_background_image']['url']; ?>);'>
+		        		<img src='<?php echo $business_logo['business_logo_color']['url']; ?>' class='logo'>
+					</div>		
+		    	</div>
+				<div class='flex-column-2'>
+					<div class='business-info'>
+						<div class="container">
+							<div class="row">
+								<div class="col-12">
+									<h2 class='business-name'><?php echo $business_name; ?></h2>
+								</div>
+							</div>
+							<div class="row">
+
+								<?php if( have_rows('business_locations', 'option') ): ?>
+									<?php while( have_rows('business_locations', 'option') ): the_row();
+										$location_address = get_sub_field('location_address', 'option');
+										$email = get_sub_field('email', 'option');
+									?>
+									<div class="col-12 col-md-6">
+										<div class="business-location">											
+											<p><?php echo $location_address; ?></p>
+											<p><?php echo $email; ?></p>
+										</div>
+									</div>		
+																			
+									<?php endwhile; ?>
+								<?php endif; ?>
+							</div>
+								<div class="row">
+									<div class="col-12">
+										<a href="<?php echo $business_website['url']; ?>">Website <span>&rarr;</span></a>
+									</div>
+								</div>						
+						</div>
+						
+					</div>
+				</div>	
+		    </div>	    
+			<?php endwhile; ?>
 		<?php endif; ?>
-		<div class='flex-column-2'>
-			
-		</div>
-	</div>
+
 </section>
