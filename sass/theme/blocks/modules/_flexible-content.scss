@@ -36,6 +36,14 @@
 	}
 }
 
+.flex-column-5 {
+	flex: auto;
+	width: 100%;
+	@include respond-to('md'){
+		flex: 0 0 20%;
+	}	
+}
+
 .tcb_cta {
 	display:flex;
 	flex-direction: column;

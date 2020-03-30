@@ -10,7 +10,7 @@
 	margin: 1rem 0;
 	
 	@include respond-to('md'){
-		margin: 0;
+		margin-bottom: 1rem;
 	}
 	&__first {
 		display: flex;
