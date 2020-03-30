@@ -1,9 +1,23 @@
+<?php
+/**
+ * Template Name: News Archive Template
+ *
+ * Template for displaying a page just with the header and footer area and a "naked" content area in between.
+ * Good for landingpages and other types of pages where you want to add a lot of custom markup.
+ *
+ * @package understrap
+ */
 
-<section class="generic bg-light-grey dog-overlay-cs">
+// Exit if accessed directly.
+defined( 'ABSPATH' ) || exit;
+
+get_header(); ?>
+
+<section class="generic bg-white">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 horizontal-center">
-				<h1>Latest News</h1>
+				<h1>News Archive</h1>
 			</div>
 		</div>
 	
@@ -16,13 +30,12 @@
 					'post_status'=>'publish',
 					'posts_per_page'=>7,
 					'category__not_in' => $caseStudy,
+					'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
 				));															
 			?>
 			<!-- WHILE LOOP -->
 		    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
-		    	<?php if( $wp_query->current_post == 0 && !is_paged() ) : ?>
 		    	
-					<!-- BLOG CARD (FIRST) -->
 					<div class="col-12">
 							<div class="news-card__first">
 								
@@ -58,19 +71,13 @@
 					    	</div><!-- end blog card -->
 					  
 					</div><!-- end col -->
-		    		
-		    	<?php else : ?>
-					<?php include (get_template_directory() . '/global-templates/cards/news-card.tpl'); ?>
-				<?php endif; ?>
-		
 			<?php endwhile; ?>
 										    
 			<?php wp_reset_postdata(); ?>
+			
 		</div>
-		<div class="row">
-			<div class="col-12">
-				<a href="<?php echo esc_url( home_url( '/news-archive' ) ); ?>" class="link" style="float:right;"><div class="btn_black-border">More News</div></a>
-			</div>		
-		</div>
-	</div>
+		<?php understrap_pagination(); ?>
+	</div>					
 </section>
+
+<?php get_footer(); ?>
