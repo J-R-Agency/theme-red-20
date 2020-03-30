@@ -40,7 +40,7 @@
 							</div>
 								<div class="row">
 									<div class="col-12">
-										<a href="<?php echo $business_website['url']; ?>">Website <span>&rarr;</span></a>
+										<a href="<?php echo $business_website['url']; ?>" target="<?php echo $business_website['target']; ?>">Website <span>&rarr;</span></a>
 									</div>
 								</div>						
 						</div>
