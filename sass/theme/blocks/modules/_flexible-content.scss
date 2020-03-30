@@ -4,11 +4,12 @@
 	@include respond-to('md'){
 		min-height: 500px;
 	}	
+	&.contact:nth-child(even) {
+		flex-direction:row-reverse !important;
+	}	
 }
 
-.flex-row .contact:nth-child(even) {
-	flex-direction:row-reverse !important;
-}
+
 
 .flex-column-2 {
 	display: flex;
@@ -28,6 +29,7 @@
 		    object-fit: contain;
 		    padding: 5rem;
 		    max-height: 500px;
+		    margin: 0 auto;
 	    }
 	    &.other {
 		    object-fit: cover;
