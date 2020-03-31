@@ -53,9 +53,8 @@ get_header(); ?>
 		<?php endif; ?>
 		</div>
 		
-	</div>	
-
+	</div>
+	
 </section>
-<?php include(get_template_directory() . '/global-templates/template-parts/current-vacancies.tpl'); ?>
 
 <?php get_footer(); ?>

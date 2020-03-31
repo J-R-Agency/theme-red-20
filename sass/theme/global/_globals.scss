@@ -6,8 +6,8 @@
 }
 
 @mixin horizontal-center {
-	display: flex;
-	justify-content: center;
+	text-align: center;
+	margin: 0 auto;
 }
 
 @mixin no-margins {
@@ -30,6 +30,11 @@
 
 .bg-light-grey {
 	background-color: $light-grey;
+}
+
+.bg-dark-grey {
+	background-color: $dark-grey;
+	color: white;
 }
 
 .bg-red {

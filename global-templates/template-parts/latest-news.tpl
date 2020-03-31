@@ -10,12 +10,15 @@
 		<div class="row blog-posts">
 			<?php
 				$caseStudy = get_category_by_slug('case-study');
+				$caseStudyID = $caseStudy->term_id;
+				$job = get_category_by_slug('job');
+				$jobID = $job->term_id;			
 				
 				$wp_query = new WP_Query(array(
 					'post_type'=>'post',
 					'post_status'=>'publish',
 					'posts_per_page'=>7,
-					'category__not_in' => $caseStudy,
+					'category__not_in' => array($caseStudyID, $jobID),
 				));															
 			?>
 			<!-- WHILE LOOP -->

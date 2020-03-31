@@ -10,6 +10,7 @@
 		<div class="row blog-posts">
 			<?php
 				$caseStudy = get_category_by_slug('case-study');
+				$job = get_category_by_slug('job');
 				
 				$wp_query = new WP_Query(array(
 					'post_type'=>'post',
