@@ -19,6 +19,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 ?>
 
+<?php
+	$page = get_ID_by_slug('careers');
+	
+if ($page == $post->post_parent) {
+    include (TEMPLATEPATH . '/page-templates/vacancy.php'); // Name this for your child page template name
+    exit();
+} else {
+    // Do something else
+    // You might want to stick your regular page.php code in here, or alternatively, you could call another template
+}; ?>
+
 <div class="wrapper" id="page-wrapper">
 
 	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">

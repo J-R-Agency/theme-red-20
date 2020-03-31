@@ -139,3 +139,13 @@ add_action( 'init', 'add_taxonomies_to_pages' );
 
 // Add excerpts to pages
 add_post_type_support( 'page', 'excerpt' );
+
+// Get page ID
+function get_ID_by_slug($page_slug) {
+    $page = get_page_by_path($page_slug);
+    if ($page) {
+        return $page->ID;
+    } else {
+        return null;
+    }
+}
