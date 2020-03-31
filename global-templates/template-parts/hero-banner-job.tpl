@@ -1,22 +1,31 @@
 <!-- Hero image -->
-<?php if ( has_post_thumbnail() ): ?>
-	<?php $thumb = get_the_post_thumbnail_url(); ?>
-	<?php
-		$hero = get_field('hero');
-	if( $hero ): ?>
-		<div class="hero post">
-			<div class="hero-copy post">
-				<div class="hero-title post">
-					<?php echo the_title(); ?>
-				</div>
-				<hr class="hero-line post" width=50%>
-				<div class="hero-intro post">
-					<p><?php echo $hero['hero_intro']; ?></p>
-				</div>
+	<div class="hero job">
+		<div class="hero-copy job">
+			<div class="hero-title job">
+				<h1><?php echo the_title(); ?></h1>
 			</div>
-			<div class="hero-image post">	
-				<img src="<?php echo $thumb; ?>">
-			</div>	
+			<hr class="hero-line job" width=50%>
+			<div class="hero-intro job">
+				<p>
+					<strong>
+						<?php
+						$categories = get_the_category();
+						echo esc_html( $categories[0]->name );
+						$san_cat = sanitize_title( $categories[0]->name );  
+						?>
+					</strong>	
+				</p>
+				<p><?php echo the_excerpt(); ?></p>
+			</div>
 		</div>
-	<?php endif ?>
-<?php endif ?>
+		<div class="hero-image job">
+			<div class="vacancy-logo-wrapper">	
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-color.png">
+				<a class="link job-hero-btn" href="#">
+				<div class="btn_black-border">
+					Read About <?php echo esc_html( $categories[0]->name ); ?>
+				</div>
+			</a>
+			</div>
+		</div>	
+	</div>

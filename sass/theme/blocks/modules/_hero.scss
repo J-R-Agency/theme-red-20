@@ -21,7 +21,14 @@
 	&.post {
 		background-color: white;
 	}
-	@include respond-to('md'){
+	
+	&.job {
+		display: flex;
+		background-color: $red;
+		color: white;
+		flex-direction: column-reverse;
+	}
+	@include respond-to('lg'){
 		display: flex;
 		position: relative;
 		height:50vw;
@@ -31,18 +38,20 @@
 		&.secondary {
 			height: 40vw;
 		}
+		&.job {
+			height: 40vw;
+		}
 	}	
 }
 .hero-copy {
 	padding: 2rem 2rem 0 2rem;
 	&.primary {
-		@include respond-to('md'){
+		@include respond-to('lg'){
 			padding: 10rem 60% 5rem 5rem;
 		}
 	}	
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		position: absolute;
-		z-index: 1;
 		padding: 5rem 60% 5rem 5rem;
 		height: 100%;
 		display: flex;
@@ -55,9 +64,14 @@
 	@include _roboto-condensed-bold;
 	p, h1, span {
 		@include _roboto-condensed-bold;
-		font-size: 4rem;
-		line-height: 4rem;
+		font-size: 3rem;
+		line-height: 3rem;
 		text-transform: uppercase;
+		@include respond-to('lg'){
+			font-size: 4rem;
+			line-height: 4rem;	
+		}		
+		
 	}
 	&:after {
 		border-bottom: 2px solid black;
@@ -79,6 +93,9 @@
 
 .hero-intro {
 	margin: 2rem 0 4rem 0;
+	&.job p {
+		margin: 0;
+	}
 }	
 
 .hero-cta-link {
@@ -86,7 +103,13 @@
 }
 
 .hero-image {
-	@include respond-to('md'){
+	&.job {
+		background-color: white;
+		img {
+			object-position: center;
+		}
+	}
+	@include respond-to('lg'){
 		height: 50vw; 
 		width: 100vw;
 		&.primary {
@@ -119,13 +142,44 @@
 				object-fit: cover;
 			}
 		}
+		&.job {
+			height: 40vw;
+			background-color: white;
+			mask: url(../assets/masks/clippingmask-4.svg);
+			mask-size: cover;
+			mask-position: left;								
+		}
 	}
 	img {
 		object-fit: contain;
 		object-position: right;
 		width: 100%;
 		height: 100%;
+
 	}
+}
+
+.vacancy-logo-wrapper {
+	padding: 2rem;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+		
+	@include respond-to('lg'){
+		margin-top: 12%;
+		width: 50%;
+		height: 50%;	
+		float: right;	
+	}
+
+
+}
+
+.job-hero-btn {
+	margin-top: 1rem;
 }
 
 .hero-line {
