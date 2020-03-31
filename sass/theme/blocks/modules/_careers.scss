@@ -3,6 +3,10 @@
 	border-bottom: 1px solid white;
 }
 
+.vacancy-container:last-of-type {
+	border-bottom: 0;
+}
+
 .vacancy-description {
 	text-align: left;
 }
