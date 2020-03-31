@@ -5,42 +5,46 @@
 	
 	
 		<?php				
-			$wp_query = new WP_Query(array(
-				'post_type'=>'post',
+			$args = array(
+				'post_type'=>'page',
+				'post_parent'=> $post->ID,
 				'post_status'=>'publish',
 				'posts_per_page'=> -1,
-				'category_name'=>'job',
-			));															
+			);
+			
+			$parent = new WP_Query( $args );
+			
+			if ( $parent->have_posts() ) : 													
 		?>
 		
-		<!-- WHILE LOOP -->
-	    <?php while ( $wp_query->have_posts() ) : $wp_query->the_post();
-	    		$categories = get_the_category();
- 
-				if ( ! empty( $categories )) {
-				    $san_cat = sanitize_title( $categories[1]->name );  
-				}
-	    	?>
-		        
-			    <div class="vacancy-container">
-					<div class="container">
-						<div class="row">
-							<div class="col-12 col-md-3">
-								<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-white.png" class="vacancy-logo">
-							</div>
-							<div class="col-12 col-md-9">
-								<div class="vacancy-description">
-									<h2><?php echo the_title(); ?></h2>
-									<p><?php echo the_excerpt(); ?>
-									<a href="<?php echo the_permalink(); ?>">FIND OUT MORE</a>
+			<!-- WHILE LOOP -->
+		    <?php while ( $parent->have_posts() ) : $parent->the_post();
+		    		$categories = get_the_category();
+	 
+					if ( ! empty( $categories )) {
+					    $san_cat = sanitize_title( $categories[0]->name );  
+					}
+		    	?>
+			        
+				    <div class="vacancy-container">
+						<div class="container">
+							<div class="row">
+								<div class="col-12 col-md-3">
+									<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-white.png" class="vacancy-logo">
+								</div>
+								<div class="col-12 col-md-9">
+									<div class="vacancy-description">
+										<h2><?php echo the_title(); ?></h2>
+										<p><?php echo the_excerpt(); ?>
+										<a href="<?php echo the_permalink(); ?>">FIND OUT MORE</a>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>	
-				</div>
-				
-		<?php endwhile; ?>
-									    
+						</div>	
+					</div>
+					
+			<?php endwhile; ?>
+		<?php endif; ?>						    
 		<?php wp_reset_query(); ?>		
 	
 </section>
