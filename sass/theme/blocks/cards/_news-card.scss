@@ -1,6 +1,4 @@
 .news-card {
-	display: flex;
-	flex-direction: column;
 	background-color: white;
 	padding: 1.5rem;
 	height: 400px;
@@ -8,6 +6,7 @@
 	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
 	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
 	margin: 1rem 0;
+	overflow: hidden;
 	
 	@include respond-to('md'){
 		margin-bottom: 1rem;
@@ -28,52 +27,53 @@
 	&__left {
 		flex-basis: 100%;
 		flex-grow: 1;
+		height: 200px;
+		
 		@include respond-to('md'){
 			flex-basis: 50%;
+			height:100%;
 		}		
 	}
 	&__right {
 		flex-basis: 100%;
 		flex-grow: 1;
+		overflow: hidden;
+		height: 100%;
 		@include respond-to('md'){
 			flex-basis: 50%;
 		}	
 	}
 		
-	&__img {
-		margin-bottom: 0.5rem;
-		height: 200px;
-		width: 290px;
-		img {
-			height: 100%;
-			width: 86%;
-			object-fit: cover;
-			@include respond-to('md'){
-				width: 100%;
-			}			
-		}
+
+	img {
+		height: 50%;
+		width: 100%;
+		object-fit: cover;			
 	}
+	
 	&__img-large {
 		margin: 0;
+		overflow: hidden;
 		height: 100%;
+		
 		@include respond-to('md'){
 			margin: 0rem 1rem 1rem 0;
+			height: 100%;
 		}		
 		img {
-			height: 95%;
 			width: 100%;
-			object-fit: cover;
-			@include respond-to('md'){
-				height: 90%;
-			}			
+			height: 100%;
+			object-fit: cover;			
 		}
 	}
 	&__title {
 		display: flex;
 		overflow: hidden;
 		max-height: 4.5em;
-		margin-bottom: 2rem;
-		
+		margin: 1rem 0 2rem 0;
+		@include respond-to('md'){
+			margin: 0 0 2rem 0;
+		}						
 		a {
 			color: black;
 			text-transform: uppercase;

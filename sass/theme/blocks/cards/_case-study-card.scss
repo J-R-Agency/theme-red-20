@@ -9,8 +9,6 @@
 }
 
 .case-study-card {
-	display: flex;
-	flex-direction: column;
 	background-color: white;
 	padding: 1.5rem;
 	height: 350px;
@@ -18,25 +16,24 @@
 	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
 	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
 	margin: 1rem 0;
+	overflow: hidden;
 	
 	@include respond-to('md'){
 		margin: 0;
 	}	
 		
-	&__img {
-		margin-bottom: 0.5rem;
-		height: 200px;
-		width: 290px;
-		img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-		}
+
+	img {
+		height: 60%;
+		width: 100%;
+		object-fit: cover;				
 	}
+	
 	&__title {
 		display: flex;
 		overflow: hidden;
 		max-height: 4.5em;
+		margin: 1rem 0;
 		
 		a {
 			color: black;

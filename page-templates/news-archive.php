@@ -28,7 +28,7 @@ get_header(); ?>
 				$wp_query = new WP_Query(array(
 					'post_type'=>'post',
 					'post_status'=>'publish',
-					'posts_per_page'=>7,
+					'posts_per_page'=>5,
 					'category__not_in' => $caseStudy,
 					'paged' => ( get_query_var('paged') ? get_query_var('paged') : 0)
 				));															
@@ -74,9 +74,16 @@ get_header(); ?>
 			<?php endwhile; ?>
 										    
 			<?php wp_reset_postdata(); ?>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 horizontal-center">
+						<?php understrap_pagination(); ?>
+					</div>
+				</div>
+			</div>
 			
 		</div>
-		<?php understrap_pagination(); ?>
+		
 	</div>					
 </section>
 

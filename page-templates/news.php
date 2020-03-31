@@ -13,7 +13,6 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 
-
 <?php include(get_template_directory() . '/global-templates/template-parts/latest-news.tpl'); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/videos.tpl'); ?>
 

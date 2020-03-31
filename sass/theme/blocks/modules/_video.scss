@@ -1,4 +1,8 @@
+.video-container {
+	text-align: center;
+}
 .embed-container {
+	margin: 1rem;
 	iframe {
 		width: 99%;
 		height: 300px;
@@ -6,4 +10,11 @@
 			height: 449px;
 		}		
 	}
+}
+
+.video-title {
+	color: $red;
+	font-weight: bold;
+}
+.video-description {
 }
