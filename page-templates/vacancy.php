@@ -14,6 +14,44 @@ defined( 'ABSPATH' ) || exit;
 get_header(); ?>
 
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner-job.tpl'); ?>
-<?php the_content(); ?>
+<section class="generic bg-white dog-overlay-vacancy">
+	
+	<!-- Post Content -->
+	<div class="post-content">
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
+				<?php the_content(); ?>
+			<?php endwhile; ?>
+		<?php endif; ?>
+	</div>
+	
+	<!-- Benefits -->
+	<div class="checklist-container horizontal-center">
+		<h2><?php echo the_field('checklist_title'); ?></h2>
+		<?php if( have_rows('checklist_items') ): ?>
+		
+			<ul class="checklist">
+		
+			<?php while( have_rows('checklist_items') ): the_row(); 
+		
+				// vars
+				$checklist_item = get_sub_field('checklist_item');
+		
+				?>
+		
+				<li class="checklist-item">
+	
+				    <p><strong><?php echo $checklist_item; ?></strong></p>
+		
+				</li>
+		
+			<?php endwhile; ?>
+		
+			</ul>
+		
+		<?php endif; ?>		
+		Form coming soon
+	</div>
+	
+</section>
 
 <?php get_footer(); ?>

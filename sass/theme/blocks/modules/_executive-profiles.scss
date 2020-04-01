@@ -41,14 +41,6 @@
 	}
 }
 
-.dog-overlay-ep {
-	background-image: url(../assets/images/dog-watermark-eb.png);
-	background-position: center;
-	@include respond-to('md'){
-		background-position: left;
-	}	
-}
-
 .executive-profile {
 	width: 100%;
 	flex-grow: 1;

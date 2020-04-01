@@ -8,6 +8,7 @@
 @import "global/globals"; 
 @import "global/buttons"; 
 @import "global/archive"; 
+@import "global/overlays"; 
 
 // Header
 @import "blocks/header/navbar";
@@ -16,6 +17,7 @@
 @import "blocks/footer/footer";
 
 // Modules
+@import "blocks/modules/post";
 @import "blocks/modules/flexible-content";
 @import "blocks/modules/content-block";
 @import "blocks/modules/icon-set";
@@ -27,6 +29,7 @@
 @import "blocks/modules/careers";
 @import "blocks/modules/video";
 @import "blocks/modules/charity";
+@import "blocks/modules/checklist";
 
 // Cards
 @import "blocks/cards/news-card";

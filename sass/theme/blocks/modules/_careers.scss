@@ -38,12 +38,3 @@
 	text-align: center;
 	margin: 0 auto;
 }
-.dog-overlay-careers {
-	background-image: url(../assets/images/dog-watermark-careers.png);
-	background-position: center;
-	@include respond-to('md'){
-		background-position: bottom left;
-		background-size: contain;
-		background-repeat: no-repeat;
-	}	
-}

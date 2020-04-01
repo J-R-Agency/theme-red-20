@@ -1,0 +1,37 @@
+.dog-overlay-cs {
+	background-image: url(../assets/images/dog-watermark-cs.png);
+	background-position: center;
+	@include respond-to('md'){
+		background-position: bottom left;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}	
+}
+
+.dog-overlay-vacancy {
+	background-image: url(../assets/images/dog-watermark-vacancy.png);
+	background-position: center;
+	@include respond-to('md'){
+		background-position: bottom left;
+		background-size: 50%;
+		background-repeat: no-repeat;
+	}	
+}
+
+.dog-overlay-ep {
+	background-image: url(../assets/images/dog-watermark-eb.png);
+	background-position: center;
+	@include respond-to('md'){
+		background-position: left;
+	}	
+}
+
+.dog-overlay-careers {
+	background-image: url(../assets/images/dog-watermark-careers.png);
+	background-position: center;
+	@include respond-to('md'){
+		background-position: bottom left;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}	
+}
