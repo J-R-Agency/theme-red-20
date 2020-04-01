@@ -19,20 +19,26 @@
 .video-description {
 }
 
-    .fc-embed-container { 
-        position: relative; 
-        padding-bottom: 56.25%;
-        overflow: hidden;
-        max-width: 100%;
-        height: auto;
-    } 
+.vp-center {
+	div {
+		height: inherit !important;
+	}
+}
 
-    .fc-embed-container iframe,
-    .fc-embed-container object,
-    .fc-embed-container embed { 
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+.fc-embed-container { 
+    position: relative; 
+    padding-bottom: 36%;
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+} 
+
+.fc-embed-container iframe,
+.fc-embed-container object,
+.fc-embed-container embed { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
