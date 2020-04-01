@@ -13,7 +13,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 <div class="post-hero-image">
-	<?php echo get_the_post_thumbnail( $post->ID, 'large' ); ?>
+	<?php echo get_the_post_thumbnail(); ?>
 </div>
 
 <div class="wrapper" id="single-wrapper">
