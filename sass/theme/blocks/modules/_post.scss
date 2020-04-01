@@ -2,10 +2,49 @@
 	img {
 		width: 100%;
 		object-fit: cover;
+		height: 40vw;
 	}
 }
 
-.post-content {
+.post-navigation {
+	a {
+		color: black;
+		margin: 0 2rem;
+	}
+	#next {
+		float: right;
+	}
+}
+
+.post-navigation {
+	padding: 4rem 20%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.category-description {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.post-excerpt {
+	margin: 1rem 0;
+	.news-card__button {
+		display: none;	
+	}
+}
+
+.social-share, .post-footer {
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	padding: 2rem 20%;
+	text-align: center;
+}
+
+.post-content, .entry-header {
 	padding: 1rem;
 	@include respond-to('lg'){
 		width: 70%;
