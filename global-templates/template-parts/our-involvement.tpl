@@ -1,5 +1,5 @@
 <section class="generic bg-white">
-	<h1 class="horizontal-center">Our <div class="red-text">Involvement</div></h1>
+	<h1 class="horizontal-center"><p>Our <span style="color:#d11317;">Involvement</span></p></h1>
 		<p class="oi-introduction horizontal-center"><?php the_field('oi_introduction'); ?></p>
 		<?php if( have_rows('oi_businesses') ): ?>
 			<div class="container">
