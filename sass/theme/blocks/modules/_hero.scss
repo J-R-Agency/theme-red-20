@@ -12,7 +12,6 @@
 		flex-direction: column-reverse;		
 	}
 	&.tertiary {
-		height: 40vw;
 		background-color: white;
 		color: black;
 		display: flex;
@@ -43,6 +42,9 @@
 			height: 40vw;	
 		}
 		&.secondary {
+			height: 40vw;
+		}
+		&.tertiary {
 			height: 40vw;
 		}
 		&.job {
