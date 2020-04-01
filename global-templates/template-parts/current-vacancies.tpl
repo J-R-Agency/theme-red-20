@@ -29,10 +29,10 @@
 				    <div class="vacancy-container">
 						<div class="container">
 							<div class="row">
-								<div class="col-12 col-md-3">
+								<div class="col-12 col-lg-3">
 									<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-white.png" class="vacancy-logo">
 								</div>
-								<div class="col-12 col-md-9">
+								<div class="col-12 col-lg-9">
 									<div class="vacancy-description">
 										<h2><?php echo the_title(); ?></h2>
 										<p><?php echo the_excerpt(); ?>

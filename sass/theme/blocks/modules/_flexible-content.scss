@@ -1,7 +1,7 @@
 .flex-row {
 	display:flex;
 	flex-wrap: wrap;
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		min-height: 500px;
 	}	
 	&.contact:nth-child(even) {
@@ -16,7 +16,7 @@
 	flex: 100%;
 	flex-grow: 1;
 	min-height: auto;
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		flex: 50%;
 		min-height: 500px;
 	}	
@@ -43,6 +43,9 @@
 	flex: auto;
 	width: 100%;
 	@include respond-to('md'){
+		width: 40%;
+	}	
+	@include respond-to('lg'){
 		flex: 0 0 20%;
 	}	
 }
@@ -50,11 +53,11 @@
 .tcb_cta {
 	display:flex;
 	flex-direction: column;
-	padding: 2rem;
+	padding: 3rem 2rem 2rem 2rem;
 	justify-content: center;
 	background-position:center;
 	background-size: cover;
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		padding: 5rem;
 	}
 	&.primary {
@@ -87,7 +90,7 @@
 	text-align: center;
 	padding: 2rem;
 	color: $red;
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		padding: 5rem;
 	}	
 }
@@ -107,6 +110,10 @@
 		list-style: none;
 		flex: 1 0 30%;
 		@include respond-to('md'){
+			flex: 1 0 20%;
+		}		
+		
+		@include respond-to('lg'){
 			flex: 1 0 15%;
 		}		
 		img {
@@ -132,7 +139,7 @@
 			width: 100px;
 			height: 100px;
 			object-fit: contain;
-			@include respond-to('md'){
+			@include respond-to('lg'){
 				width: 150px;
 				height: 150px;
 			}					
@@ -177,7 +184,7 @@
 
 #red-logo-line {
 	display: none;
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		width: 83%;
 		display: flex;
 		margin-left: 10%;

@@ -14,5 +14,6 @@ defined( 'ABSPATH' ) || exit;
 get_header(); ?>
 
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner-job.tpl'); ?>
+<?php the_content(); ?>
 
 <?php get_footer(); ?>
