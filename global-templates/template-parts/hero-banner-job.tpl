@@ -21,7 +21,7 @@
 		<div class="hero-image job">
 			<div class="vacancy-logo-wrapper">	
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-color.png">
-				<a class="link job-hero-btn" href="#">
+				<a class="link job-hero-btn" href="<?php echo site_url();?>/<?php echo $san_cat; ?>">
 				<div class="btn_black-border">
 					Read About <?php echo esc_html( $categories[0]->name ); ?>
 				</div>
