@@ -141,11 +141,9 @@ if( have_rows('flexible_content_block') ):
        		$fc_video_embed = get_sub_field('fc_video_embed');
        		
        		echo "
-			<div class='fc-video-container'>
 				<div class='fc-embed-container'>".
 					$fc_video_embed
 				."</div>    		
-       		</div>
        		";       		
 
           // -------------------------- //
@@ -161,7 +159,7 @@ if( have_rows('flexible_content_block') ):
 				<h1>".$team_headline."</h1>  	
 				<p>".$team_copy."</p>
 				<div class='container'>
-					<div class='row'>";
+					<div class='row' style='justify-content:center;'>";
 					
 				if ( have_rows( 'team_members' ) ) :
 					while ( have_rows( 'team_members' ) ) : the_row();
@@ -170,7 +168,7 @@ if( have_rows('flexible_content_block') ):
 					$team_member_position = get_sub_field('team_member_position');
 					
 					echo "
-						<div class='col-3'>
+						<div class='col-12 col-lg-3'>
 							<img src='". $team_member_portrait['url'] ."' class='team-member-portrait'>
 							<p class='team-member-name'><strong>". $team_member_name ."</strong></p>	
 							<p class='team-member-position'>". $team_member_position ."</p>			
@@ -205,7 +203,7 @@ if( have_rows('flexible_content_block') ):
 							$fc_dog_name = get_sub_field('fc_dog_name');
 							
 							echo "
-								<div class='col-3'>
+								<div class='col-12 col-lg-3'>
 									<img src='". $fc_dog_portrait['url'] ."' class='team-member-portrait'>
 									<p><strong>". $fc_dog_name ."</strong></p>	
 								</div>					
@@ -242,7 +240,7 @@ if( have_rows('flexible_content_block') ):
 					$number = get_row_index();
 					
 					echo "
-						<div class='col-3'>
+						<div class='col-12 col-lg-3'>
 							<h1>".$number."</h1>
 							<p class='team-member-name'><strong>". $fc_achievement ."</strong></p>
 						</div>
