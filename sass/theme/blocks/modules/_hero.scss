@@ -23,7 +23,12 @@
 		display: flex;
 		flex-direction: column-reverse;
 	}
-	
+	&.profile {
+		background-color: white;
+		display: flex;
+		flex-direction: column-reverse;
+		height: auto;
+	}	
 	&.job {
 		display: flex;
 		background-color: $red;
@@ -98,10 +103,14 @@
 	&.job p {
 		margin: 0;
 	}
+	&.profile {
+		margin: 2rem 0;
+	}
 }	
 
 .hero-cta-link {
 	margin-bottom: 2rem;
+	z-index: 99;
 }
 
 .hero-image {
@@ -153,6 +162,14 @@
 				width: 100%;
 			}
 		}
+		&.profile {
+			height: 40vw;
+			background-color: white;
+			mask: url(../assets/masks/clippingmask-5.svg);
+			mask-size: cover;
+			mask-position: left;								
+		}		
+		
 		&.job {
 			height: 40vw;
 			background-color: white;

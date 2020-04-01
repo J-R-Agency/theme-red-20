@@ -119,8 +119,178 @@ if( have_rows('flexible_content_block') ):
        		
        		";
        		
+          // -------------------------- //
+         // ---- CASE: BANNER CTA -----//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_banner_cta' ):
+       		$bcta_text = get_sub_field('bcta_text');
+       		$bcta_link = get_sub_field('bcta_link');
+       		
+       		echo "
+				<div class='banner-cta link'>
+					<h2>".$bcta_text."</h2>		
+					<a href='".$bcta_link['url']."' target='".$bcta_link['target']."' class='btn_white-border margin-horizontal'>".$bcta_link['title']."</a>
+				</div>
+       		";       		
        		
        		
+          // -------------------------- //
+         // ------- CASE: VIDEO -------//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_video' ):
+       		$fc_video_embed = get_sub_field('fc_video_embed');
+       		
+       		echo "
+			<div class='fc-video-container'>
+				<div class='fc-embed-container'>".
+					$fc_video_embed
+				."</div>    		
+       		</div>
+       		";       		
+
+          // -------------------------- //
+         // -------- CASE: TEAM -------//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_team' ):
+       		$team_headline = get_sub_field('team_headline');
+       		$team_copy = get_sub_field('team_copy');
+       		$team_members = get_sub_field('team_members');
+       		
+       		echo "
+			<section class='generic bg-white horizontal-center'>
+				<h1>".$team_headline."</h1>  	
+				<p>".$team_copy."</p>
+				<div class='container'>
+					<div class='row'>";
+					
+				if ( have_rows( 'team_members' ) ) :
+					while ( have_rows( 'team_members' ) ) : the_row();
+					$team_member_portrait = get_sub_field('team_member_portrait');
+					$team_member_name = get_sub_field('team_member_name');
+					$team_member_position = get_sub_field('team_member_position');
+					
+					echo "
+						<div class='col-3'>
+							<img src='". $team_member_portrait['url'] ."' class='team-member-portrait'>
+							<p class='team-member-name'><strong>". $team_member_name ."</strong></p>	
+							<p class='team-member-position'>". $team_member_position ."</p>			
+						</div>
+					";	
+					
+					endwhile;
+				endif;
+			echo "
+					</div>
+				</div>	
+       		</section>
+       		";  
+
+
+          // -------------------------- //
+         // ------- CASE: DOGS --------//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_dogs' ):
+       		$dogs_headline = get_sub_field('dogs_headline');
+       		$dogs_list = get_sub_field('dogs_list');
+       		
+       		echo "
+			<section class='generic bg-light-grey dog-overlay-cs horizontal-center'>
+				<h2>".$dogs_headline."</h2>
+				<div class='container'>
+					<div class='row' style='justify-content:center;'>";
+					
+					if ( have_rows( 'dogs_list' ) ) :
+						while ( have_rows( 'dogs_list' ) ) : the_row();
+							$fc_dog_portrait = get_sub_field('fc_dog_portrait');
+							$fc_dog_name = get_sub_field('fc_dog_name');
+							
+							echo "
+								<div class='col-3'>
+									<img src='". $fc_dog_portrait['url'] ."' class='team-member-portrait'>
+									<p><strong>". $fc_dog_name ."</strong></p>	
+								</div>					
+							";
+							
+						endwhile;
+					endif;
+					
+			echo	"
+					</div>
+				</div>
+			</section>      		
+       		
+       		";       		
+		    
+          // -------------------------- //
+         // --- CASE: ACHIEVEMENTS ----//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_achievements' ):
+       		$achievements_headline = get_sub_field('achievements_headline');
+       		$achievements_copy = get_sub_field('achievements_copy');
+       		$achievements_list = get_sub_field('achievements_members');
+       		
+       		echo "
+			<section class='generic bg-white horizontal-center'>
+				<h1>".$achievements_headline."</h1>  	
+				<p>".$achievements_copy."</p>
+				<div class='container'>
+					<div class='row'>";
+					
+				if ( have_rows( 'achievements_list' ) ) :
+					while ( have_rows( 'achievements_list' ) ) : the_row();
+					$fc_achievement = get_sub_field('fc_achievement');
+					$number = get_row_index();
+					
+					echo "
+						<div class='col-3'>
+							<h1>".$number."</h1>
+							<p class='team-member-name'><strong>". $fc_achievement ."</strong></p>
+						</div>
+					";	
+					
+					endwhile;
+				endif;
+			echo "
+					</div>
+				</div>	
+       		</section>
+       		";  
+		    
+          // -------------------------- //
+         // ----- CASE: BENEFITS ------//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_benefits' ):
+       		$fc_benefits_headline = get_sub_field('fc_benefits_headline');
+       		$fc_benefits_copy = get_sub_field('fc_benefits_copy');
+       		$fc_benefits_list = get_sub_field('fc_benefits_list');
+       		
+       		echo "
+			<section class='generic bg-white horizontal-center'>
+				<h1>".$fc_benefits_headline."</h1>  	
+				<p>".$fc_benefits_copy."</p>
+				<div class='careers-benefits'>
+					<div class='flex-row'>";
+					
+				if ( have_rows( 'fc_benefits_list' ) ) :
+					while ( have_rows( 'fc_benefits_list' ) ) : the_row();
+					$fc_benefits_icon = get_sub_field('fc_benefits_icon');
+					$fc_benefits_list_item = get_sub_field('fc_benefits_list_item');
+					
+					echo "
+						<div class='flex-column-5'>
+							<img src=".$fc_benefits_icon['url']." class='benefits-icon'>
+							<p class='benefits-list-item'><strong>". $fc_benefits_list_item ."</strong></p>
+						</div>
+					";	
+					
+					endwhile;
+				endif;
+			echo "
+					</div>
+				</div>	
+       		</section>
+       		";  		    
+		    
 		    
         endif; // Last endif            
 
