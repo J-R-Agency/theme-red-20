@@ -127,7 +127,10 @@
 			object-position: center;
 			object-fit: contain;
 			object-position: right;
-			max-width: 500px;			
+			max-width: 300px;	
+			@include respond-to('lg'){
+				max-width: 500px;
+			}		
 		}
 	}
 	@include respond-to('lg'){
