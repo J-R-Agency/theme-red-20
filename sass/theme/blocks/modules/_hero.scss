@@ -103,6 +103,11 @@
 }
 
 .hero-image {
+	img {
+		height: inherit;
+		float: right;
+	}
+	
 	&.job {
 		background-color: white;
 		img {
