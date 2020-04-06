@@ -1,11 +1,26 @@
 .video-container {
 	text-align: center;
+	
+	&.thumb {
+		width: auto;
+		display: inline-block;
+		
+		@include respond-to('md'){
+			width: 422px;
+		}
+		.embed-container > iframe {
+			height: 220px;
+			background-color: black;
+		}
+	}
 }
+
+
 .embed-container {
 	margin: 1rem;
 	iframe {
 		width: 99%;
-		height: 300px;
+		height: 300px;	
 		@include respond-to('md'){
 			height: 449px;
 		}		

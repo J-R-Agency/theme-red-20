@@ -17,9 +17,7 @@ defined( 'ABSPATH' ) || exit;
 		<div class="post-excerpt">
 			<?php the_excerpt(); ?>
 		</div>
-		<div class="social-share">
-			social sharing buttons here
-		</div>
+
 
 	</header><!-- .entry-header -->
 
