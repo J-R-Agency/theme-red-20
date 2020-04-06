@@ -23,8 +23,13 @@ div.sharedaddy h3.sd-title::before {
 }
 
 #share-icon {
-	@include _social-icon;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+	width: 30px;
+	height: 30px;	
 	background-image: url('../assets/images/share-icon.png');
+	margin: 0 1rem;
 }
 
 .robots-nocontent.sd-block.sd-social.sd-social-icon.sd-sharing {
@@ -32,11 +37,14 @@ div.sharedaddy h3.sd-title::before {
 }
 
 div.sharedaddy h3.sd-title {
-	margin: 0 5rem 0 0;
+	margin: 0;
 	font-size: 14pt;
 	font-weight: normal;
 	align-items: center;
 	display: flex;
+	@include respond-to('lg'){
+		margin: 0 5rem 0 0;
+	}
 }
 .sd-content ul {
 	display: flex;
