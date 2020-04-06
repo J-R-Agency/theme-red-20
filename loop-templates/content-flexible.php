@@ -288,6 +288,50 @@ if( have_rows('flexible_content_block') ):
 				</div>	
        		</section>
        		";  		    
+
+          // -------------------------- //
+         // ------ CASE: IMPACT -------//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_impact' ):
+       		$impact_headline = get_sub_field('impact_headline');
+       		$impact_intro = get_sub_field('impact_intro');
+       		
+       		echo "
+			<!-- Hero image -->
+				<div class='impact'>
+					<div class='impact-copy'>
+						<div class='impact-headline'>
+							<h1>".$impact_headline."</h1>
+						</div>
+						<div class='impact-intro'>
+							<p>
+								".$impact_intro."
+							</p>
+						</div>
+					</div>
+					<div class='impact-wave'></div>
+					<div class='impact-timeline'>";
+						if ( have_rows( 'impact_timeline' ) ) :
+						
+							echo "<ul class='timeline'>";
+							
+							while ( have_rows( 'impact_timeline' ) ) : the_row();
+							$timeline_year = get_sub_field('timeline_year');
+							$timeline_milestone = get_sub_field('timeline_milestone');		
+							
+							echo "
+								<li class='milestone' data-date='".$timeline_year."'>
+									<p>".$timeline_milestone."</p>
+								</li>
+							
+							";
+												
+							endwhile;
+							echo "</ul>";
+						endif;							
+				echo "</div>
+				</div>	
+       		";  	
 		    
 		    
         endif; // Last endif            
