@@ -149,3 +149,6 @@ function get_ID_by_slug($page_slug) {
         return null;
     }
 }
+
+// Turn off jetpack minification
+add_filter( 'jetpack_implode_frontend_css', '__return_false' );
