@@ -1,3 +1,5 @@
 jQuery(document).ready(function($) {
-	$(".share-icon").append("<p>TEST</p>");
+	$("a.share-facebook").append("<p>Facebook</p>");
+	$("a.share-twitter").append("<p>Twitter</p>");
+	$("a.share-linkedin").append("<p>Linkedin</p>");
 });
