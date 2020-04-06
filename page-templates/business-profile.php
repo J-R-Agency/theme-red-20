@@ -15,5 +15,5 @@ get_header(); ?>
 
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner-profile.tpl'); ?>
 <?php get_template_part( 'loop-templates/content', 'flexible' ); ?>
-
+<?php include(get_template_directory() . '/global-templates/template-parts/banner-cta.tpl'); ?>
 <?php get_footer(); ?>

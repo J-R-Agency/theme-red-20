@@ -20,16 +20,31 @@
 				margin-bottom: 0;
 			}			
 		}
+		h2 > p, h2 > p > span {
+			margin: 0;
+			@include _montserrat-semibold;
+		}
 	}
 	&.social-media {
 		justify-content: center;
 	}
+	
+	&.social-media-2 {
+		background-color: $dark-grey;
+		justify-content: center;
+		padding: 4rem;
+	}
+	
 }
 
 .banner-cta-left {
 	display: flex;
 	align-items: center;
 	text-align: center;
+	h2 > p, h2 > p > span {
+		margin: 0;
+		@include _montserrat-semibold;
+	}
 	@include respond-to('lg'){
 		text-align: left;
 	}		
