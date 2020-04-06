@@ -151,4 +151,5 @@ function get_ID_by_slug($page_slug) {
 }
 
 // Turn off jetpack minification
-add_filter( 'jetpack_implode_frontend_css', '__return_false' );
+add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
