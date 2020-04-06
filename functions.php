@@ -126,7 +126,7 @@ add_filter( 'excerpt_more', 'dyad_excerpt_continue_reading' );
 
 //Enqueue javascript
 function my_theme_scripts() {
-    wp_enqueue_script( 'wrap-divs', get_template_directory_uri() . '/js/wrap-divs.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'wrap-divs', get_template_directory_uri() . '/js/social-links.js', array( 'jquery' ), '1.0.0', true );
 }
 add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
 
