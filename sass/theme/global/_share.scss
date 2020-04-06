@@ -23,7 +23,14 @@ div.sharedaddy h3.sd-title {
 	font-size: 14pt;
 	font-weight: normal;
 }
-
+.sd-content ul {
+	display: flex;
+}
 .sd-content ul li {
 	margin: 0 0.5rem;
+	list-style-type: none;
+}
+
+.sharing-screen-reader-text {
+	display: none;
 }
