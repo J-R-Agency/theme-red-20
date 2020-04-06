@@ -6,6 +6,10 @@
 	padding: 1rem 0;
 }
 
+.sharedaddy:nth-of-type(2) {
+	display: none;
+}
+
 div.sharedaddy h3.sd-title::before {
 	border-top: none;
 }
