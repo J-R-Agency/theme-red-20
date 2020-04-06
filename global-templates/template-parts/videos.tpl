@@ -23,7 +23,7 @@
             ?>
 				<p class="video-title">New! <?php echo $video_title; ?></p>
 				<p class="video-description"><?php echo $video_description; ?></p>
-			<?php endif; ?>
+            <?php endif; ?>
 		</div>
 	<?php $count++;
 		endwhile; 

@@ -5,8 +5,8 @@
 		width: auto;
 		display: inline-block;
 		
-		@include respond-to('md'){
-			width: 422px;
+		@include respond-to('lg'){
+			width: 33%;
 		}
 		.embed-container > iframe {
 			height: 220px;
