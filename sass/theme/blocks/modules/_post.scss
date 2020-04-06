@@ -6,6 +6,11 @@
 	}
 }
 
+article {
+	padding: 1rem;
+	overflow: hidden;
+}
+
 .post-navigation {
 	a {
 		color: black;
@@ -40,13 +45,21 @@
 .post-footer {
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
-	padding: 2rem 20%;
+	padding: 2rem 0;
 	text-align: center;
+	@include respond-to('lg'){
+		padding: 2rem 20%;
+	}
+	
+	.post-footer-logo {
+		padding: 1rem;
+	}
 }
 
 .post-content, .entry-header {
-	padding: 1rem;
+	padding: 0rem;
 	@include respond-to('lg'){
+		padding: 1rem;
 		width: 70%;
 		margin: 0 auto;
 	}

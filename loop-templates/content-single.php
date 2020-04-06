@@ -37,7 +37,7 @@ defined( 'ABSPATH' ) || exit;
 						    $san_cat = sanitize_title( $categories[0]->name );  
 						}
 			    ?>	
-					<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-color.png">
+					<img class='post-footer-logo' src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-color.png">
 				</div>
 				<div class="col-12 col-lg-9" style="display:flex;">
 					<div class="category-description">
