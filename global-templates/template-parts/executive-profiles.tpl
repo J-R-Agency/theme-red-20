@@ -11,7 +11,6 @@ if( have_rows('executive_profile') ):
 		<p><?php the_field('ep_intro');?></p>
 	</div>
 </section>
-
 <?php
  	// loop through the rows of data
     while ( have_rows('executive_profile') ) : the_row();
@@ -33,6 +32,7 @@ if( have_rows('executive_profile') ):
 				<p><?php echo $bio; ?></p>
 		  	</div>		  	
 		  	<?php else: ?>
+
 				<div class="executive-profile" href="#" style="background-image: url(<?php echo $portrait['url']; ?>)">
 					<div class="ep-description">
 						<p><strong><?php echo $name; ?></strong></p>
@@ -40,6 +40,7 @@ if( have_rows('executive_profile') ):
 					</div>
 				</div>
 				<div class="ep-hover" style="background-image: url(<?php echo $hover_image['url']; ?>)"></div>
+
 			<?php endif; ?>
 		<?php    
 		$count++;

@@ -1,3 +1,7 @@
+.ep-individual-wrapper {
+	position: relative;
+}
+
 .executive-profiles-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -64,10 +68,10 @@
 	}
 }
 
-.executive-profile:hover {
-	z-index: 0;
-}
-
 .ep-hover {
-	display: flex;
+	display: none;
+	z-index: 0;
+	width: 33%;
+	flex-grow: 1;
+	background-position: center;
 }

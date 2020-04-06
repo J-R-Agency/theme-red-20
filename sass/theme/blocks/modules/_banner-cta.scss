@@ -8,7 +8,7 @@
 	width: 100%;
 	@include respond-to('lg'){
 		flex-direction: row;
-		padding: 2rem;
+		padding: 2rem 2rem 6rem 2rem;
 	}	
 	&.link {
 		justify-content: center;

@@ -15,7 +15,7 @@ $theme_path = get_template_directory_uri();
 ?>
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
-
+<div class="footer-wave"></div>
 <div class="wrapper" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
