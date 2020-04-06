@@ -52,7 +52,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									$nextid    = isset( $ids[ $thisindex + 1 ] ) ? $ids[ $thisindex + 1 ] : 0;
 									
 									if ( $previd ) {
-									    ?><a id="prev" rel="prev" href="<?php echo get_permalink($previd) ?>">Previous news article</a>
+									    ?><a id="prev" rel="prev" href="<?php echo get_permalink($previd) ?>"><span>&larr;</span> <p>Previous news article</p></a>
 									    <?php
 									}
 									if ( $allid ) {
@@ -60,7 +60,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									}
 									
 									if ( $nextid ) {
-									    ?><a id="next" rel="next" href="<?php echo get_permalink($nextid) ?>">Next news article</a><?php
+									    ?><a id="next" rel="next" href="<?php echo get_permalink($nextid) ?>"><p>Next news article</p><span>&rarr;</span></a><?php
 									}
 								?>
 							</div>

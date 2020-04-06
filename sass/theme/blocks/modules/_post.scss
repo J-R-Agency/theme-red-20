@@ -26,10 +26,24 @@ article {
 }
 
 .post-navigation {
-	padding: 4rem 20%;
+	padding: 4rem 10%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	a > span {
+		font-size: 3rem;
+		font-family: monospace;
+		padding: 0 0.5rem;
+		@include respond-to('lg'){
+			font-size: 2rem;
+		}
+	}
+	a > p{
+		display: none;
+		@include respond-to('lg'){
+			display: inline-block;
+		}
+	}
 }
 
 .category-description {
@@ -52,7 +66,7 @@ article {
 	padding: 2rem 0;
 	text-align: center;
 	@include respond-to('lg'){
-		padding: 2rem 20%;
+		padding: 2rem 10%;
 	}
 	
 	.post-footer-logo {
