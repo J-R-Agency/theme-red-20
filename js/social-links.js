@@ -9,4 +9,6 @@ jQuery(document).ready(function($) {
 	$("a.share-twitter").append("<div id='twitter-icon-red'>");
 	
 	$("a.share-linkedin").append("<div id='linkedin-icon-red'>");
+	
+	$(".sharedaddy").eq(1).remove();
 });
