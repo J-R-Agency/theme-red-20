@@ -22,9 +22,11 @@ div.sharedaddy h3.sd-title {
 	margin: 0 5rem 0 0;
 	font-size: 14pt;
 	font-weight: normal;
+	align-items: center;
 }
 .sd-content ul {
 	display: flex;
+	margin: 0;
 }
 .sd-content ul li {
 	margin: 0 0.5rem;
@@ -38,6 +40,7 @@ div.sharedaddy h3.sd-title {
 @mixin _social-icon {
 	background-repeat: no-repeat;
 	background-size: contain;
+	background-position: center bottom;
 	width: 40px;
 	height: 40px;	
 }
