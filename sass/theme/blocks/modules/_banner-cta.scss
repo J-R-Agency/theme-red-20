@@ -1,12 +1,12 @@
 .banner-cta {
 	background-color: $red;
-	padding: 1rem;
+	padding: 2rem 1rem;
 	color: white;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 	width: 100%;
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		flex-direction: row;
 		padding: 2rem;
 	}	
@@ -14,8 +14,10 @@
 		justify-content: center;
 		h2 {
 			text-align: center;
-			@include respond-to('md'){
+			margin-bottom: 1rem;
+			@include respond-to('lg'){
 				text-align: left;
+				margin-bottom: 0;
 			}			
 		}
 	}
@@ -28,14 +30,14 @@
 	display: flex;
 	align-items: center;
 	text-align: center;
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		text-align: left;
 	}		
 }
 
 .banner-social-media {
 	filter: invert(1);
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		margin-left: 20%;
 	}	
 	img {

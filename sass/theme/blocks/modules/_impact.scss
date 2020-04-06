@@ -12,7 +12,7 @@ $line: 4px;
 .impact {
 	display: flex;
 	flex-direction: column;
-	@include respond-to('md') {
+	@include respond-to('lg') {
 		flex-direction: row;
 	}
 }
@@ -21,6 +21,10 @@ $line: 4px;
 .impact-timeline {
 	background-color: $dark-grey;
 	color: white;
+	padding: 2rem 0 4rem 0;
+	@include respond-to('lg') {
+		padding: 0;	
+	}
 }
 
 /* Copy */
@@ -32,7 +36,7 @@ $line: 4px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	@include respond-to('md') {
+	@include respond-to('lg') {
 		width: 50%;
 		padding: 7rem 0 7rem 5rem;
 	}
@@ -46,7 +50,7 @@ $line: 4px;
 
 .impact-wave {
 	display: none;
-	@include respond-to('md') {
+	@include respond-to('lg') {
 		display: block;
 		background-image: url('../assets/images/impact-wave.png');
 		background-color: $dark-grey;
@@ -65,23 +69,23 @@ $line: 4px;
 	border-bottom-right-radius: $radius;
 	border-top-right-radius: $radius;    
 	color: fade(white, 80%);
-	margin: $spacing 0 0 6rem;  
+	margin: 0 0 0 6rem;  
 	position: relative;
 	list-style: none;
 	text-align: left;  
 	max-width: 70%; 
-	@include respond-to('md') {
+	@include respond-to('lg') {
 		margin: $spacing auto;
-		max-width: 50%; 
+		max-width: 50%;
 	}
   
 	.milestone {
 	border-bottom: 1px dashed fade(white, 10%);
-	margin: 2rem 0;  
+	margin: 4rem 0;  
 	position: relative;
 	height: auto;
 	
-		@include respond-to('md') {
+		@include respond-to('lg') {
 			height: 50px;	
 		}
 		
@@ -105,7 +109,7 @@ $line: 4px;
 		  min-width: $date;
 		  top: 10px;
 		  margin-left: 1rem;
-		  @include respond-to('md') {
+		  @include respond-to('lg') {
 		      margin-left: 0;
 		  }
 		}
