@@ -1,3 +1,11 @@
+@mixin _social-icon {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+	width: 40px;
+	height: 40px;	
+}
+
 #content div.sharedaddy, #main div.sharedaddy, div.sharedaddy {
 	border-top: 1px solid gray;
 	border-bottom: 1px solid gray;
@@ -12,6 +20,11 @@
 
 div.sharedaddy h3.sd-title::before {
 	border-top: none;
+}
+
+div.sharedaddy h3.sd-title::after {
+	@include _social-icon;
+	background-image: url('../assets/images/share-icon.png');
 }
 
 .robots-nocontent.sd-block.sd-social.sd-social-icon.sd-sharing {
@@ -36,14 +49,6 @@ div.sharedaddy h3.sd-title {
 
 .sharing-screen-reader-text {
 	display: none;
-}
-
-@mixin _social-icon {
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center bottom;
-	width: 40px;
-	height: 40px;	
 }
 
 #facebook-icon-red {
