@@ -31,7 +31,7 @@
 									<div class="col-12 col-md-6">
 										<div class="business-location">											
 											<p><?php echo $location_address; ?></p>
-											<a href="<?php echo $email; ?>" class="email-link"><?php echo $email; ?></a>
+											<a href="mailto:<?php echo $email; ?>" class="email-link"><?php echo $email; ?></a>
 										</div>
 									</div>		
 																			
