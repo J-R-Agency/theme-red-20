@@ -161,6 +161,15 @@
 	a {
 		color: $red;
 		text-transform: uppercase;
+		&.email-link {
+			color: black;
+			text-transform: inherit;
+			@include _montserrat-light;
+			
+			&:hover {
+				color: $red;
+			}
+		}
 		span {
 			font-size: 2rem;
 			font-family:monospace;		
