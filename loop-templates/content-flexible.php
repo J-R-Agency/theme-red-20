@@ -64,10 +64,12 @@ if( have_rows('flexible_content_block') ):
 							while( have_rows('businesses', 'option') ): the_row();
 								$business_logo = get_sub_field('business_logo', 'option'); // Image
 								$business_website = get_sub_field('business_website', 'option'); // Website link
+								$business_name = get_sub_field('business_name', 'option');
+								$san_name = sanitize_title($business_name);  
 								
 								echo "
 								    <li>
-								    	<a href='".$business_website['url']."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+								    	<a href='".site_url()."/".$san_name."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
 								    </li>";
 							
 							endwhile;
@@ -87,10 +89,12 @@ if( have_rows('flexible_content_block') ):
 							while( have_rows('businesses', 'option') ): the_row();
 								$business_logo = get_sub_field('business_logo', 'option'); // Image
 								$business_website = get_sub_field('business_website', 'option'); // Website link
+								$business_name = get_sub_field('business_name', 'option');
+								$san_name = sanitize_title($business_name);  
 								
 								echo "
 								    <li>
-								    	<a href='".$business_website['url']."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+								    	<a href='".site_url()."/".$san_name."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
 								    </li>";
 							
 							endwhile;
