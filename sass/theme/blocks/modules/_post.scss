@@ -74,6 +74,12 @@ article {
 	}
 }
 
+.three-column {
+	@include respond-to('lg'){
+		column-count: 3;
+	}
+}
+
 .post-content, .entry-header {
 	padding: 0rem;
 	@include respond-to('lg'){
