@@ -127,7 +127,7 @@ if( have_rows('flexible_content_block') ):
        		$bcta_link = get_sub_field('bcta_link');
        		
        		echo "
-				<div class='banner-cta link'>
+				<div class='banner-cta-mid link'>
 					<h2>".$bcta_text."</h2>		
 					<a href='".$bcta_link['url']."' target='".$bcta_link['target']."' class='btn_white-border margin-horizontal'>".$bcta_link['title']."</a>
 				</div>
