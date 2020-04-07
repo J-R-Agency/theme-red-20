@@ -239,4 +239,8 @@
 .achievement-copy {
 	margin: 0 auto;
 	width: 80%;
+	p > a {
+		color: $red;
+		@include _montserrat-light;
+	}
 }
