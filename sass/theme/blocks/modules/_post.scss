@@ -78,7 +78,7 @@ article {
 	@include respond-to('lg'){
 		column-count: 3;
 	}
-	.sharedaddy .sd-sharing-enabled {
+	.sharedaddy {
 		display: none;
 	}
 }
