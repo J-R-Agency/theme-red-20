@@ -71,7 +71,7 @@ elseif( get_row_layout() == 'tcb_brands' ):
 						
 						echo "
 						    <li>
-						    	<a href='".site_url()."/".$san_name."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_color']['url']."' alt='".$business_logo['business_logo_color']['alt']."'></a>
+						    	<a href='".site_url()."/".$san_name."'><img src='".$business_logo['business_logo_color']['url']."' alt='".$business_logo['business_logo_color']['alt']."'></a>
 						    </li>";
 					
 					endwhile;

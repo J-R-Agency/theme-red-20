@@ -69,7 +69,7 @@ if( have_rows('flexible_content_block') ):
 								
 								echo "
 								    <li>
-								    	<a href='".site_url()."/".$san_name."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+								    	<a href='".site_url()."/".$san_name."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
 								    </li>";
 							
 							endwhile;
@@ -94,7 +94,7 @@ if( have_rows('flexible_content_block') ):
 								
 								echo "
 								    <li>
-								    	<a href='".site_url()."/".$san_name."' target='".$business_website['target']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+								    	<a href='".site_url()."/".$san_name."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
 								    </li>";
 							
 							endwhile;
