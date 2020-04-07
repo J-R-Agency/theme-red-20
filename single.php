@@ -74,5 +74,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 	</div><!-- #content -->
 
 </div><!-- #single-wrapper -->
+<section class="bottom-section"></section>
 
 <?php get_footer();
