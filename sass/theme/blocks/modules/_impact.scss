@@ -14,6 +14,8 @@ $line: 4px;
 	flex-direction: column;
 	@include respond-to('lg') {
 		flex-direction: row;
+		height: 550px;
+		overflow: hidden;
 	}
 }
 
@@ -56,7 +58,7 @@ $line: 4px;
 		background-color: $dark-grey;
 		background-size: contain;
 		background-repeat: no-repeat;
-		width: 250px;	
+		width: 350px;	
 		z-index: -1;
 		margin-left: -10px;	
 	}
