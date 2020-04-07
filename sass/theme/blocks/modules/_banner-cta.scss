@@ -32,7 +32,7 @@
 	&.social-media-2 {
 		background-color: $dark-grey;
 		justify-content: center;
-		padding: 4rem;
+		padding: 4rem 4rem 150px 4rem;
 		@include respond-to('lg'){
 			padding: 3rem 2rem 250px 2rem;
 		}
