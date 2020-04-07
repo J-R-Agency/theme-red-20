@@ -1,5 +1,5 @@
 
-<section class="generic bg-dark-grey horizontal-center">
+<section class="generic bg-dark-grey horizontal-center bottom-section">
 	<h1><p>Our Current <span style="color:#d11317;">Vacancies</span></p></h1>
 	<p>Let's connect you to your perfect career</p>
 	

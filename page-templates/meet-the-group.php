@@ -15,5 +15,5 @@ get_header(); ?>
 
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner.tpl'); ?>
 <?php get_template_part( 'loop-templates/content', 'flexible' ); ?>
-
+<section class="bottom-section"></section>
 <?php get_footer(); ?>
