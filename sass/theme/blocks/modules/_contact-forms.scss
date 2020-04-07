@@ -1,0 +1,26 @@
+.contact-left {
+	@include respond-to('lg'){
+		padding-right: 4rem;
+	}
+	a {
+		color: black;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
+.contact-right {
+	label {
+		margin: 0;
+	}
+}
+
+input[type="checkbox"] {
+	margin: 0 1rem;
+}
+
+.span.wpcf7-list-item {
+	display: flex;
+	align-items: center;
+}

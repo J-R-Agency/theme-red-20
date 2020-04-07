@@ -48,8 +48,9 @@ get_header(); ?>
 		
 			</ul>
 		
-		<?php endif; ?>		
-		Form coming soon
+		<?php endif; ?>	
+		<h2>Application Form</h2>	
+		<?php echo do_shortcode('[contact-form-7 id="434" title="Job Application Form"]');?>
 	</div>
 	
 </section>

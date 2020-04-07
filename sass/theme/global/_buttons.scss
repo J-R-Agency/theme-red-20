@@ -7,7 +7,7 @@
 		&:hover {
 			text-decoration: none;
 			color: black;
-			border: 1px solid black;
+			border: 2px solid black;
 		}
 	}
 	
@@ -21,7 +21,7 @@
 		&:hover {
 			text-decoration: none;
 			color: black;
-			border: 1px solid black;
+			border: 2px solid black;
 		}		
 	}
 	&_black-border {
@@ -34,9 +34,25 @@
 		&:hover {
 			text-decoration: none;
 			color: black;
-			border: 1px solid black;
+			border: 2px solid black;
 		}		
 	}
+}
+
+#submit-contact-details {
+		border: 2px solid $red;
+		text-transform: uppercase;
+		color: $red;
+		text-align: center;
+		width: 150px;
+		height: 50px;
+		border-radius: 0;
+		
+		&:hover {
+			text-decoration: none;
+			color: black;
+			border: 2px solid black;
+		}	
 }
 
 .link {
