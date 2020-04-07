@@ -22,11 +22,13 @@
 	height: 400px;
 	background-position: center left;
 	background-color: $light-grey;
+	background-repeat: no-repeat;
+	background-size: cover;
 	z-index: 1;
 	position: relative;
 	
 	@include respond-to('lg'){
-		background-position: center;
+		background-position: center top;
 		position: absolute;
 		width: 50%;
 		clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
@@ -46,6 +48,7 @@
 		height: 100%;
 		flex-grow: 1;
 		background-position: center;
+		background-size: cover;
 		position: absolute;		
 		width: 50%;
 		clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
