@@ -24,15 +24,23 @@ if( have_rows('executive_profile') ):
 		 ?>
 		 	<!-- if count = 0 / first row -->
 		  	<?php if ($count == 0): ?>
-		  	<div class="president-profile" style="background-image: url(<?php echo $portrait['url']; ?>)">
+		  	<div class='president-wrapper'>
+			  	<!-- image -->
+			  	<div class="president-profile" style="background-image: url(<?php echo $portrait['url']; ?>)"></div>
+			  	<!-- hover image -->
+			  	<div class="president-hover" style="background-image: url(<?php echo $hover_image['url']; ?>)"></div>
+			
+			
+			  	<!-- description -->
+			  	<div class="president-description dog-overlay">
+					<h2><strong><?php echo $name; ?></strong></h2>
+					<p class="ep-position"><strong><?php echo $position; ?></strong></p>
+					<p><?php echo $bio; ?></p>
+			  	</div>
 		  	</div>
-		  	<div class="president-description dog-overlay">
-				<h2><strong><?php echo $name; ?></strong></h2>
-				<p class="ep-position"><strong><?php echo $position; ?></strong></p>
-				<p><?php echo $bio; ?></p>
-		  	</div>		  	
+		  		  	
 		  	<?php else: ?>
-
+		  	<div class="ep-individual-wrapper">
 				<div class="executive-profile" href="#" style="background-image: url(<?php echo $portrait['url']; ?>)">
 					<div class="ep-description">
 						<p><strong><?php echo $name; ?></strong></p>
@@ -40,7 +48,7 @@ if( have_rows('executive_profile') ):
 					</div>
 				</div>
 				<div class="ep-hover" style="background-image: url(<?php echo $hover_image['url']; ?>)"></div>
-
+		  	</div>
 			<?php endif; ?>
 		<?php    
 		$count++;

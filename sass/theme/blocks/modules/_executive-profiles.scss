@@ -1,7 +1,3 @@
-.ep-individual-wrapper {
-	position: relative;
-}
-
 .executive-profiles-wrapper {
 	display: flex;
 	flex-wrap: wrap;
@@ -15,18 +11,47 @@
 	margin: 0 auto;
 }
 
+.president-wrapper {
+	position: relative;
+}
+
 .president-profile {
 	flex-grow: 1;
 	width: 100%;
 	color: white;
 	height: 400px;
-	background-position: center;
+	background-position: center left;
 	background-color: $light-grey;
-	@include respond-to('md'){
+	z-index: 1;
+	position: relative;
+	
+	@include respond-to('lg'){
+		background-position: center;
+		position: absolute;
 		width: 50%;
 		clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
+		&:hover {
+			opacity: 0;	
+		}
 	}		
 }
+
+.president-hover {
+	display: none;
+	
+	@include respond-to('lg'){
+		display: block;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		flex-grow: 1;
+		background-position: center;
+		position: absolute;		
+		width: 50%;
+		clip-path: polygon(0 0, 100% 0%, 84% 100%, 0% 100%);
+	}	
+}
+
 
 .president-description {
 	flex-grow: 1;
@@ -36,27 +61,43 @@
 	justify-content: center;
 	flex-direction: column;
 	padding: 2rem;
-	@include respond-to('md'){
+	@include respond-to('lg'){
 		width: 50%;
 		padding: 5rem;
+		float: right;
 	}	
 	.ep-position {
 		color: $red;
 	}
 }
 
+.ep-individual-wrapper {
+	position: relative;
+	width: 100%;
+	height: 400px;
+	@include respond-to('lg'){
+		width: 33%;
+	}	
+}
+
 .executive-profile {
 	width: 100%;
+	height: 100%;
 	flex-grow: 1;
 	color: white;
 	padding: 2rem;
-	height: 400px;
 	display: flex;
 	background-size: cover;
 	background-position: center top;
-	@include respond-to('md'){
-		width: 33%;
+	position: absolute;
+	z-index: 3;
+	
+	@include respond-to('lg'){
+		&:hover {
+			opacity: 0;	
+		}
 	}	
+	
 	.ep-description {
 		text-align: center;
 		align-self: flex-end;
@@ -70,8 +111,13 @@
 
 .ep-hover {
 	display: none;
-	z-index: 0;
-	width: 33%;
-	flex-grow: 1;
-	background-position: center;
+	@include respond-to('lg'){
+		display: block;
+		z-index: 2;
+		width: 100%;
+		height: 100%;
+		flex-grow: 1;
+		background-position: center;
+		position: absolute;	
+	}
 }
