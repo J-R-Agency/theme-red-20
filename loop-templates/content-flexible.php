@@ -241,8 +241,10 @@ if( have_rows('flexible_content_block') ):
 					
 					echo "
 						<div class='col-12 col-lg-3'>
+							<div class='achievement-copy'>
 							<h1 class='achievement-number'>".$number."</h1>
-							<p class='achievement-copy'>". $fc_achievement ."</p>
+							". $fc_achievement ."
+							</div>
 						</div>
 					";	
 					
