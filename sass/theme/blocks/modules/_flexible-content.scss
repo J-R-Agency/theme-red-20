@@ -234,9 +234,6 @@
 	height: 130px;
 	padding: 5px 0;
 	margin: 2rem 0;
-	@include respond-to('lg'){
-		padding: 15px 0;
-	}
 }
 
 .achievement-copy {
