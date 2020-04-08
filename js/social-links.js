@@ -13,7 +13,13 @@ jQuery(document).ready(function($) {
 	
 	$(".share-icon").removeAttr("href");
 	
-	$(".share-icon").click(function() {
+	$(".share-facebook").click(function() {
 		window.open(window.location.href+'?share=facebook','','resizable=yes,width=800,height=600');
 	});
+	$(".share-twitter").click(function() {
+		window.open(window.location.href+'?share=twitter','','resizable=yes,width=800,height=600');
+	});
+	$(".share-linkedin").click(function() {
+		window.open(window.location.href+'?share=linkedin','','resizable=yes,width=800,height=600');
+	});		
 });
