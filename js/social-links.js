@@ -11,9 +11,9 @@ jQuery(document).ready(function($) {
 	
 	$(".sharedaddy").eq(1).remove();
 	
-	$(".share-icon").removeAttr('target');
+	$(".share-icon").removeAttr(href);
 	
 	$(".share-icon").click(function() {
-		window.open(this.href,'','resizable=yes,width=800,height=600');
+		window.open(window.location.href+'?share=facebook','','resizable=yes,width=800,height=600');
 	});
 });
