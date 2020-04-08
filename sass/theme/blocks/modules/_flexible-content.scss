@@ -5,8 +5,11 @@
 		min-height: 500px;
 	}	
 	&.contact:nth-child(even) {
-		flex-direction:row-reverse !important;
-	}	
+		flex-direction:column-reverse !important;
+		@include respond-to('lg'){
+			flex-direction:row-reverse;
+		}
+	}
 }
 
 
