@@ -130,6 +130,7 @@
 	
 	&.job {
 		background-color: white;
+		z-index: 3;
 		img {
 			object-position: center;
 			object-fit: contain;

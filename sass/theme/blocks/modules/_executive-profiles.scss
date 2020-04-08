@@ -79,7 +79,7 @@
 	width: 100%;
 	height: 400px;
 	@include respond-to('lg'){
-		width: 33%;
+		width: 33.33%;
 	}	
 }
 
@@ -91,7 +91,7 @@
 	padding: 2rem;
 	display: flex;
 	background-size: cover;
-	background-position: center top;
+	background-position: center;
 	position: absolute;
 	z-index: 3;
 	
