@@ -2,13 +2,17 @@
 	z-index: 10;
 	display: block;
 	background-image: url('../assets/images/footer-wave.png');
-	height: 250px;
+	height: 100px;
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: contain;
 	background-position: bottom;
 	position: absolute;
-	transform: translateY(-250px);
+	transform: translateY(-100px);
+	@include respond-to('lg'){
+		transform: translateY(-250px);
+		height: 250px;
+	}
 }
 
 #wrapper-footer {
