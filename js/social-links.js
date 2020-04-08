@@ -11,5 +11,5 @@ jQuery(document).ready(function($) {
 	
 	$(".sharedaddy").eq(1).remove();
 	
-	$(".share-icon").delegate("a", "onclick", "window.open(this.href); return false;");
+	$("a").on("onclick", ".share-icon", "window.open(this.href); return false;");
 });
