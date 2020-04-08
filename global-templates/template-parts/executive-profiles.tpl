@@ -32,7 +32,7 @@ if( have_rows('executive_profile') ):
 			
 			
 			  	<!-- description -->
-			  	<div class="president-description dog-overlay">
+			  	<div class="president-description dog-overlay-ep">
 					<h2><strong><?php echo $name; ?></strong></h2>
 					<p class="ep-position"><strong><?php echo $position; ?></strong></p>
 					<p><?php echo $bio; ?></p>
