@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
 	
 	$(".sharedaddy").eq(1).remove();
 	
-	$(".share-icon").removeAttr(href);
+	$(".share-icon").removeAttr("href");
 	
 	$(".share-icon").click(function() {
 		window.open(window.location.href+'?share=facebook','','resizable=yes,width=800,height=600');
