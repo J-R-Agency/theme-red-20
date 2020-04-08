@@ -10,10 +10,8 @@ jQuery(document).ready(function($) {
 	$("a.share-linkedin").append("<div id='linkedin-icon-red'>");
 	
 	$(".sharedaddy").eq(1).remove();
-	
-	$("a").on("onclick", ".share-icon", "window.open(this.href); return false;");
-	
+		
 	$(".share-icon").click(function() {
-		alert("Test");
+		window.open(this.href);
 	});
 });
