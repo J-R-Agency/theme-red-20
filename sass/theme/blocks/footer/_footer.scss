@@ -13,6 +13,9 @@
 		transform: translateY(-250px);
 		height: 250px;
 	}
+	@include respond-to('xl'){
+		height: 255px;
+	}
 }
 
 #wrapper-footer {
