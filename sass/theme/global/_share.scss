@@ -3,7 +3,10 @@
 	background-size: contain;
 	background-position: center bottom;
 	width: 40px;
-	height: 40px;	
+	height: 40px;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 #content div.sharedaddy, #main div.sharedaddy, div.sharedaddy {
