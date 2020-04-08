@@ -94,6 +94,7 @@
 			color: $red;
 			font-size: 3rem;
 			line-height: 3rem;
+			padding-top: 3rem;
 			&:after {
 				border: 3px solid black;
 			}
@@ -102,7 +103,7 @@
 }
 
 .hero-intro {
-	margin: 2rem 0 4rem 0;
+	margin: 0rem 0 4rem 0;
 	&.post p > a {
 		color: $red;
 	}
