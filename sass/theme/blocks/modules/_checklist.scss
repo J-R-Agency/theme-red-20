@@ -1,11 +1,19 @@
 .checklist-container {
-	width: 60%;
+	width: 100%;
+	@include respond-to('lg'){
+		width: 60%;	
+	}
 }
 
 .checklist {
 	column-count: 2;
 	column-gap: 10%;
-	margin: 2rem 0;
+	margin: 0;
+	@include respond-to('lg'){
+		column-count: 2;
+		column-gap: 10%;
+		margin: 2rem 0;
+	}
 }
 
 .checklist-item {
