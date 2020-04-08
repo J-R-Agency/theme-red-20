@@ -12,6 +12,6 @@ jQuery(document).ready(function($) {
 	$(".sharedaddy").eq(1).remove();
 		
 	$(".share-icon").click(function() {
-		window.open(this.href, 'width=300,height=250');
+		window.open(this.href,'','resizable=yes,width=800,height=600');
 	});
 });
