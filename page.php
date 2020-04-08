@@ -64,5 +64,6 @@ if ($page == $post->post_parent) {
 	</div><!-- #content -->
 
 </div><!-- #page-wrapper -->
+<section class="bottom-section"></section>
 
 <?php get_footer();
