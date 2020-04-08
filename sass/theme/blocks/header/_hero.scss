@@ -75,7 +75,7 @@
 	p, h1, span {
 		@include _roboto-condensed-bold;
 		font-size: 3rem;
-		line-height: 3rem;
+		line-height: 2rem;
 		text-transform: uppercase;
 		@include respond-to('lg'){
 			font-size: 4rem;
