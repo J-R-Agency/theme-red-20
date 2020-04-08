@@ -12,4 +12,8 @@ jQuery(document).ready(function($) {
 	$(".sharedaddy").eq(1).remove();
 	
 	$("a").on("onclick", ".share-icon", "window.open(this.href); return false;");
+	
+	$(".share-icon").click(function() {
+		alert("Test");
+	});
 });
