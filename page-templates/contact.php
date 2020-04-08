@@ -22,7 +22,7 @@ get_header(); ?>
 				<div class="contact-left">
 					<h1><?php the_field('contact_headline'); ?></h1>
 					<p><?php the_field('contact_copy'); ?></p>
-					<p><strong><?php the_field('contact_address'); ?></strong></p>
+					<?php the_field('contact_address'); ?>
 					<hr class="hero-line post" width=50% style="border-color: #d11317;">
 					<p><strong><a href="mailto:<?php the_field('contact_email'); ?>"><?php the_field('contact_email'); ?></a></strong></p>
 				</div>
