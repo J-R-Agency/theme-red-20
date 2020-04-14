@@ -60,31 +60,26 @@ function register_my_menus() {
  
 add_filter( 'wp_nav_menu_items', 'add_social_media_icons', 10, 2 );
 function add_social_media_icons ( $items, $args ) {
-	
-	if( have_rows('social_media', 'option') ):
-		while( have_rows('social_media', 'option') ): the_row();
-			$social_media_link = get_sub_field('social_media_link', 'option');
-	
-			if( $args->theme_location == 'primary' ) {
-			    $items .=
-			    '<div class="header-social-media">
-			    	<a href="https://www.facebook.com/ReallyEpicDog/" target="_blank">
-			    		<img src="'.get_template_directory_uri().'/assets/images/facebook.svg">
-			    	</a>
-			    	<a href="https://www.instagram.com/reallyepicdoggroup/" target="_blank">
-			    		<img src="'.get_template_directory_uri().'/assets/images/instagram.svg">
-			    	</a>
-			    	<a href="https://twitter.com/ReallyEpicDog_" target="_blank">
-			    		<img src="'.get_template_directory_uri().'/assets/images/twitter.svg">
-			    	</a>
-			    	<a href="https://www.linkedin.com/company/really-epic-dog-group" target="_blank">
-			    		<img src="'.get_template_directory_uri().'/assets/images/linkedin.svg">
-			    	</a>
-			    </div>';
-			}
-			return $items;
-		endwhile;
-	endif;
+		
+	if( $args->theme_location == 'primary' ) {
+	    $items .=
+	    '<div class="header-social-media">
+	    	<a href="https://www.facebook.com/ReallyEpicDog/" target="_blank">
+	    		<img src="'.get_template_directory_uri().'/assets/images/facebook.svg">
+	    	</a>
+	    	<a href="https://www.instagram.com/reallyepicdoggroup/" target="_blank">
+	    		<img src="'.get_template_directory_uri().'/assets/images/instagram.svg">
+	    	</a>
+	    	<a href="https://twitter.com/ReallyEpicDog_" target="_blank">
+	    		<img src="'.get_template_directory_uri().'/assets/images/twitter.svg">
+	    	</a>
+	    	<a href="https://www.linkedin.com/company/really-epic-dog-group" target="_blank">
+	    		<img src="'.get_template_directory_uri().'/assets/images/linkedin.svg">
+	    	</a>
+	    </div>';
+	}
+	return $items;
+
 }
 
 
