@@ -18,10 +18,15 @@ defined( 'ABSPATH' ) || exit;
 			
 			<?php
 				if ( ! has_excerpt() ) {
-				    echo '&nbsp;';
+				    echo '';
 				} else { 
 				    the_excerpt();
 				}
+				
+				if ( function_exists( 'sharing_display' ) ) {
+				    sharing_display( '', true );
+				}
+				 
 			?>
 			
 		</div>
