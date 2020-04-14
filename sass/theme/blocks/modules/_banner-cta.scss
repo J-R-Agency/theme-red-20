@@ -1,6 +1,6 @@
 .banner-cta {
 	background-color: $red;
-	padding: 4rem 4rem 150px 4rem;
+	padding: 4rem 4rem 15% 4rem;
 	color: white;
 	display: flex;
 	align-items: center;
@@ -9,11 +9,6 @@
 
 	@include respond-to('md'){
 		flex-direction: row;
-		padding: 3rem 2rem 250px 2rem;
-	}
-	
-	@include respond-to('xl'){
-		padding: 3rem 2rem 300px 2rem;
 	}
 	
 	&.link {
@@ -38,12 +33,7 @@
 	&.social-media-2 {
 		background-color: $dark-grey;
 		justify-content: center;
-		padding: 4rem 4rem 150px 4rem;
-		@include respond-to('lg'){
-			padding: 3rem 2rem 300px 2rem;
-		}
-		
-	
+		padding: 4rem 4rem 15% 4rem;
 	}
 	
 }
