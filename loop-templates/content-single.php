@@ -15,7 +15,15 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		<div class="post-excerpt">
-			<?php the_excerpt(); ?>
+			
+			<?php
+				if ( ! has_excerpt() ) {
+				    echo '';
+				} else { 
+				    the_excerpt();
+				}
+			?>
+			
 		</div>
 
 
@@ -23,7 +31,6 @@ defined( 'ABSPATH' ) || exit;
 
 	<div class="post-content">
 		<?php the_content(); ?>
-
 	</div><!-- .entry-content -->
 	
 	<div class="post-footer">
