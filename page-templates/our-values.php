@@ -30,7 +30,7 @@ get_header(); ?>
 					?>					
 						<div class="col-6 col-md-4">
 							<img src="<?php echo $ethics_image['url']; ?>" class="ethics_image">
-							<p><?php echo $ethics_text; ?></p>
+							<p class="ethics-text"><?php echo $ethics_text; ?></p>
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>
