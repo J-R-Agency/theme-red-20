@@ -44,10 +44,10 @@
     position: relative; 
     padding-bottom: 36%;
     overflow: hidden;
-    max-width: 100%;
+    max-width: initial;
     height: auto;
 	@include respond-to('xl'){
-		max-width: 80%;
+		max-width: 60%;
 		margin: 0 auto;
 	}    
 } 
