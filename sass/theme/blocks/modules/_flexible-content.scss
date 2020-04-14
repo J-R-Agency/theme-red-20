@@ -101,6 +101,10 @@
 	align-content: center;
 }
 
+.tcb-image > a {
+	display: flex;
+}
+
 .business-logos-wrapper {
 	display: flex;
 	flex-direction: column;

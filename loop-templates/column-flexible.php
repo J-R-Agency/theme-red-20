@@ -43,18 +43,20 @@ elseif( get_row_layout() == 'tcb_image' ):
 	$tcb_link = get_sub_field('tcb_link'); // Image
 	$tcb_image_type = get_sub_field('tcb_image_type'); // Image Type
 	echo "
-		<div class='flex-column-2'>";
+		<div class='flex-column-2'>
+			<div class='tcb-image'>";
 	
-	if ($tcb_link) {
-		echo "<a href='".$tcb_link['url']."' target='".$tcb_link['target']."'>";
-	}
-	
-	echo "<img src='".$tcb_image['url']."' class='".$tcb_image_type."'>";
-	
-	if ($tcb_link) {
-		echo "</a>";
-	}
-	echo "</div>";						
+		if ($tcb_link) {
+			echo "<a href='".$tcb_link['url']."' target='".$tcb_link['target']."'>";
+		}
+		
+		echo "<img src='".$tcb_image['url']."' class='".$tcb_image_type."'>";
+		
+		if ($tcb_link) {
+			echo "</a>";
+		}
+	echo "</div>
+	</div>";						
 
   // -------------------------- //
  // ---------- BRAND ----------//
