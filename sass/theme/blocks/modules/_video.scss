@@ -46,6 +46,10 @@
     overflow: hidden;
     max-width: 100%;
     height: auto;
+	@include respond-to('xl'){
+		max-width: 80%;
+		margin: 0 auto;
+	}    
 } 
 
 .fc-embed-container iframe,

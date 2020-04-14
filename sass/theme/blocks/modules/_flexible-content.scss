@@ -197,6 +197,10 @@
 
 .fc_brands_block {
 	padding: 2rem 0;
+	@include respond-to('xl'){
+		max-width: 80%;
+		margin: 0 auto;
+	}	
 	&.primary {
 		background-color: #383838;
 		background-blend-mode: overlay;
