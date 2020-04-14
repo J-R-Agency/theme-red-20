@@ -5,7 +5,7 @@ if( have_rows('executive_profile') ):
 	$count = 0;?>
 <section class="executive-profiles-wrapper">
 	
-<section class="generic bg-white">
+<section class="generic bg-grey">
 	<div class="executive-profiles-intro">
 		<h1><?php the_field('ep_headline');?></h1>
 		<p><?php the_field('ep_intro');?></p>
@@ -37,19 +37,21 @@ if( have_rows('executive_profile') ):
 					<p class="ep-position"><strong><?php echo $position; ?></strong></p>
 					<p><?php echo $bio; ?></p>
 			  	</div>
-		  	</div>
-		  		  	
+		  	</div>	  	
 		  	<?php else: ?>
-		  	<div class="ep-individual-wrapper">
-				<div class="executive-profile" href="#" style="background-image: url(<?php echo $portrait['url']; ?>)">
-					<div class="ep-description">
-						<p><strong><?php echo $name; ?></strong></p>
-						<p><?php echo $position; ?></p>
+		  	
+			  	<div class="ep-individual-wrapper">
+					<div class="executive-profile" href="#" style="background-image: url(<?php echo $portrait['url']; ?>)">
+						<div class="ep-description">
+							<p><strong><?php echo $name; ?></strong></p>
+							<p><?php echo $position; ?></p>
+						</div>
 					</div>
-				</div>
-				<div class="ep-hover" style="background-image: url(<?php echo $hover_image['url']; ?>)"></div>
-		  	</div>
+					<div class="ep-hover" style="background-image: url(<?php echo $hover_image['url']; ?>)"></div>
+			  	</div>
+		  	
 			<?php endif; ?>
+			
 		<?php    
 		$count++;
 		endwhile;

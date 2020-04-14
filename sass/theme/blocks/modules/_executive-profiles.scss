@@ -74,6 +74,7 @@
 	}
 }
 
+
 .ep-individual-wrapper {
 	position: relative;
 	width: 100%;
@@ -96,6 +97,10 @@
 	z-index: 3;
 	
 	@include respond-to('lg'){
+		border-right: 10px solid $light-grey;
+		border-left: 10px solid $light-grey;
+		border-bottom: 10px solid $light-grey;
+		border-top: 15px solid $light-grey;
 		&:hover {
 			opacity: 0;	
 		}
@@ -115,6 +120,10 @@
 .ep-hover {
 	display: none;
 	@include respond-to('lg'){
+		border-right: 10px solid $light-grey;
+		border-left: 10px solid $light-grey;
+		border-bottom: 10px solid $light-grey;
+		border-top: 15px solid $light-grey;
 		display: block;
 		z-index: 2;
 		width: 100%;
