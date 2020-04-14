@@ -4,7 +4,7 @@
 if( have_rows('photo_gallery') ):
 	$count = 0;?>
 <section class="photo-gallery-wrapper">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 <?php
  	// loop through the rows of data

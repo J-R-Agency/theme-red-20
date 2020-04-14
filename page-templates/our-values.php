@@ -17,8 +17,7 @@ get_header(); ?>
 
 <section class="generic bg-white">
 	<div class="ethics-wrapper">
-		<h1><?php the_field('ethics_headline'); ?></h1>
-		<p><?php the_field('ethics_intro'); ?></p>
+		<h1><?php the_field('ethics_intro'); ?></h1>
 		<div class="container">
 			<div class="row">
 				<?php if( have_rows('ethics_images') ):

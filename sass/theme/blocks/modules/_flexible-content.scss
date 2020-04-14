@@ -3,7 +3,11 @@
 	flex-wrap: wrap;
 	@include respond-to('lg'){
 		min-height: 500px;
-	}	
+	}
+	@include respond-to('xl'){
+		width: 80%;
+		margin: 0 auto;	
+	}
 	&:nth-child(even) {
 		flex-direction:column-reverse !important;
 		@include respond-to('lg'){
@@ -25,7 +29,11 @@
 	@include respond-to('lg'){
 		flex: 50%;
 		min-height: 500px;
-	}	
+	}
+	@include respond-to('xl'){
+		max-width: 80%;
+		margin: 0 auto;
+	}
 	img {
 	    max-width: 100%;
 	    max-height: initial;
@@ -67,10 +75,11 @@
 	@include respond-to('lg'){
 		padding: 5rem;
 	}
+
 	&.primary {
 		background-color: #a8a8a8;
 		background-blend-mode: screen;	
-		width: 100%;	
+		width: 100%;
 	}	
 	&.secondary {
 		color: white;
