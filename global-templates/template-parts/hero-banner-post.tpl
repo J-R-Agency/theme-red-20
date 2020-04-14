@@ -15,7 +15,7 @@
 				</div>
 			</div>
 			<div class="hero-image post">	
-				<img src="<?php echo $thumb; ?>">
+				<img src="<?php echo $thumb; ?>" id="post-image">
 			</div>	
 		</div>
 	<?php endif ?>

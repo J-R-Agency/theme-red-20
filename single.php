@@ -12,7 +12,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="post-hero-image">
+<div class="post-hero-image <?php the_field('hero_style'); ?>">
 	<?php echo get_the_post_thumbnail(); ?>
 </div>
 

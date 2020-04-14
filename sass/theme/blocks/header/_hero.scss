@@ -122,6 +122,15 @@
 	z-index: 99;
 }
 
+.post-hero-image {
+	&.contain {
+		img {
+			background-color: $light-grey;
+			object-fit: contain;
+		}		
+	}
+}
+
 .hero-image {
 	img {
 		height: inherit;
