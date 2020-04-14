@@ -1,6 +1,6 @@
 .banner-cta {
 	background-color: $red;
-	padding: 4rem 4rem 15% 4rem;
+	padding: 4rem 4rem 25% 4rem;
 	color: white;
 	display: flex;
 	align-items: center;
@@ -9,6 +9,7 @@
 
 	@include respond-to('md'){
 		flex-direction: row;
+		padding: 4rem 4rem 15% 4rem;
 	}
 	
 	&.link {
