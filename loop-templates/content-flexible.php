@@ -103,12 +103,11 @@ if( have_rows('flexible_content_block') ):
 	   			echo "</section>";
 	   		elseif($bb_style == 'tertiary'):
 	   			echo "<section class='fc_brands_block tertiary');'>
-	   				<p>".$bb_text."</p>
 	   			";
 	   				if( have_rows('businesses', 'option') ):
 						echo "
 							<div class='business-logos-wrapper'>
-								<p><strong>Our Brands:</strong></p>
+								<p><strong>".$bb_text."</strong></p>
 								<ul class='business-logos-list-full'>
 							";
 						
