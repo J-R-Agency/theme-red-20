@@ -28,7 +28,7 @@ get_header(); ?>
 						$ethics_links = get_sub_field('ethics_links');
 						$ethics_text = get_sub_field('ethics_text');
 					?>					
-						<div class="col-6 col-md-3">
+						<div class="col-6 col-md-4">
 							<img src="<?php echo $ethics_image['url']; ?>" class="ethics_image">
 							<p><?php echo $ethics_text; ?></p>
 						</div>
