@@ -100,7 +100,34 @@ if( have_rows('flexible_content_block') ):
 							endwhile;
 						echo "</ul></div>";
 					endif;	   				
-	   			echo "</section>";		
+	   			echo "</section>";
+	   		elseif($bb_style == 'tertiary'):
+	   			echo "<section class='fc_brands_block tertiary');'>
+	   				<p>".$bb_text."</p>
+	   			";
+	   				if( have_rows('businesses', 'option') ):
+						echo "
+							<div class='business-logos-wrapper'>
+								<p><strong>Our Brands:</strong></p>
+								<ul class='business-logos-list-full'>
+							";
+						
+							while( have_rows('businesses', 'option') ): the_row();
+								$business_logo = get_sub_field('business_logo', 'option'); // Image
+								$business_website = get_sub_field('business_website', 'option'); // Website link
+								$business_name = get_sub_field('business_name', 'option');
+								$san_name = sanitize_title($business_name);  
+								
+								echo "
+								    <li>
+								    	<a href='".site_url()."/".$san_name."'><img src='".$business_logo['business_logo_color']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+								    </li>";
+							
+							endwhile;
+						echo "</ul></div>";
+					endif;	   				
+	   			echo "</section>";		   			
+	   				
 	   		endif;
 
           // -------------------------- //
