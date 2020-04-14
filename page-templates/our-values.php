@@ -29,7 +29,7 @@ get_header(); ?>
 						$ethics_text = get_sub_field('ethics_text');
 					?>					
 						<div class="col-6 col-md-4">
-							<img src="<?php echo $ethics_image['url']; ?>" class="ethics_image">
+							<img src="<?php echo $ethics_image['url']; ?>" class="ethics-image">
 							<p class="ethics-text"><?php echo $ethics_text; ?></p>
 						</div>
 					<?php endwhile; ?>
