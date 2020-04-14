@@ -16,19 +16,21 @@ get_header(); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/hero-banner.tpl'); ?>
 
 <section class="generic bg-white">
-	<div class="charity-wrapper">
-		<h1><?php the_field('charity_headline'); ?></h1>
-		<p><?php the_field('charity_intro'); ?></p>
+	<div class="ethics-wrapper">
+		<h1><?php the_field('ethics_headline'); ?></h1>
+		<p><?php the_field('ethics_intro'); ?></p>
 		<div class="container">
 			<div class="row">
-				<?php if( have_rows('charity_logos') ):
+				<?php if( have_rows('ethics_images') ):
 						
-					while ( have_rows('charity_logos') ) : the_row();
-						$charity_logo_images = get_sub_field('charity_logo_images');
-						$charity_links = get_sub_field('charity_links');
+					while ( have_rows('ethics_images') ) : the_row();
+						$ethics_image = get_sub_field('ethics_image');
+						$ethics_links = get_sub_field('ethics_links');
+						$ethics_text = get_sub_field('ethics_text');
 					?>					
 						<div class="col-6 col-md-3">
-							<a href="<?php echo $charity_links['url']?>" target="<?php echo $charity_links['target']?>"><img src="<?php echo $charity_logo_images['url']; ?>" class="charity-logo"></a>
+							<img src="<?php echo $ethics_image['url']; ?>" class="ethics_image">
+							<p><?php echo $ethics_text; ?></p>
 						</div>
 					<?php endwhile; ?>
 				<?php endif; ?>
