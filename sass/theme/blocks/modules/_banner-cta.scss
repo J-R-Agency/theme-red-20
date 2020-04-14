@@ -34,7 +34,10 @@
 	&.social-media-2 {
 		background-color: $dark-grey;
 		justify-content: center;
-		padding: 4rem 4rem 15% 4rem;
+		padding: 4rem 4rem 25% 4rem;
+		@include respond-to('md'){
+			padding: 4rem 4rem 15% 4rem;
+		}
 	}
 	
 }
