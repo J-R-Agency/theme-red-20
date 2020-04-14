@@ -37,6 +37,9 @@
 	.tcb-image {
 		max-height: 500px;
 		display: flex;
+		a {
+			display: flex;
+		}
 	}
 	img, .tcb-image > a > img {
 	    max-width: 100%;
