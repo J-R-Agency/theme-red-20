@@ -34,7 +34,7 @@
 		max-width: 80%;
 		margin: 0 auto;
 	}
-	img {
+	img, .tcb-image > a > img {
 	    max-width: 100%;
 	    max-height: initial;
 	    object-position: center center;
@@ -99,10 +99,6 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
-}
-
-.tcb-image > a {
-	display: flex;
 }
 
 .business-logos-wrapper {
