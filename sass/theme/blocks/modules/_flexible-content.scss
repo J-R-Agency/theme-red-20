@@ -34,6 +34,10 @@
 		max-width: 80%;
 		margin: 0 auto;
 	}
+	.tcb-image {
+		max-height: 500px;
+		display: flex;
+	}
 	img, .tcb-image > a > img {
 	    max-width: 100%;
 	    max-height: initial;
@@ -42,12 +46,12 @@
 	    &.logo {
 		    object-fit: contain;
 		    padding: 5rem;
-		    max-height: 500px;
+		    height: 100%;
 		    margin: 0 auto;
 	    }
 	    &.other {
 		    object-fit: cover;
-		    max-height: 500px;
+		    height: 100%;
 		    width: 100%;
 	    }
 	    
