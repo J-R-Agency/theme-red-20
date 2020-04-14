@@ -46,7 +46,7 @@ elseif( get_row_layout() == 'tcb_image' ):
 		<div class='flex-column-2'>";
 	
 	if ($tcb_link) {
-		echo "<a href='".$tcb_link['url']."' target='".$tcb_link['target']."''>";
+		echo "<a href='".$tcb_link['url']."' target='".$tcb_link['target']."'>";
 	}
 	
 	echo "<img src='".$tcb_image['url']."' class='".$tcb_image_type."'>";
