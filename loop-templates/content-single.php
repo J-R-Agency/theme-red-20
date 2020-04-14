@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 			
 			<?php
 				if ( ! has_excerpt() ) {
-				    echo '';
+				    echo '&nbsp;';
 				} else { 
 				    the_excerpt();
 				}
