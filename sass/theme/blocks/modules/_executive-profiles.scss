@@ -95,6 +95,8 @@
 	background-position: center;
 	position: absolute;
 	z-index: 3;
+	border-bottom: 10px solid $light-grey;
+	border-top: 10px solid $light-grey;
 	
 	@include respond-to('lg'){
 		border-right: 10px solid $light-grey;
@@ -119,6 +121,8 @@
 
 .ep-hover {
 	display: none;
+	border-bottom: 10px solid $light-grey;
+	border-top: 10px solid $light-grey;
 	@include respond-to('lg'){
 		border-right: 10px solid $light-grey;
 		border-left: 10px solid $light-grey;
