@@ -95,12 +95,18 @@ if( have_rows('flexible_content_block') ):
 								$business_logo = get_sub_field('business_logo', 'option'); // Image
 								$business_name = get_sub_field('business_name', 'option');
 								$business_links = get_sub_field('business_links', 'option'); // Profile
+								$enable = get_sub_field('enable', 'option');
 								$san_name = sanitize_title($business_name);  
 								
-								echo "
-								    <li>
-								    	<a href='".$business_links['business_profile']['url']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
-								    </li>";
+								
+								if ($enable == false) {
+									echo "
+									    <li>
+									    	<a href='".$business_links['business_profile']['url']."'><img src='".$business_logo['business_logo_white']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+									    </li>";
+								} else {
+									echo "";
+								}
 							
 							endwhile;
 						echo "</ul></div>";
@@ -120,12 +126,19 @@ if( have_rows('flexible_content_block') ):
 								$business_logo = get_sub_field('business_logo', 'option'); // Image
 								$business_links = get_sub_field('business_links', 'option'); // Profile
 								$business_name = get_sub_field('business_name', 'option');
+								$enable = get_sub_field('enable', 'option');
 								$san_name = sanitize_title($business_name);  
 								
-								echo "
-								    <li>
-								    	<a href='".$business_links['business_profile']['url']."'><img src='".$business_logo['business_logo_color']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
-								    </li>";
+								if ($enable == false) {
+									echo "
+									    <li>
+									    	<a href='".$business_links['business_profile']['url']."'><img src='".$business_logo['business_logo_color']['url']."' alt='".$business_logo['business_logo_white']['alt']."'></a>
+									    </li>";
+								} else {
+									echo "";
+								}
+								
+								
 							
 							endwhile;
 						echo "</ul></div>";
