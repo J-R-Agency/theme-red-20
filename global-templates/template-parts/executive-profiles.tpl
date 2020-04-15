@@ -8,9 +8,7 @@ if( have_rows('executive_profile') ):
 		<h1><?php the_field('ep_headline');?></h1>
 		<p><?php the_field('ep_intro');?></p>
 	</div>
-</section>
 
-<section class="generic bg-light-grey">
 	<section class="executive-profiles-wrapper">
 	<?php
 	 	// loop through the rows of data
