@@ -78,12 +78,18 @@ elseif( get_row_layout() == 'tcb_brands' ):
 						$business_logo = get_sub_field('business_logo', 'option'); // Image
 						$business_links = get_sub_field('business_links', 'option'); // Profile
 						$business_name = get_sub_field('business_name', 'option');
+						$enable = get_sub_field('enable', 'option');
 						$san_name = sanitize_title($business_name);  						
 						
-						echo "
-						    <li>
-						    	<a href='".$business_links['business_profile']['url']."'><img src='".$business_logo['business_logo_color']['url']."' alt='".$business_logo['business_logo_color']['alt']."'></a>
-						    </li>";
+						if ($enable == false) {
+							echo "
+							    <li>
+							    	<a href='".$business_links['business_profile']['url']."'><img src='".$business_logo['business_logo_color']['url']."' alt='".$business_logo['business_logo_color']['alt']."'></a>
+							    </li>";							
+						} else {
+							echo "";
+						}
+
 					
 					endwhile;
 				
