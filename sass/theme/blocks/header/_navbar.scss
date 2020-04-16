@@ -63,9 +63,9 @@
 	background-size: contain;
 	background-position: bottom;
 	position: absolute;
-	transform: translateY(-100px);
+	transform: translateY(-50px);
 	@include respond-to('lg'){
-		transform: translateY(-50px);
+		transform: translateY(-100px);
 		height: 250px;
 	}
 	@include respond-to('xl'){
