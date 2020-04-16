@@ -3,6 +3,7 @@
 	flex-wrap: wrap;
 	@include respond-to('lg'){
 		min-height: 500px;
+		max-height: 600px;
 	}
 	@include respond-to('xl'){
 		max-width: 2000px;
