@@ -111,9 +111,8 @@
 
 .hero-intro {
 	margin: 0rem 0 4rem 0;
-	&.primary p {
-		font-size: 10pt;
-	}
+	font-size: 10pt;
+	
 	&.post p > a {
 		color: $red;
 	}
