@@ -3,7 +3,7 @@
 // check if the repeater field has rows of data
 if( have_rows('executive_profile') ):
 	$count = 0;?>
-<section class="generic bg-light-grey">
+<section class="generic bg-light-grey dog-overlay-ep">
 	<div class="executive-profiles-intro">
 		<h1><?php the_field('ep_headline');?></h1>
 		<p><?php the_field('ep_intro');?></p>
@@ -31,7 +31,7 @@ if( have_rows('executive_profile') ):
 				
 				
 				  	<!-- description -->
-				  	<div class="president-description dog-overlay-ep">
+				  	<div class="president-description">
 						<h2><strong><?php echo $name; ?></strong></h2>
 						<p class="ep-position"><strong><?php echo $position; ?></strong></p>
 						<p><?php echo $bio; ?></p>

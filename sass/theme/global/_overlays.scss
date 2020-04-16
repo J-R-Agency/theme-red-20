@@ -19,8 +19,9 @@
 }
 
 .dog-overlay-ep {
-	background-image: url(../assets/images/dog-watermark-eb.png);
-	background-position: center;
+	background-image: url(../assets/images/dog-watermark-ep.png);
+	background-position: top right;
+	background-repeat: no-repeat;
 	@include respond-to('md'){
 		background-position: left;
 	}	
