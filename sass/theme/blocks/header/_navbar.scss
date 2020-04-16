@@ -61,11 +61,9 @@
 	width: 100%;
 	background-repeat: no-repeat;
 	background-size: contain;
-	background-position: bottom;
+	background-position: top left;
 	position: absolute;
-	transform: translateY(-50px);
 	@include respond-to('lg'){
-		transform: translateY(-100px);
 		height: 250px;
 	}
 	@include respond-to('xl'){
