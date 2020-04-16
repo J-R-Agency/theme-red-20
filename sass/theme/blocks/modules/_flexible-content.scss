@@ -48,8 +48,8 @@
 	    
 	    &.logo {
 		    object-fit: contain;
-		    padding: 5rem;
-		    height: 100%;
+		    height: 70%;
+		    width: 70%;
 		    margin: 0 auto;
 	    }
 	    &.other {
@@ -87,6 +87,7 @@
 		background-color: #a8a8a8;
 		background-blend-mode: screen;	
 		width: 100%;
+		min-height: 400px;
 	}	
 	&.secondary {
 		color: white;
