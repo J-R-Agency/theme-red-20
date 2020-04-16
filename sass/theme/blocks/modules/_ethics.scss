@@ -4,9 +4,12 @@
 
 .ethics-image {
 	width: 200px;
-	height: 200px;
+	height: auto;
 	object-fit: contain;
 	padding: 1rem;
+	@include respond-to ('lg') {
+		height: 200px;
+	}
 }
 
 .ethics-text {
