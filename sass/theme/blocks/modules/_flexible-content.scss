@@ -28,7 +28,7 @@
 	@include respond-to('lg'){
 		flex: 50%;
 		min-height: 500px;
-		max-height: 800px;
+		max-height: 600px;
 	}
 	@include respond-to('xl'){
 		max-width: 2000px;
@@ -75,6 +75,20 @@
 		flex: 0 0 20%;
 	}	
 }
+
+.meet-the-group-container {
+	@include respond-to('lg'){
+		.flex-row:last-of-type {
+			min-height: 800px;
+			max-height: 800px;
+		}
+		.flex-column-2:last-of-type {
+			min-height: 800px;
+			max-height: 800px;
+		}
+	}
+}
+
 
 .tcb_cta {
 	display:flex;
