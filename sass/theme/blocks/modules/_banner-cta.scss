@@ -8,7 +8,7 @@
 	width: 100%;
 
 	@include respond-to('md'){
-		flex-direction: row;
+		flex-direction: column;
 		padding: 4rem 4rem 15% 4rem;
 	}
 	
@@ -19,7 +19,6 @@
 			margin-bottom: 1rem;
 			@include respond-to('lg'){
 				text-align: left;
-				margin-bottom: 0;
 			}			
 		}
 		h2 > p, h2 > p > span {
