@@ -4,7 +4,7 @@
 	<?php
 		$hero = get_field('hero');
 	if( $hero ): ?>
-		<div class="hero <?php echo $hero['hero_style']?>">
+		<div class="hero <?php echo $hero['hero_style']?> bg-<?php echo $hero['hero_color']?>">
 			<div class="hero-copy <?php echo $hero['hero_style']?>">
 				<div class="hero-title <?php echo $hero['hero_style']?>">
 					<?php echo $hero['hero_title']; ?>
@@ -20,7 +20,7 @@
 							if ($hero['hero_style']=='tertiary') {
 								echo "<div class='btn_red-border'>";
 							} else {
-								echo "<div class='btn_white-border'>";
+								echo "<div class='btn_".$hero['hero_button_color']."-border'>";
 							}
 							echo	$hero['hero_cta_link']['title'];
 							echo	"</div>

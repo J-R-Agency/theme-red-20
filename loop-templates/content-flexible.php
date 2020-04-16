@@ -50,6 +50,7 @@ if( have_rows('flexible_content_block') ):
        		$bb_style = get_sub_field('bb_style'); // Style (select)
        		$bb_text = get_sub_field('bb_text');
        		$bb_background_image = get_sub_field('bb_background_image');
+       		$bb_color = get_sub_field('bb_color');
        		
        		if ($bb_style == 'primary'):
 	   			echo "<section class='fc_brands_block primary' style='background-image:url(".$bb_background_image['url'].");'>
@@ -82,7 +83,7 @@ if( have_rows('flexible_content_block') ):
 					endif;	   				
 	   			echo "</section>";	
 	   		elseif($bb_style == 'secondary'):
-	   			echo "<section class='fc_brands_block secondary');'>
+	   			echo "<section class='fc_brands_block secondary bg-".$bb_color."');'>
 	   				<p>".$bb_text."</p>
 	   			";
 	   				if( have_rows('businesses', 'option') ):

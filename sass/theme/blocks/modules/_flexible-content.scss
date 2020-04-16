@@ -213,9 +213,16 @@
 		background-blend-mode: overlay;
 		background-position: bottom;
 	}
-	&.secondary {
+	
+	&.bg-red {
+		background-color: $red;
+		color: white;
+	}
+	&.bg-grey {
 		background-color: $dark-grey;
 		color: white;
+	}
+	&.secondary {
 		text-align: center;
 	}
 }
@@ -259,11 +266,8 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	height: 130px;
-	padding: 15px 0;
+	padding: 20px 0;
 	margin: 2rem 0;
-	@include respond-to('md') {
-		padding: 5px 0;
-	}
 }
 
 .achievement-copy {

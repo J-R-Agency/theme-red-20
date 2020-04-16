@@ -1,19 +1,25 @@
 .hero {
-	&.primary {
+	&.bg-white {
+		background-color: white;
+		color: black;
+	}
+	&.bg-grey {
+		background-color: $dark-grey;
+		color: white;
+	}
+	&.bg-red {
 		background-color: $red;
 		color: white;
+	}
+	&.primary {
 		display: flex;
 		flex-direction: column-reverse;
 	}
 	&.secondary {
-		background-color: $dark-grey;
-		color: white;
 		display: flex;
 		flex-direction: column-reverse;		
 	}
 	&.tertiary {
-		background-color: white;
-		color: black;
 		display: flex;
 		flex-direction: column-reverse;		
 	}	
