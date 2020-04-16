@@ -53,10 +53,11 @@
     padding-bottom: 36%;
     overflow: hidden;
     max-width: initial;
-    height: auto;
+    height: 250px;
 	@include respond-to('xl'){
 		max-width: 64%;
 		margin: 0 auto;
+		height: auto;
 	}    
 } 
 
