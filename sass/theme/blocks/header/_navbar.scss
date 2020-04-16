@@ -52,3 +52,23 @@
 		}					
 	}
 }
+
+.header-wave {
+	z-index: 10;
+	display: block;
+	background-image: url('../assets/images/header-wave.png');
+	height: 100px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	position: absolute;
+	transform: translateY(-100px);
+	@include respond-to('lg'){
+		transform: translateY(-100px);
+		height: 250px;
+	}
+	@include respond-to('xl'){
+		height: 255px;
+	}
+}
