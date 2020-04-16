@@ -3,7 +3,7 @@
 		
 		    <?php while( have_rows('businesses', 'option') ): the_row();
 		    	$business_logo = get_sub_field('business_logo', 'option'); // Image
-		    	$business_name = get_sub_field('business_name', 'option'); // Text
+		    	$business_brand = get_sub_field('business_brand', 'option'); // Text
 		    	$business_locations = get_sub_field('business_locations', 'option');
 		    	$business_links = get_sub_field('business_links', 'option'); // Profile
 				$enable = get_sub_field('enable', 'option');
@@ -21,7 +21,7 @@
 							<div class="container">
 								<div class="row">
 									<div class="col-12">
-										<h2 class='business-name'><?php echo $business_name; ?></h2>
+										<h2 class='business-name' style="color:<?php echo $business_brand['primary_color']; ?>; border-bottom: 8px solid <?php echo $business_brand['secondary_color']; ?>"><?php echo $business_brand['business_name']; ?></h2>
 									</div>
 								</div>
 								<div class="row">
