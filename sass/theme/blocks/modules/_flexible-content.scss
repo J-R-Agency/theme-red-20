@@ -79,7 +79,7 @@
 
 .meet-the-group-container {
 	@include respond-to('lg'){
-		&:last-child {
+		.flex-row:last-of-type {
 			min-height: 800px;
 			max-height: 800px;
 			.flex-column-2 {
