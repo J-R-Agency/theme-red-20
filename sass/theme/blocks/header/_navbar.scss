@@ -64,9 +64,6 @@
 	background-position: top left;
 	position: absolute;
 	@include respond-to('lg'){
-		height: 250px;
-	}
-	@include respond-to('xl'){
-		height: 255px;
+		height: 100%;
 	}
 }

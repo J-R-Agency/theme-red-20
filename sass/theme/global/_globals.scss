@@ -36,6 +36,14 @@
 	}
 }
 
+.top-section {
+	padding-top: 50px;
+	
+	@include respond-to('lg'){
+		padding-top: 150px;
+	}	
+}
+
 .bg-light-grey {
 	background-color: $light-grey;
 }

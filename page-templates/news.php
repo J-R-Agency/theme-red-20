@@ -13,7 +13,7 @@ defined( 'ABSPATH' ) || exit;
 
 get_header(); ?>
 <section class="header-wave"></section>
-<section class="generic bg-light-grey"></section>
+<section class="top-section bg-light-grey"></section>
 <?php include(get_template_directory() . '/global-templates/template-parts/latest-news.tpl'); ?>
 <?php include(get_template_directory() . '/global-templates/template-parts/videos.tpl'); ?>
 <section class="bottom-section"></section>
