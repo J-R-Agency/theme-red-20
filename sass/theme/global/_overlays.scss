@@ -1,6 +1,7 @@
 .dog-overlay-cs {
 	background-image: url(../assets/images/dog-watermark-cs.png);
 	background-position: center;
+	background-repeat: no-repeat;
 	@include respond-to('md'){
 		background-position: bottom left;
 		background-size: contain;

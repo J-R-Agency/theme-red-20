@@ -65,7 +65,7 @@
 	position: absolute;
 	transform: translateY(-100px);
 	@include respond-to('lg'){
-		transform: translateY(-100px);
+		transform: translateY(-50px);
 		height: 250px;
 	}
 	@include respond-to('xl'){
