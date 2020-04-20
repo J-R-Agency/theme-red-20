@@ -228,15 +228,11 @@
 	li {
 		display: flex;
 		margin: 0 1rem;
-		list-style: none;		
+		list-style: none;
 		img {
 			width: 150px;
 			height: 100px;
-			object-fit: contain;
-			@include respond-to('lg'){
-				width: 150px;
-				height: 100px;
-			}					
+			object-fit: contain;				
 		}
 	}
 }
