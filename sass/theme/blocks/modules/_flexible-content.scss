@@ -149,8 +149,9 @@
 	@include respond-to('lg'){
 		padding: 6rem 3rem;
 	}
-	a {
-		color: black;
+	
+	.tcb-cta-link {	
+		color: black;	
 	}
 	
 	&.primary {
@@ -160,6 +161,7 @@
 		height: 100%;
 		min-height: 400px;
 	}	
+	
 	&.secondary {
 		color: white;
 		text-align: center;

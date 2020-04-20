@@ -15,7 +15,7 @@ if( get_row_layout() == 'tcb_cta_with_image' ):
 	if ($tcb_cta_style == 'primary'):
 		echo "
 			<div class='flex-column-2'>
-				<a href='".$tcb_cta_link['url']."' target='".$tcb_cta_link['target']."'>
+				<a href='".$tcb_cta_link['url']."' target='".$tcb_cta_link['target']."' class='tcb-cta-link'>
 				<div class='tcb_cta_container'>
 				
 					<div class='hover' style='background-image: url(".$tcb_cta_image_hover['url'].")'></div>
