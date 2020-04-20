@@ -1,0 +1,18 @@
+.achievement-number {
+	background-image: url('../assets/images/achievement-ribbon.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 130px;
+	padding: 20px 0;
+	margin: 2rem 0;
+}
+
+.achievement-copy {
+	margin: 0 auto;
+	width: 80%;
+	p > a {
+		color: $red;
+		@include _montserrat-light;
+	}
+}

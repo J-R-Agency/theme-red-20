@@ -9,16 +9,25 @@ if( get_row_layout() == 'tcb_cta_with_image' ):
 	$tcb_cta_text = get_sub_field('tcb_cta_text');
 	$tcb_cta_link = get_sub_field('tcb_cta_link');
 	$tcb_cta_style = get_sub_field('tcb_cta_style');
+	$tcb_cta_image_hover = get_sub_field('tcb_cta_image_hover');
 	
 	// STYLE: PRIMARY
 	if ($tcb_cta_style == 'primary'):
 		echo "
 			<div class='flex-column-2'>
-				<div class='tcb_cta ".$tcb_cta_style."' style='background-image:url(".$tcb_cta_background_image['url'].");'>
-					<h2>".$tcb_cta_title."</h2>
-					<p>".$tcb_cta_text."</p>
-					<a href='".$tcb_cta_link['url']."' target='".$tcb_cta_link['target']."' class='link margin-vertical'><div class='btn_red-border'>".$tcb_cta_link['title']."</div></a>
+				<a href='".$tcb_cta_link['url']."' target='".$tcb_cta_link['target']."'>
+				<div class='tcb_cta_container'>
+				
+					<div class='hover' style='background-image: url(".$tcb_cta_image_hover['url'].")'></div>
+					
+						<div class='tcb_cta ".$tcb_cta_style."' style='background-image:url(".$tcb_cta_background_image['url'].");'>
+							<h2>".$tcb_cta_title."</h2>
+							<p>".$tcb_cta_text."</p>
+							<a href='".$tcb_cta_link['url']."' target='".$tcb_cta_link['target']."' class='link margin-vertical'><div class='btn_red-border'>".$tcb_cta_link['title']."</div></a>
+						</div>
+					
 				</div>
+				</a>
 			</div>
 			";		
 	// STYLE: SECONDARY
@@ -52,7 +61,6 @@ elseif( get_row_layout() == 'tcb_image' ):
 		
 		echo "
 		<div class='logo' style='background-image: url(".$tcb_image['url'].")'></div>
-		<div class='hover' style='background-image: url(".$tcb_image_hover['url'].")'></div>
 		";
 		
 		if ($tcb_link) {

@@ -56,20 +56,7 @@
 			border: 20px solid transparent;
 			@include respond-to('lg') {
 				border: 100px solid transparent;
-				&:hover {
-					opacity: 0;
-				}
 			}
-			
-		}
-		.hover {
-			background-position: center;
-			width: 100%;
-			height: 100%;
-			background-repeat: no-repeat;
-			background-size: cover;
-			position: absolute;
-			z-index: 1;
 		}
 	}
 	img, .tcb-image > a > img {
@@ -82,13 +69,34 @@
 		    height: 70%;
 		    width: 70%;
 		    margin: 0 auto;
-	    }
+	    } 
 	    &.other {
 		    object-fit: cover;
 		    height: 100%;
 		    width: 100%;
 	    }
-	    
+	}
+	
+	.tcb_cta_container {
+		position: relative;
+		.hover {
+			display: none;
+		}
+		
+		@include respond-to ('lg') {
+			.hover {
+				display: block;
+				background-position: center;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				position: absolute;
+				&:hover {
+					opacity: 0;
+				}
+			}
+		}
 	}
 }
 
@@ -122,16 +130,7 @@
 						position: absolute;
 						z-index: 3;
 					}
-					.hover {
-						margin-bottom: 6rem;
-						background-position: center;
-						width: 100%;
-						height: 100%;
-						background-repeat: no-repeat;
-						background-size: cover;
-						position: absolute;
-						z-index: 1;
-					}					
+									
 				}
 			}
 		}
@@ -150,11 +149,15 @@
 	@include respond-to('lg'){
 		padding: 6rem 3rem;
 	}
-
+	a {
+		color: black;
+	}
+	
 	&.primary {
 		background-color: #cccccc;
 		background-blend-mode: screen;	
 		width: 100%;
+		height: 100%;
 		min-height: 400px;
 	}	
 	&.secondary {
@@ -177,168 +180,3 @@
 	align-content: center;
 }
 
-.business-logos-wrapper {
-	display: flex;
-	flex-direction: column;
-	text-align: center;
-	padding: 2rem;
-	color: $red;
-	@include respond-to('lg'){
-		padding: 3rem 0;
-	}	
-}
-
-.business-logos {
-	display: flex;
-}
-
-.business-logos-list {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding: 0;
-	li {
-		display: flex;
-		margin: 0 1rem;
-		list-style: none;
-		flex: 1 0 30%;
-		@include respond-to('md'){
-			flex: 1 0 20%;
-		}		
-		
-		@include respond-to('lg'){
-			flex: 1 0 17%;
-		}
-	
-		img {
-			width: 100px;
-			height: 100px;
-			object-fit: contain;
-		}
-	}
-}
-
-.business-logos-list-full {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	padding: 0;
-	margin: 0 auto;
-	justify-content: center;
-	li {
-		display: flex;
-		margin: 0 1rem;
-		list-style: none;
-		img {
-			width: 150px;
-			height: 100px;
-			object-fit: contain;				
-		}
-	}
-}
-
-.business-info {
-	padding: 5rem 2rem;
-	justify-content: left;
-	flex: 1;
-	.business-name {
-		padding-bottom: 1rem;
-		display: inline-block;
-	}
-	a {
-		color: $red;
-		text-transform: uppercase;
-		&.email-link {
-			color: black;
-			text-transform: inherit;
-			@include _montserrat-light;
-			
-			&:hover {
-				color: $red;
-			}
-		}
-		span {
-			font-size: 2rem;
-			font-family:monospace;		
-			padding-left: 0.5rem;	
-		}
-	}
-
-}
-
-.fc_brands_block {
-	padding: 2rem 0;
-	@include respond-to('xl'){
-		max-width: 2000px;
-		margin: 0 auto;
-	}	
-	&.primary {
-		background-color: #383838;
-		background-blend-mode: overlay;
-		background-position: bottom;
-	}
-	
-	&.bg-red {
-		background-color: $red;
-		color: white;
-	}
-	&.bg-grey {
-		background-color: $dark-grey;
-		color: white;
-	}
-	&.secondary {
-		text-align: center;
-	}
-}
-
-#red-logo-line {
-	display: none;
-	@include respond-to('lg'){
-		width: 83%;
-		display: flex;
-		margin-left: 10%;
-	}	
-}
-
-#red-logo-white {
-	width: 200px;
-	margin-left: 44%;
-	display: flex;
-	padding: 1rem;
-}
-
-.team-member-portrait {
-	border-radius: 50%;
-	border: 1px solid gray;
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-	margin: 1rem 0;
-}
-
-.team-member-name {
-	margin: 0;
-}
-
-.team-member-position {
-	color: $red;
-}
-
-.achievement-number {
-	background-image: url('../assets/images/achievement-ribbon.png');
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	height: 130px;
-	padding: 20px 0;
-	margin: 2rem 0;
-}
-
-.achievement-copy {
-	margin: 0 auto;
-	width: 80%;
-	p > a {
-		color: $red;
-		@include _montserrat-light;
-	}
-}
