@@ -36,14 +36,40 @@
 		margin: 0 auto;
 	}
 	.tcb-image {
-		max-height: 100%;
+		max-height: 800px;
 		min-height: 400px;
 		display: flex;
 		width: 100%;
-		justify-content: center;
-		align-items: center;
+		position: relative;
 		a {
 			display: flex;
+		}
+		.logo {
+			background-position: center;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: contain;
+			position: absolute;
+			z-index: 3;
+			background-color: white;
+			border: 20px solid transparent;
+			@include respond-to('lg') {
+				border: 100px solid transparent;
+				&:hover {
+					opacity: 0;
+				}
+			}
+			
+		}
+		.hover {
+			background-position: center;
+			width: 100%;
+			height: 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+			position: absolute;
+			z-index: 1;
 		}
 	}
 	img, .tcb-image > a > img {
@@ -88,7 +114,24 @@
 				.tcb-image {
 					.logo {
 						margin-bottom: 6rem;
+						background-position: center;
+						width: 100%;
+						height: 100%;
+						background-repeat: no-repeat;
+						background-size: 70%;
+						position: absolute;
+						z-index: 3;
 					}
+					.hover {
+						margin-bottom: 6rem;
+						background-position: center;
+						width: 100%;
+						height: 100%;
+						background-repeat: no-repeat;
+						background-size: cover;
+						position: absolute;
+						z-index: 1;
+					}					
 				}
 			}
 		}

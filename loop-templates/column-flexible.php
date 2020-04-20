@@ -40,8 +40,8 @@ if( get_row_layout() == 'tcb_cta_with_image' ):
 // -------------------------- //
 elseif( get_row_layout() == 'tcb_image' ):
 	$tcb_image = get_sub_field('tcb_image'); // Image
+	$tcb_image_hover = get_sub_field('tcb_image_hover'); // Image
 	$tcb_link = get_sub_field('tcb_link'); // Image
-	$tcb_image_type = get_sub_field('tcb_image_type'); // Image Type
 	echo "
 		<div class='flex-column-2'>
 			<div class='tcb-image'>";
@@ -50,7 +50,10 @@ elseif( get_row_layout() == 'tcb_image' ):
 			echo "<a href='".$tcb_link['url']."' target='".$tcb_link['target']."'>";
 		}
 		
-		echo "<img src='".$tcb_image['url']."' class='".$tcb_image_type."'>";
+		echo "
+		<div class='logo' style='background-image: url(".$tcb_image['url'].")'></div>
+		<div class='hover' style='background-image: url(".$tcb_image_hover['url'].")'></div>
+		";
 		
 		if ($tcb_link) {
 			echo "</a>";
