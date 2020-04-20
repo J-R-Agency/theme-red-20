@@ -230,12 +230,12 @@
 		margin: 0 1rem;
 		list-style: none;		
 		img {
-			width: 150px;
+			width: 100px;
 			height: 100px;
 			object-fit: contain;
 			@include respond-to('lg'){
-				width: 200px;
-				height: 150px;
+				width: 150px;
+				height: 100px;
 			}					
 		}
 	}
