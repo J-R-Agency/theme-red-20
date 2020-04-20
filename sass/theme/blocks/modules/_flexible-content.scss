@@ -148,7 +148,7 @@
 	background-position:center;
 	background-size: cover;
 	@include respond-to('lg'){
-		padding: 5rem;
+		padding: 6rem 3rem;
 	}
 
 	&.primary {
