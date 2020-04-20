@@ -17,10 +17,6 @@ if( $banner_cta ): ?>
 	?>
 	<div class="banner-cta social-media">
 
-		<div class="banner-cta-left">
-			<h2><?php echo $banner_cta['cta_text']; ?></h2>	
-		</div>
-
 		<div class="banner-social-media">
 			<?php include(get_template_directory() . '/global-templates/template-parts/social-media.php'); ?>
 		</div>

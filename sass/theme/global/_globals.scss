@@ -37,10 +37,10 @@
 }
 
 .top-section {
-	padding-top: 50px;
+	padding-top: 30px;
 	
 	@include respond-to('lg'){
-		padding-top: 150px;
+		padding-top: 90px;
 	}	
 }
 

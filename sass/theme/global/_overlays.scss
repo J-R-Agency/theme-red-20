@@ -23,9 +23,6 @@
 	background-image: url(../assets/images/dog-watermark-ep.png);
 	background-position: top right;
 	background-repeat: no-repeat;
-	@include respond-to('md'){
-		background-position: left;
-	}	
 }
 
 .dog-overlay-careers {

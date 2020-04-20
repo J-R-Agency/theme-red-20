@@ -86,7 +86,7 @@
 .banner-social-media {
 	filter: invert(1);
 	@include respond-to('lg'){
-		margin-left: 20%;
+		margin-left: 0;
 		&.tertiary {
 			margin-left: 0;
 		}
