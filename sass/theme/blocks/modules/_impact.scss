@@ -12,6 +12,8 @@ $line: 4px;
 .impact {
 	display: flex;
 	flex-direction: column;
+	position: relative;
+	background-color: $red;
 	@include respond-to('lg') {
 		flex-direction: row;
 		height: 550px;
@@ -26,19 +28,19 @@ $line: 4px;
 	padding: 2rem 0 4rem 0;
 	@include respond-to('lg') {
 		padding: 0;
-		width: 50%;	
+		width: 50%;
 	}
 }
 
 /* Copy */
 
 .impact-copy {
-	background-color: $red;
 	padding: 2rem;
 	color: white;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	z-index: 5;
 	@include respond-to('lg') {
 		width: 50%;
 		padding: 7rem 0 7rem 5rem;
@@ -49,19 +51,25 @@ $line: 4px;
 	}
 }
 
+.impact-intro {
+	width: 80%;
+}
+
 /* Wave */
 
 .impact-wave {
 	display: none;
 	@include respond-to('lg') {
 		display: block;
-		background-image: url('../assets/images/impact-wave.png');
-		background-color: $dark-grey;
+		background-image: url(../assets/images/impact-wave.png);
+		background-color: transparent;
 		background-size: contain;
 		background-repeat: no-repeat;
-		width: 350px;	
-		margin-left: -10px;	
-		z-index: -1;
+		width: 100%;
+		margin-left: 42%;
+		position: absolute;
+		height: 100%;
+		z-index: 2;
 	}
 }
 
