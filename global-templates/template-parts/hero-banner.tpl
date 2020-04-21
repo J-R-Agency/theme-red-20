@@ -18,7 +18,7 @@
 							echo "<a href='".$hero['hero_cta_link']['url']."' target='".$hero['hero_cta_link']['target']."' class='link'>";
 							
 							if ($hero['hero_style']=='tertiary') {
-								echo "<div class='btn_red-border'>";
+								echo "<div class='btn_white-border'>";
 							} else {
 								echo "<div class='btn_".$hero['hero_button_color']."-border'>";
 							}
