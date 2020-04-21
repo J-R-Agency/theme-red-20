@@ -45,10 +45,11 @@
 			  left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;    
 			  content: attr(data-date);
 			  text-align: right;
-			  font-weight: bold;    
 			  min-width: $date;
 			  top: 10px;
 			  margin-left: 1rem;
+			  @include _montserrat-bold;
+			  
 			  @include respond-to('lg') {
 			      margin-left: 0;
 			  }
