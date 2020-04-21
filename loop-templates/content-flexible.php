@@ -348,7 +348,7 @@ if( have_rows('flexible_content_block') ):
        		$impact_intro = get_sub_field('impact_intro');
        		
        		echo "
-			<!-- Hero image -->
+			<!-- Impact Module -->
 				<div class='impact'>
 					<div class='impact-copy'>
 						<div class='impact-headline'>
@@ -383,6 +383,53 @@ if( have_rows('flexible_content_block') ):
 				echo "</div>
 				</div>	
        		";  	
+
+	   	  // -------------------------- //
+         // ------ CASE: OUR TOUCH ----//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_our_touch' ):
+       		$our_touch_headline = get_sub_field('our_touch_headline');
+       		$our_touch_intro = get_sub_field('our_touch_intro');
+       		
+       		echo "
+			<!-- Our Touch Module -->
+				<section class='generic bg-white'>
+					<div class='our-touch'>
+						<h1>".$our_touch_headline."</h1>
+						<p>".$our_touch_intro."</p>
+					</div>
+				</section>
+       		"; 	
+
+          // -------------------------- //
+         // ------ CASE: TIMELINE -----//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_timeline' ):
+       		
+       		echo "<!-- Timeline -->
+       		<section class='generic bg-white'>
+       			<div class='fc_timeline'>
+       		";
+				if ( have_rows( 'timeline' ) ) :
+				
+					echo "<ul class='timeline'>";
+					
+					while ( have_rows( 'timeline' ) ) : the_row();
+					$timeline_year = get_sub_field('timeline_year');
+					$timeline_milestone = get_sub_field('timeline_milestone');		
+					
+					echo "
+						<li class='milestone' data-date='".$timeline_year."'>
+							<p>".$timeline_milestone."</p>
+						</li>
+					";
+										
+					endwhile;
+					echo "</ul>";
+				endif;	
+			echo "</div>
+			</section>";
+
 		    
 		    
         endif; // Last endif            

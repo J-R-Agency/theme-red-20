@@ -1,36 +1,9 @@
-$background: #252827;
-
-$spacing: 50px;
-$radius: 4px;
-
-$date: 120px;
-$dotborder: 4px;
-$dot: 11px;
-$line: 4px;
-
-
-.impact {
-	display: flex;
-	flex-direction: column;
-	@include respond-to('lg') {
-		flex-direction: row;
-		height: 550px;
-		overflow: hidden;
-	}
+.our-touch {
+	text-align: center;
 }
 
-/* Base */
-.impact-timeline {
-	background-color: $dark-grey;
-	color: white;
-	padding: 2rem 0 4rem 0;
-	@include respond-to('lg') {
-		padding: 0;
-		width: 50%;	
-	}
-	
-	/* Timeline */
-	
+/* Timeline */
+.fc_timeline {
 	.timeline {
 		border-left: $line solid $red;
 		border-bottom-right-radius: $radius;
@@ -84,7 +57,7 @@ $line: 4px;
 			&:after {
 			  box-shadow: 0 0 0 $dotborder fade($red,100%);    
 			  left: -67px;        
-			  background: $dark-grey;    
+			  background: white;    
 			  border-radius: 50%;  
 			  padding: 20px;
 			  border: 5px solid $red;
@@ -96,39 +69,3 @@ $line: 4px;
 		}
 	}	
 }
-
-/* Copy */
-
-.impact-copy {
-	background-color: $red;
-	padding: 2rem;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	@include respond-to('lg') {
-		width: 50%;
-		padding: 7rem 0 7rem 5rem;
-	}
-	&:after {
-		width: 20px;
-		background-color: blue;
-	}
-}
-
-/* Wave */
-
-.impact-wave {
-	display: none;
-	@include respond-to('lg') {
-		display: block;
-		background-image: url('../assets/images/impact-wave.png');
-		background-color: $dark-grey;
-		background-size: contain;
-		background-repeat: no-repeat;
-		width: 350px;	
-		margin-left: -10px;	
-		z-index:-1;
-	}
-}
-
