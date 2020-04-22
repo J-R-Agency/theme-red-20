@@ -34,14 +34,14 @@
 								</div>
 								<div class="col-12 col-lg-9">
 									<div class="vacancy-description">
-										<h2><?php echo the_title(); ?></h2>
-										<p><?php echo the_excerpt(); ?>
+										<h2><?php echo the_title(); ?> <?php echo $categories[0]->name ?></h2>
+										<p><?php echo the_excerpt(); ?> 
 										<a href="<?php echo the_permalink(); ?>">FIND OUT MORE</a>
 									</div>
 								</div>
 							</div>
 						</div>	
-					</div>
+					</div>	
 					
 			<?php endwhile; ?>
 		<?php endif; ?>						    
