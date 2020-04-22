@@ -430,6 +430,17 @@ if( have_rows('flexible_content_block') ):
 			echo "</div>
 			</section>";
 
+	   	  // -------------------------- //
+         // --- CASE: CONTENT BLOCK ---//
+        // -------------------------- //
+       elseif( get_row_layout() == 'fc_wp_content' ):
+       		
+       		echo "
+			<!-- Content Module -->
+				<section class='generic bg-white'>
+					". get_post_field('post_content', $post->ID) ."
+				</section>
+       		"; 	
 		    
 		    
         endif; // Last endif            
