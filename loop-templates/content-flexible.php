@@ -438,8 +438,15 @@ if( have_rows('flexible_content_block') ):
        		echo "
 			<!-- Content Module -->
 				<section class='generic bg-white'>
-					". get_post_field('post_content', $post->ID) ."
-				</section>
+					";
+			if (have_posts()) : while (have_posts()) : the_post();
+					the_content();
+				endwhile;	
+			endif;	
+					
+			//get_post_field('post_content', $post->ID)
+					
+			echo "</section>
        		"; 	
 		    
 		    
