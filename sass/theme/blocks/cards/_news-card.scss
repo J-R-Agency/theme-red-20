@@ -28,6 +28,7 @@
 		flex-basis: 100%;
 		flex-grow: 1;
 		height: 200px;
+		z-index: 998;
 		
 		@include respond-to('md'){
 			flex-basis: 50%;
