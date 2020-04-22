@@ -2,7 +2,6 @@
 <div class="col-12 col-lg-4 col-md-4">
 	
 		<div class="news-card">
-			
 
 				    	<!-- image -->
 				    	<a href="<?php the_permalink(); ?>">
@@ -12,9 +11,7 @@
 					    			echo "<img src='". get_template_directory_uri() ."/assets/images/news-card-placeholder.jpg'>";
 					    		} ?>
 					    </a>
-
-
-		    
+					    
 				    	<!-- title -->
 			        	<div class="news-card__title">
 				        	<a href="<?php the_permalink(); ?>" class="link"><?php the_title(); ?></a>
