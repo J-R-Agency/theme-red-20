@@ -11,6 +11,7 @@
 	@include respond-to('md'){
 		margin-bottom: 1rem;
 	}
+	
 	&__first {
 		display: flex;
 		flex-direction: row;
@@ -28,7 +29,6 @@
 		flex-basis: 100%;
 		flex-grow: 1;
 		height: 200px;
-		z-index: 998;
 		
 		@include respond-to('md'){
 			flex-basis: 50%;
@@ -40,7 +40,6 @@
 		flex-grow: 1;
 		overflow: hidden;
 		height: 100%;
-		z-index: 999;
 		@include respond-to('md'){
 			flex-basis: 50%;
 		}	
