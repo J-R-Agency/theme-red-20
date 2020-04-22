@@ -53,6 +53,11 @@
 								    
 								    <div class="news-card__excerpt">
 								    	<?php the_excerpt(); ?>
+								    	<div class="news-card__button">
+									    	<a href="<?php echo the_permalink(); ?>" class="link">
+										    	<div class="btn_red-border">Read On</div>
+										    </a>
+										</div>
 								    </div>
 								</div>
 								

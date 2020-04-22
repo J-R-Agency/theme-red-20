@@ -120,7 +120,7 @@ add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
  */
 if ( ! function_exists( 'dyad_excerpt_continue_reading' ) ) {
 	function dyad_excerpt_continue_reading() {
-		return '<div class="news-card__button"><a href="' . esc_url( get_permalink() ) . '" class="link"><div class="btn_red-border">' . sprintf( esc_html__( 'Read On', 'dyad' ), '<span class="screen-reader-text"> "' . get_the_title() . '"</span>' ) . '</div></a></div>';
+		return '';
 	}
 } // /dyad_excerpt_continue_reading
 
