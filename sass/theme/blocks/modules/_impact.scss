@@ -1,0 +1,143 @@
+$background: #252827;
+
+$spacing: 50px;
+$radius: 4px;
+
+$date: 120px;
+$dotborder: 4px;
+$dot: 11px;
+$line: 4px;
+
+
+.impact {
+	display: flex;
+	flex-direction: column;
+	@include respond-to('lg') {
+		flex-direction: row;
+		height: 550px;
+		overflow: hidden;
+	}
+}
+
+/* Base */
+.impact-timeline {
+	background-color: $dark-grey;
+	color: white;
+	padding: 2rem 0 4rem 0;
+	@include respond-to('lg') {
+		padding: 0;
+		width: 50%;	
+	}
+	
+	/* Timeline */
+	
+	.timeline {
+		border-left: $line solid $red;
+		border-bottom-right-radius: $radius;
+		border-top-right-radius: $radius;    
+		color: fade(white, 80%);
+		margin: 0 0 0 6rem;  
+		position: relative;
+		list-style: none;
+		text-align: left;  
+		max-width: 70%; 
+		@include respond-to('lg') {
+			margin: $spacing auto;
+			max-width: 50%;
+		}
+	  
+		.milestone {
+		border-bottom: 1px dashed fade(white, 10%);
+		margin: 4rem 0;  
+		position: relative;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		
+			@include respond-to('lg') {
+				height: 50px;	
+			}
+			
+			p {
+				margin: 0;
+				padding: 0;
+			}
+			
+			&:last-of-type { 
+			  padding-bottom: 0;
+			  margin-bottom: 0; 
+			  border: none;      
+			}
+			
+			&:before, &:after {
+			  position: absolute;
+			  display: block;
+			  top: 0;
+			}
+			
+			&:before {
+			  left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;    
+			  content: attr(data-date);
+			  text-align: right;
+			  min-width: $date;
+			  top: 10px;
+			  margin-left: 1rem;
+			  @include _montserrat-bold;
+			  
+			  @include respond-to('lg') {
+			      margin-left: 0;
+			  }
+			}
+			
+			&:after {
+			  box-shadow: 0 0 0 $dotborder fade($red,100%);    
+			  left: -67px;        
+			  background: $dark-grey;    
+			  border-radius: 50%;  
+			  padding: 20px;
+			  border: 5px solid $red;
+			  height: $dot;
+			  width: $dot;
+			  content: "";
+			  top: 0px;
+			}
+		}
+	}	
+}
+
+/* Copy */
+
+.impact-copy {
+	background-color: $red;
+	padding: 2rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	@include respond-to('lg') {
+		width: 50%;
+		padding: 7rem 0 7rem 5rem;
+	}
+	&:after {
+		width: 20px;
+		background-color: blue;
+	}
+}
+
+/* Wave */
+
+.impact-wave {
+	display: none;
+	@include respond-to('lg') {
+		display: block;
+		background-image: url('../assets/images/impact-wave2.png');
+		background-color: $dark-grey;
+		background-size: contain;
+		background-repeat: no-repeat;
+		width: 350px;	
+		margin-left: -10px;	
+		z-index:-1;
+	}
+}
+

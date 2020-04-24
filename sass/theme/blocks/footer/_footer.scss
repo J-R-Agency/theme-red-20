@@ -1,0 +1,59 @@
+.footer-wave {
+	z-index: 10;
+	display: block;
+	background-image: url('../assets/images/footer-wave.png');
+	height: 100px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	position: absolute;
+	transform: translateY(-100px);
+	@include respond-to('lg'){
+		transform: translateY(-250px);
+		height: 250px;
+	}
+	@include respond-to('xl'){
+		height: 255px;
+	}
+}
+
+#wrapper-footer {
+	background-color: black;
+	color: white;
+	text-align: center;
+	
+	.footer-logo {
+		width: 50%;
+		@include respond-to('md'){
+			width: 15%;
+		}			
+	}
+}
+
+.footer-social-media {
+	filter: invert(1);
+
+	img {
+		width: 20px;
+		height: 20px;
+		object-fit: contain;
+		margin: 1rem 0.5rem;			
+	}
+}
+
+#menu-footer-menu {
+	list-style-type: none;
+	padding: 0;
+	li {
+		display:inline-block; 
+		margin: 0 1rem;
+		a {
+			text-decoration: none;
+			@include _montserrat-medium;
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+}

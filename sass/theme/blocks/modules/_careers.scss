@@ -1,0 +1,43 @@
+.vacancy-container {
+	padding: 2rem 0;
+	border-bottom: 1px solid white;
+}
+
+.vacancy-container:last-of-type {
+	border-bottom: 0;
+}
+
+.vacancy-description {
+	text-align: left;
+}
+.vacancy-logo {
+	padding: 1rem;
+}
+.careers-intro {
+	text-align: center;
+	width: 100%;
+	margin: 0 auto;
+	@include respond-to('lg'){
+		width: 70%;
+	}
+}
+
+.careers-benefits {
+	margin: 0;
+	text-align: center;
+	@include respond-to('lg'){
+		margin: 5rem 0 0 0;
+	}
+}
+
+.benefits-icon {
+	width: 100px;
+	height: 100px;
+	object-fit: contain;
+	margin: 1rem;
+}
+.benefits-list-item {
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;
+}

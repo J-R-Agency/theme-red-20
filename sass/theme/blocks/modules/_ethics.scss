@@ -1,0 +1,17 @@
+.ethics-wrapper {
+	text-align: center;
+}
+
+.ethics-image {
+	width: 200px;
+	height: auto;
+	object-fit: contain;
+	padding: 1rem;
+	@include respond-to ('lg') {
+		height: 200px;
+	}
+}
+
+.ethics-text {
+	margin: 1rem 0 1rem 0;
+}

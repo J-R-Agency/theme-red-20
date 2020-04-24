@@ -1,0 +1,13 @@
+.pagination {
+	margin: 2rem;
+	.page-item {
+		.page-link {
+			color: black;
+			&.current {
+				color: $red;
+				font-weight: bold;
+				border: 1px solid #dee2e6;
+			}
+		}		
+	}
+}

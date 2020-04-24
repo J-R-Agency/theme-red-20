@@ -34,3 +34,136 @@ foreach ( $understrap_includes as $file ) {
 	}
 	require_once $filepath;
 }
+
+/*-- ADD ACF OPTIONS --*/
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	acf_add_options_sub_page("Header");
+	acf_add_options_sub_page("Social Media");
+	acf_add_options_sub_page("Business Information");
+}
+
+/*-- REGISTER MENUS --*/
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'footer-menu' => __( 'Footer Menu' )
+     )
+   );
+ }
+ add_action( 'init', 'register_my_menus' );
+ 
+ /* -- Add social media icons to header --*/
+ 
+add_filter( 'wp_nav_menu_items', 'add_social_media_icons', 10, 2 );
+function add_social_media_icons ( $items, $args ) {
+		
+	if( $args->theme_location == 'primary' ) {
+	    $items .=
+	    '<div class="header-social-media">
+	    	<a href="https://www.facebook.com/ReallyEpicDog/" target="_blank">
+	    		<img src="'.get_template_directory_uri().'/assets/images/facebook.svg">
+	    	</a>
+	    	<a href="https://www.instagram.com/reallyepicdoggroup/" target="_blank">
+	    		<img src="'.get_template_directory_uri().'/assets/images/instagram.svg">
+	    	</a>
+	    	<a href="https://twitter.com/ReallyEpicDog_" target="_blank">
+	    		<img src="'.get_template_directory_uri().'/assets/images/twitter.svg">
+	    	</a>
+	    	<a href="https://www.linkedin.com/company/really-epic-dog-group" target="_blank">
+	    		<img src="'.get_template_directory_uri().'/assets/images/linkedin.svg">
+	    	</a>
+	    </div>';
+	}
+	return $items;
+
+}
+
+
+add_editor_style();
+
+/*-- Custom template for Case Study --*/
+add_filter( 'single_template', 'case_study_template' );
+function case_study_template($single_template)
+{
+	$category_name = get_term_by( 'slug', 'case-study', 'category' );
+    if (in_category($category_name)) {
+        $file = get_template_directory().'/single-case-study.php';
+        if ( file_exists($file) ) {
+            return $file;
+        }
+    }
+    return $single_template;
+}
+
+// Trim excerpt
+function trim_excerpt($text) {
+	$string = "[...]";
+     $text = str_replace( $string, '...', $text);
+     return $text;
+    }
+add_filter('get_the_excerpt', 'trim_excerpt', 99);
+
+// Remove excerpt "read more" button
+function understrap_all_excerpts_get_more_link( $post_excerpt ) {
+
+	return $post_excerpt;
+}
+
+add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+
+/**
+ * Replaces the excerpt "more" text by a link
+ */
+if ( ! function_exists( 'dyad_excerpt_continue_reading' ) ) {
+	function dyad_excerpt_continue_reading() {
+		return '';
+	}
+} // /dyad_excerpt_continue_reading
+
+add_filter( 'excerpt_more', 'dyad_excerpt_continue_reading' );
+
+//Enqueue javascript
+function my_theme_scripts() {
+    wp_enqueue_script( 'wrap-divs', get_template_directory_uri() . '/js/social-links.js', array( 'jquery' ), '1.0.0', true );
+    wp_enqueue_script( 'rollover', get_template_directory_uri() . '/js/rollover.js', array( 'jquery' ), '1.0.0', true );   
+    wp_enqueue_script( 'resize-hero', get_template_directory_uri() . '/js/resize-hero.js', array( 'jquery' ), '1.0.0', true );   
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_scripts' );
+
+//Add categories to pages
+function add_taxonomies_to_pages() {
+ register_taxonomy_for_object_type( 'post_tag', 'page' );
+ register_taxonomy_for_object_type( 'category', 'page' );
+ }
+add_action( 'init', 'add_taxonomies_to_pages' );
+
+// Add excerpts to pages
+add_post_type_support( 'page', 'excerpt' );
+
+// Get page ID
+function get_ID_by_slug($page_slug) {
+    $page = get_page_by_path($page_slug);
+    if ($page) {
+        return $page->ID;
+    } else {
+        return null;
+    }
+}
+
+// Turn off jetpack minification
+add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
+add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
+
+function jptweak_remove_share() {
+    remove_filter( 'the_content', 'sharing_display', 19 );
+    remove_filter( 'the_excerpt', 'sharing_display', 19 );
+    if ( class_exists( 'Jetpack_Likes' ) ) {
+        remove_filter( 'the_content', array( Jetpack_Likes::init(), 'post_likes' ), 30, 1 );
+    }
+}
+ 
+add_action( 'loop_start', 'jptweak_remove_share' );

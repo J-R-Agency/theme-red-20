@@ -1,0 +1,103 @@
+.news-card {
+	background-color: white;
+	padding: 1.5rem;
+	height: 400px;
+	-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+	box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+	margin: 1rem 0;
+	overflow: hidden;
+	
+	@include respond-to('md'){
+		margin-bottom: 1rem;
+	}
+	
+	&__first {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		background-color: white;
+		padding: 1.5rem;
+		height: 400px;
+		-webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+		-moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+		box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.75);
+		margin: 1rem 0;		
+	}
+	
+	&__left {
+		flex-basis: 100%;
+		flex-grow: 1;
+		height: 200px;
+		
+		@include respond-to('md'){
+			flex-basis: 50%;
+			height:100%;
+		}		
+	}
+	&__right {
+		flex-basis: 100%;
+		flex-grow: 1;
+		overflow: hidden;
+		height: 100%;
+		@include respond-to('md'){
+			flex-basis: 50%;
+		}	
+	}
+		
+
+	img {
+		height: 50%;
+		width: 100%;
+		object-fit: cover;			
+	}
+	
+	&__img-large {
+		margin: 0;
+		overflow: hidden;
+		height: 100%;
+		
+		@include respond-to('md'){
+			margin: 0rem 1rem 1rem 0;
+			height: 100%;
+		}		
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;			
+		}
+	}
+	&__title {
+		display: flex;
+		overflow: hidden;
+		max-height: 4.5em;
+		margin: 1rem 0 1rem 0;					
+		a {
+			color: black;
+			text-transform: uppercase;
+			@include _roboto-condensed-bold;
+			font-size: 1.5rem;
+			line-height: 1.5rem;			
+		}
+	}
+	
+	&__category a {
+		color: $red;
+		margin: 0;
+	}
+	
+	&__excerpt {
+		display: none;
+		@include respond-to('md'){
+			display: block;
+			margin: 1rem 0 0 0;
+			p {
+				max-height: 6rem;
+				overflow: hidden;
+			}
+		}			
+	}
+	&__button {
+		text-align: right;
+	}
+}

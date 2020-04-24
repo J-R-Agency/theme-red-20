@@ -1,0 +1,56 @@
+@mixin _roboto-bold {
+	font-family: 'roboto-bold';
+}
+
+@mixin _roboto-regular {
+	font-family: 'roboto-regular';	
+}
+
+@mixin _roboto-condensed-bold {
+	font-family: 'roboto-condensed-bold';	
+}
+
+@mixin _montserrat-semibold {
+	font-family: 'montserrat-semibold', 'montserrat-medium';
+}
+
+@mixin _montserrat-light {
+	font-family: 'montserrat-light';	
+}
+
+@mixin _montserrat-medium {
+	font-family: 'montserrat-medium';	
+}
+
+@mixin _montserrat-bold {
+	font-family: 'montserrat-bold';	
+}
+
+a {
+	@include _montserrat-semibold;
+}
+
+h1, h1 > p, h1 > p > span, {
+	@include _roboto-condensed-bold;
+	text-transform: uppercase;
+	font-size: 3rem;
+	@include respond-to('md'){
+		font-size: 4rem;	
+	}
+}
+
+h2 {
+	@include _montserrat-semibold;
+}
+
+h3 {
+	@include _montserrat-bold;
+}
+
+p, span, li {
+	@include _montserrat-light;
+}
+
+strong {
+	@include _montserrat-medium;
+}

@@ -1,0 +1,79 @@
+.our-touch {
+	text-align: center;
+}
+
+/* Timeline */
+.fc_timeline {
+	.timeline {
+		border-left: $line solid $red;
+		border-bottom-right-radius: $radius;
+		border-top-right-radius: $radius;    
+		color: fade(white, 80%);
+		margin: 0 0 0 6rem;  
+		position: relative;
+		list-style: none;
+		text-align: left;  
+		max-width: 70%; 
+		@include respond-to('lg') {
+			margin: $spacing auto;
+			max-width: 50%;
+		}
+	  
+		.milestone {
+		border-bottom: 1px dashed fade(white, 10%);
+		margin: 4rem 0;  
+		position: relative;
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		
+			@include respond-to('lg') {
+				height: 50px;	
+			}
+			
+			p {
+				margin: 0;
+			}
+			
+			&:last-of-type { 
+			  padding-bottom: 0;
+			  margin-bottom: 0; 
+			  border: none;      
+			}
+			
+			&:before, &:after {
+			  position: absolute;
+			  display: block;
+			  top: 0;
+			}
+			
+			&:before {
+			  left: ((($date * 0.6) + $spacing + $line + $dot + ($dotborder * 2)) * 1.5) * -1;    
+			  content: attr(data-date);
+			  text-align: right;
+			  min-width: $date;
+			  top: 10px;
+			  margin-left: 1rem;
+			  @include _montserrat-bold;
+			  
+			  @include respond-to('lg') {
+			      margin-left: 0;
+			  }
+			}
+			
+			&:after {
+			  box-shadow: 0 0 0 $dotborder fade($red,100%);    
+			  left: -67px;        
+			  background: white;    
+			  border-radius: 50%;  
+			  padding: 20px;
+			  border: 5px solid $red;
+			  height: $dot;
+			  width: $dot;
+			  content: "";
+			  top: 0px;
+			}
+		}
+	}	
+}

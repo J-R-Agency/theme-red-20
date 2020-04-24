@@ -1,0 +1,78 @@
+@mixin _social-icon {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+	width: 40px;
+	height: 40px;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+#content div.sharedaddy, #main div.sharedaddy, div.sharedaddy {
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	display: flex;
+	justify-content: center;
+	padding: 1rem 0;
+}
+
+.sharedaddy:nth-of-type(2) {
+	display: none;
+}
+
+div.sharedaddy h3.sd-title::before {
+	border-top: none;
+}
+
+#share-icon {
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center bottom;
+	width: 30px;
+	height: 30px;	
+	background-image: url('../assets/images/share-icon.png');
+	margin: 0 1rem;
+}
+
+.robots-nocontent.sd-block.sd-social.sd-social-icon.sd-sharing {
+	display: flex;
+}
+
+div.sharedaddy h3.sd-title {
+	margin: 0;
+	font-size: 14pt;
+	font-weight: normal;
+	align-items: center;
+	display: flex;
+	@include respond-to('lg'){
+		margin: 0 5rem 0 0;
+	}
+}
+.sd-content ul {
+	display: flex;
+	margin: 0;
+}
+.sd-content ul li {
+	margin: 0 0.5rem;
+	list-style-type: none;
+}
+
+.sharing-screen-reader-text {
+	display: none;
+}
+
+#facebook-icon-red {
+	@include _social-icon;
+	background-image: url('../assets/images/facebook-red.png');
+}
+
+#twitter-icon-red {
+	@include _social-icon;
+	background-image: url('../assets/images/twitter-red.png');	
+}
+
+#linkedin-icon-red {
+	@include _social-icon;
+	background-image: url('../assets/images/linkedin-red.png');	
+}

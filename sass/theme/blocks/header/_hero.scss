@@ -1,0 +1,253 @@
+.hero {
+	.lead {
+		font-size: 1rem;
+	}
+	
+	&.bg-white {
+		background-color: white;
+		color: black;
+	}
+	&.bg-grey {
+		background-color: $dark-grey;
+		color: white;
+	}
+	&.bg-red {
+		background-color: $red;
+		color: white;
+	}
+	&.primary {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	&.secondary {
+		display: flex;
+		flex-direction: column-reverse;		
+	}
+	&.tertiary {
+		display: flex;
+		flex-direction: column-reverse;		
+	}	
+	&.post {
+		background-color: white;
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	&.profile {
+		background-color: white;
+		display: flex;
+		flex-direction: column-reverse;
+		height: auto;
+	}	
+	&.job {
+		display: flex;
+		background-color: $red;
+		color: white;
+		flex-direction: column-reverse;
+	}
+	@include respond-to('lg'){
+		display: flex;
+		position: relative;
+		height:50vw;
+		&.post {
+			height: 40vw;	
+		}
+		&.secondary {
+			height: 40vw;
+		}
+		&.tertiary {
+			height: 40vw;
+		}
+		&.job {
+			height: 40vw;
+		}
+	}	
+}
+.hero-copy {
+	padding: 2rem 2rem 0 2rem;
+	&.primary {
+		@include respond-to('lg'){
+			padding: 10rem 60% 5rem 5rem;
+		}
+	}	
+	@include respond-to('lg'){
+		position: absolute;
+		padding: 5rem 60% 5rem 5rem;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		z-index: 2;
+	}
+}
+
+.hero-title {	
+	@include _roboto-condensed-bold;
+	p, h1, span {
+		@include _roboto-condensed-bold;
+		font-size: 3rem;
+		line-height: 3rem;
+		margin: 0;
+		text-transform: uppercase;
+		@include respond-to('lg'){
+			font-size: 4rem;
+			line-height: 4rem;	
+		}		
+		
+	}
+	&:after {
+		border-bottom: 2px solid black;
+	}
+	&.post {
+		color: $red;
+		font-size: 3rem;
+		line-height: 3rem;		
+		p, h1, span {
+			color: $red;
+			font-size: 3rem;
+			line-height: 3rem;
+			padding-top: 3rem;
+			&:after {
+				border: 3px solid black;
+			}
+		}
+	}	
+}
+
+.hero-intro {
+	margin: 0rem 0 1rem 0;
+	@include respond-to('md') {
+		font-size: 10pt;
+	}
+	
+	&.post p > a {
+		color: $red;
+	}
+	
+	&.job p {
+		margin: 0;
+	}
+	&.profile {
+		margin: 2rem 0;
+	}
+}	
+
+.hero-cta-link {
+	margin-bottom: 2rem;
+	z-index: 99;
+}
+
+.post-hero-image {
+	&.contain {
+		img {
+			background-color: $light-grey;
+			object-fit: contain;
+		}		
+	}
+}
+
+.hero-image {
+	img {
+		height: inherit;
+		float: right;
+	}
+	
+	&.job {
+		background-color: white;
+		z-index: 3;
+		img {
+			object-position: center;
+			object-fit: contain;
+			object-position: right;
+			max-width: 300px;	
+			@include respond-to('lg'){
+				max-width: 500px;
+			}		
+		}
+	}
+	@include respond-to('lg'){
+		height: 50vw; 
+		width: 100vw;
+		&.primary {
+			background-color: $red;
+			mask: url(../assets/masks/clippingmask-1.svg);
+			mask-size: cover;
+			mask-position: left;	
+		}
+		&.secondary {
+			height: 40vw;
+			background-color: $dark-grey;
+			mask: url(../assets/masks/clippingmask-1.svg);
+			mask-size: cover;
+			mask-position: left;			
+		}
+		&.tertiary {
+			height: 40vw;
+			background-color: white;
+			mask: url(../assets/masks/clippingmask-3.svg);
+			mask-size: cover;
+			mask-position: left;			
+		}
+		&.post {
+			height: 40vw;
+			background-color: white;
+			mask: url(../assets/masks/clippingmask-2.svg);
+			mask-size: cover;
+			mask-position: left;				
+			img {
+				object-fit: cover;
+				width: 100%;
+			}
+		}
+		&.profile {
+			height: 40vw;
+			background-color: white;
+			mask: url(../assets/masks/clippingmask-5.svg);
+			mask-size: cover;
+			mask-position: left;
+			img {
+				width: 60%;
+				object-fit: cover;
+			}								
+		}		
+		
+		&.job {
+			height: 40vw;
+			background-color: white;
+			mask: url(../assets/masks/clippingmask-4.svg);
+			mask-size: cover;
+			mask-position: left;								
+		}
+	}
+}
+
+.vacancy-logo-wrapper {
+	
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+		
+	@include respond-to('lg'){
+		margin-top: 17%;
+		width: 50%;
+		height: 50%;	
+		float: right;	
+	}
+
+
+}
+
+.job-hero-btn {
+	margin: 1rem 0;
+}
+
+.hero-line {
+	display: none;
+	&.post {
+		display: block;
+		border: 3px solid black;
+		margin: 2rem 0;
+	}
+}

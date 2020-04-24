@@ -1,1 +1,44 @@
 // This is an empty scss file for your custom styles - Please add your super duper awesome mega design styles here
+
+// Global styles
+@import "global/mixins/fonts";
+@import "global/mixins/breakpoints";
+@import "global/mixins/typography";
+@import "global/typography"; 
+@import "global/globals"; 
+@import "global/buttons"; 
+@import "global/archive"; 
+@import "global/overlays"; 
+@import "global/share";
+@import "global/reset"; 
+
+// Header
+@import "blocks/header/navbar";
+@import "blocks/header/hero";
+
+// Footer
+@import "blocks/footer/footer";
+
+// Modules
+@import "blocks/modules/post";
+@import "blocks/modules/flexible-content";
+@import "blocks/modules/content-block";
+@import "blocks/modules/icon-set";
+@import "blocks/modules/banner-cta";
+@import "blocks/modules/executive-profiles";
+@import "blocks/modules/our-involvement";
+@import "blocks/modules/photo-gallery";
+@import "blocks/modules/careers";
+@import "blocks/modules/video";
+@import "blocks/modules/ethics";
+@import "blocks/modules/checklist";
+@import "blocks/modules/impact";
+@import "blocks/modules/contact-forms";
+@import "blocks/modules/achievements";
+@import "blocks/modules/team-members";
+@import "blocks/modules/brands";
+@import "blocks/modules/our-touch";
+
+// Cards
+@import "blocks/cards/news-card";
+@import "blocks/cards/case-study-card";

@@ -1,0 +1,33 @@
+.red-text {
+	color: $red;
+	margin-left: 1rem;
+}
+
+.oi-introduction {
+	text-align: center;
+	width: 70%;
+	margin: 0 auto;
+}
+
+.oi-involvement-description {
+	text-align: center;
+}
+
+.oi-business {
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#oi-business-logo {
+	width: 300px;
+	height: 200px;
+	margin-top: 1rem;
+	object-fit: contain;
+}
+
+#oi-business-name {
+	text-align: center;
+	margin: 1rem 0;
+}

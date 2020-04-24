@@ -1,0 +1,100 @@
+.banner-cta {
+	background-color: $red;
+	padding: 4rem 4rem 25% 4rem;
+	color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+
+	@include respond-to('md'){
+		flex-direction: column;
+		padding: 4rem 4rem 15% 4rem;
+	}
+	
+	&.link {
+		justify-content: center;
+		h2 {
+			text-align: center;
+			margin-bottom: 1rem;
+			@include respond-to('lg'){
+				text-align: left;
+			}			
+		}
+		h2 > p, h2 > p > span {
+			margin: 0;
+			@include _montserrat-semibold;
+		}
+	}
+	&.social-media {
+		justify-content: center;
+	}
+	
+	&.social-media-2 {
+		background-color: $dark-grey;
+		justify-content: center;
+		padding: 4rem 4rem 25% 4rem;
+		@include respond-to('md'){
+			padding: 4rem 4rem 15% 4rem;
+		}
+	}
+	
+}
+
+.banner-cta-mid {
+	background-color: $red;
+	padding: 2rem 1rem;
+	color: white;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	@include respond-to('lg'){
+		flex-direction: row;
+		padding: 3rem 2rem 3rem 2rem;
+	}	
+	&.link {
+		justify-content: center;
+		h2 {
+			text-align: center;
+			margin-bottom: 1rem;
+			@include respond-to('lg'){
+				text-align: left;
+				margin-bottom: 0;
+			}			
+		}
+		h2 > p, h2 > p > span {
+			margin: 0;
+			@include _montserrat-semibold;
+		}
+	}	
+}
+
+.banner-cta-left {
+	display: flex;
+	align-items: center;
+	text-align: center;
+	h2 > p, h2 > p > span {
+		margin: 0;
+		@include _montserrat-semibold;
+	}
+	@include respond-to('lg'){
+		text-align: left;
+	}		
+}
+
+.banner-social-media {
+	filter: invert(1);
+	@include respond-to('lg'){
+		margin-left: 0;
+		&.tertiary {
+			margin-left: 0;
+		}
+	}	
+	img {
+		margin: 0.5rem;
+		width: 30px;
+		height: 30px;
+		object-fit: contain;
+	}
+}
