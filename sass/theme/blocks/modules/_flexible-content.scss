@@ -130,6 +130,9 @@
 						position: absolute;
 						z-index: 3;
 					}
+					@include respond-to('ld'){
+						margin-bottom: 7rem;
+					}
 									
 				}
 			}
