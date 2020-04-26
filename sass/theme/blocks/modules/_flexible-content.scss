@@ -187,13 +187,9 @@
 	margin-bottom: 7rem;
 	@include respond-to('ld'){
 		margin-bottom: 0rem;
-	    min-height: 700px;
-	    max-height: 700px;
 	}
 	@include respond-to('xl'){
 		margin-bottom: 0rem;
-	    min-height: 700px;
-	    max-height: 700px;
 	}
 }
 
