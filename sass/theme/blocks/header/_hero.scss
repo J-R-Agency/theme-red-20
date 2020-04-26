@@ -1,6 +1,9 @@
 .hero {
 	.lead {
 		font-size: 1rem;
+		@include respond-to('ld'){
+			font-size: 0.9rem;
+		}
 	}
 	
 	&.bg-white {
@@ -78,9 +81,9 @@
 		justify-content: center;
 		z-index: 2;
 	}
-/*	@include respond-to('ld'){
+	@include respond-to('ld'){
 		padding: 1rem 2rem 3rem 4rem ;
-	}*/
+	}
 }
 
 .hero-title {	
@@ -95,7 +98,11 @@
 			font-size: 4rem;
 			line-height: 4rem;	
 		}		
-		
+		@include respond-to('ld'){
+			font-size: 3rem;
+			line-height: 4rem;
+			margin-top: 4rem;	
+		}	
 	}
 	&:after {
 		border-bottom: 2px solid black;
@@ -137,6 +144,9 @@
 .hero-cta-link {
 	margin-bottom: 2rem;
 	z-index: 99;
+	@include respond-to('ld'){
+		font-size: 0.8rem
+	}
 }
 
 .post-hero-image {
