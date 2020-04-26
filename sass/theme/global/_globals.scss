@@ -1,6 +1,6 @@
 @mixin global-padding {
 	padding: 3rem 1rem;
-	@include respond-to('lg'){
+	@include respond-to('xl'){
 		padding: 3rem 10rem;
 	}	
 }
