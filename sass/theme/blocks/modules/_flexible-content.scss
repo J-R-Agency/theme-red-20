@@ -112,13 +112,18 @@
 }
 
 .meet-the-group-container {
-	@include respond-to('lg'){
+	@include respond-to('lg'){	
 		.flex-row:last-of-type {
 			min-height: 800px;
 			max-height: 800px;
+
 			.flex-column-2 {
 				min-height: 800px;
 				max-height: 800px;
+					@include respond-to('ld'){
+						margin-bottom: 7rem;
+						min-height: 400px;
+					}
 				.tcb-image {
 					.logo {
 						margin-bottom: 6rem;
