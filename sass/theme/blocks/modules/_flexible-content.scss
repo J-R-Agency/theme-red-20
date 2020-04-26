@@ -112,6 +112,12 @@
 }
 
 .meet-the-group-container {
+	@include respond-to('ld'){	
+		.flex-row:last-of-type {
+			min-height: 700px;
+			max-height: 700px;
+		}
+	}
 	@include respond-to('lg'){	
 		.flex-row:last-of-type {
 			min-height: 800px;
