@@ -118,7 +118,7 @@
 			max-height: 700px;
 		}
 	}
-	@include respond-to('lg'){	
+	@include respond-to('xl'){	
 		.flex-row:last-of-type {
 			min-height: 800px;
 			max-height: 800px;
