@@ -114,8 +114,8 @@
 .meet-the-group-container {
 	@include respond-to('ld'){	
 		.flex-row {
-			min-height: 500px;
-			max-height: 500px;
+			min-height: 400px;
+			max-height: 400px;
 		}
 		.flex-row:last-of-type {
 			min-height: 700px;
