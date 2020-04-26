@@ -114,12 +114,12 @@
 .meet-the-group-container {
 	@include respond-to('ld'){	
 		.flex-row {
-			min-height: 400px;
-			max-height: 400px;
+			min-height: 500px;
+			max-height: 500px;
 		}
 		.flex-row:last-of-type {
-			min-height: 700px;
-			max-height: 700px;
+			min-height: 800px;
+			max-height: 800px;
 		}
 	}
 	@include respond-to('xl'){	
