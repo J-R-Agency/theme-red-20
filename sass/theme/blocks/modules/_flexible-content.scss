@@ -44,11 +44,6 @@
 		a {
 			display: flex;
 		}
-		&:last-of-type{
-			@include respond-to('ld'){
-				margin-bottom: 7rem;
-			}
-		}
 		.logo {
 			background-position: center;
 			width: 100%;
@@ -186,5 +181,11 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
+}
+
+.meet-the-group-container .tcb-image:last-of-type{
+
+	background-color: #789;
+	
 }
 
