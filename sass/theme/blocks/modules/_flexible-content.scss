@@ -186,7 +186,7 @@
 .meet-the-group-container .tcb-image:last-of-type{
 	margin-bottom: 7rem;
 	@include respond-to('ld'){
-		margin-bottom: 3rem;
+		margin-bottom: 0rem;
 	}
 	@include respond-to('xl'){
 		margin-bottom: 0rem;
