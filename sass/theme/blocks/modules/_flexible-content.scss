@@ -112,10 +112,21 @@
 }
 
 .meet-the-group-container {
-	@include respond-to('lg'){
+	@include respond-to('ld'){	
+		.flex-row {
+			min-height: 500px;
+			max-height: 500px;
+		}
+		.flex-row:last-of-type {
+			min-height: 640px;
+			max-height: 800px;
+		}
+	}
+	@include respond-to('xl'){	
 		.flex-row:last-of-type {
 			min-height: 800px;
 			max-height: 800px;
+
 			.flex-column-2 {
 				min-height: 800px;
 				max-height: 800px;
@@ -180,5 +191,15 @@
 	display: flex;
 	justify-content: center;
 	align-content: center;
+}
+
+.meet-the-group-container .tcb-image:last-of-type{
+	margin-bottom: 7rem;
+	@include respond-to('ld'){
+		margin-bottom: 0rem;
+	}
+	@include respond-to('xl'){
+		margin-bottom: 0rem;
+	}
 }
 
