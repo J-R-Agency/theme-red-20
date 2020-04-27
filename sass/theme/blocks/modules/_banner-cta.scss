@@ -79,7 +79,7 @@
 		@include _montserrat-semibold;
 	}
 	@include respond-to('lg'){
-		text-align: left;
+		text-align: left; 
 	}		
 }
 
@@ -87,6 +87,7 @@
 	filter: invert(1);
 	@include respond-to('lg'){
 		margin-left: 0;
+		z-index: 99;
 		&.tertiary {
 			margin-left: 0;
 		}
