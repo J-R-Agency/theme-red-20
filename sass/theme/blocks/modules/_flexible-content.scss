@@ -112,7 +112,7 @@
 }
 
 .meet-the-group-container {
-	@include respond-to('ld'){	
+	@include respond-to('lg'){	
 		.flex-row {
 			min-height: 500px;
 			max-height: 500px;
@@ -198,7 +198,10 @@
 
 .meet-the-group-container .tcb-image:last-of-type{
 	margin-bottom: 7rem;
-	@include respond-to('ld'){
+	@include respond-to('md'){
+		margin-bottom: 0rem;
+	}
+	@include respond-to('lg'){
 		margin-bottom: 0rem;
 	}
 	@include respond-to('xl'){

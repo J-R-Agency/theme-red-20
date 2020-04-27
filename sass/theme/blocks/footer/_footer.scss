@@ -9,6 +9,10 @@
 	background-position: bottom;
 	position: absolute;
 	transform: translateY(-100px);
+	@include respond-to('md') {
+		transform: translateY(-250px);
+		height: 250px;
+	}
 	@include respond-to('lg'){
 		transform: translateY(-250px);
 		height: 250px;
