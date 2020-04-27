@@ -25,6 +25,9 @@
 	flex: 100%;
 	flex-grow: 1;
 	min-height: auto;
+	@include respond-to ('md') {
+		min-height: 500px;
+	}
 	@include respond-to('lg'){
 		flex: 50%;
 		min-height: 500px;
