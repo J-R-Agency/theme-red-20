@@ -7,3 +7,33 @@ $primary: white; // Thats a sample how you could change a BootStrap variable.
 $red: #d11317;
 $dark-grey: #4b4b4b;
 $light-grey: #ededec;
+
+/*
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+);
+*/
+
+/*
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 640px,
+	lg: 768px,
+	xl: 1200px,
+);
+*/
+
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	ld: 1024px,
+	xl: 1200px,
+);

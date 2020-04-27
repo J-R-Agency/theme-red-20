@@ -20,12 +20,14 @@
 	}
 }
 
-
 .flex-column-2 {
 	display: flex;
 	flex: 100%;
 	flex-grow: 1;
 	min-height: auto;
+	@include respond-to ('md') {
+		min-height: 500px;
+	}
 	@include respond-to('lg'){
 		flex: 50%;
 		min-height: 500px;
@@ -54,6 +56,9 @@
 			z-index: 3;
 			background-color: white;
 			border: 20px solid transparent;
+			@include respond-to('md') {
+				border: 5rem solid transparent;
+			}
 			@include respond-to('lg') {
 				border: 100px solid transparent;
 			}
@@ -111,33 +116,6 @@
 	}	
 }
 
-.meet-the-group-container {
-	@include respond-to('lg'){
-		.flex-row:last-of-type {
-			min-height: 800px;
-			max-height: 800px;
-			.flex-column-2 {
-				min-height: 800px;
-				max-height: 800px;
-				.tcb-image {
-					.logo {
-						margin-bottom: 6rem;
-						background-position: top center;
-						width: 100%;
-						height: 100%;
-						background-repeat: no-repeat;
-						background-size: 65%;
-						position: absolute;
-						z-index: 3;
-					}
-									
-				}
-			}
-		}
-		
-	}
-}
-
 
 .tcb_cta {
 	display:flex;
@@ -160,6 +138,9 @@
 		width: 100%;
 		height: 100%;
 		min-height: 400px;
+		@include respond-to ('md') {
+			min-height: 500px;
+		}
 	}	
 	
 	&.secondary {
@@ -182,3 +163,68 @@
 	align-content: center;
 }
 
+.flex-row:last-of-type {
+	.flex-column-2 {
+		.tcb-image {
+			.logo {
+				@include respond-to('md') {
+					border-bottom: 10rem solid transparent;
+				}
+			}
+		}
+	}	
+}
+
+
+/* Meet The Group */
+
+.meet-the-group-container .tcb-image:last-of-type{
+	margin-bottom: 7rem;
+	@include respond-to('md'){
+		margin-bottom: 0rem;
+	}
+	@include respond-to('lg'){
+		margin-bottom: 0rem;
+	}
+	@include respond-to('xl'){
+		margin-bottom: 0rem;
+	}
+}
+
+.meet-the-group-container {
+	@include respond-to('lg'){	
+		.flex-row {
+			min-height: 500px;
+			max-height: 500px;
+		}
+		.flex-row:last-of-type {
+			min-height: 600px;
+			max-height: 600px;
+		}
+	}
+	@include respond-to('xl'){	
+		.flex-row:last-of-type {
+			min-height: 800px;
+			max-height: 800px;
+
+			.flex-column-2 {
+				min-height: 800px;
+				max-height: 800px;
+				.tcb-image {
+					.logo {
+						margin-bottom: 6rem;
+						background-position: top center;
+						width: 100%;
+						height: 100%;
+						background-repeat: no-repeat;
+						background-size: 65%;
+						position: absolute;
+						z-index: 3;
+					}
+									
+				}
+			}
+		}
+		
+	}
+}
