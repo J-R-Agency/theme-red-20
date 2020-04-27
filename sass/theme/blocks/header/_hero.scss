@@ -258,6 +258,9 @@
 	@include respond-to('ld'){
 		font-size: 0.9rem;
 	}
+	@include respond-to('xl'){
+		font-size: 1rem;	
+	}
 }
 
 .page-template-meet-the-group .hero-copy {
