@@ -24,14 +24,33 @@
 					if ( ! empty( $categories )) {
 					    $san_cat = sanitize_title( $categories[0]->name );  
 					}
+					
+					
 		    	?>
 			        
 				    <div class="vacancy-container">
 						<div class="container">
 							<div class="row">
 								<div class="col-12 col-lg-3">
-									<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-white.png" class="vacancy-logo">
-								</div> 
+<!--<img src="<?php echo get_template_directory_uri(); ?>/assets/logos/<?php echo $san_cat; ?>-logo-white.png" class="vacancy-logo">-->
+									<?php
+									if( have_rows('businesses', 'option') ):
+										while ( have_rows('businesses', 'option') ) : the_row();
+											$business_logo = get_sub_field('business_logo', 'option'); // Image
+											$business_brand = get_sub_field('business_brand', 'option');
+											$business_name = $business_brand['business_name'];
+											
+											$san_name = sanitize_title($business_name);
+											
+												if ($san_name == $san_cat):
+													echo
+													"<img class='vacancy-logo' src='".$business_logo['business_logo_white']['url']."'>";
+												endif;
+											
+										endwhile;
+									endif;
+									?>
+								</div>
 								<div class="col-12 col-lg-9">
 									<div class="vacancy-description">
 										<h2><?php echo the_title(); ?></h2>
@@ -43,8 +62,9 @@
 						</div>	
 					</div>	
 					
-			<?php endwhile; ?>
-		<?php endif; ?>						    
+			<?php 
+			endwhile;
+		endif; ?>						    
 		<?php wp_reset_query(); ?>		
 	
 </section>
