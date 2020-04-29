@@ -33,7 +33,7 @@
 							
 								if ($san_name == $san_cat):
 									echo
-									"<img class='vacancy-logo' src='".$business_logo['business_logo_color']['url']."'>";
+									"<img src='".$business_logo['business_logo_color']['url']."'>";
 								endif;
 							
 						endwhile;
